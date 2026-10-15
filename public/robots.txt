@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://biff-cloud.github.io/bookkeeper-ai/sitemap-index.xml

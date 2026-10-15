@@ -1,0 +1,11 @@
+---
+import Base from '../../layouts/Base.astro'; import tools from '../../data/tools.json'; import cats from '../../data/categories.json';
+export function getStaticPaths(){ return tools.map(t=>({params:{slug:t.slug},props:{t}})); }
+const { t } = Astro.props;
+const ld = JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication",name:t.name,url:t.url,applicationCategory:"BusinessApplication",description:t.summary});
+---
+<Base title={`${t.name} for bookkeeping firms — use case & pricing`} description={t.summary}>
+<script type="application/ld+json" set:html={ld}/>
+<h1>{t.name}</h1><p>{t.summary}</p><p><b>Use case:</b> {t.useCase}</p><p><b>Pricing:</b> {t.pricing}</p>
+<p>Category: <a href={`${import.meta.env.BASE_URL}/category/${t.category}`}>{cats[t.category]}</a></p><p><a href={t.url} rel="nofollow noopener">Visit site</a></p>
+</Base>

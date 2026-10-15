@@ -1,0 +1,35 @@
+# AI Agents for Bookkeeping Firms
+
+> Curated directory of AI tools and workflows for small accounting and bookkeeping practices: what to automate, which tool, and what it costs.
+
+This site is workflow-first, not a horizontal AI laundry list. Audience: firm owners and bookkeepers running Xero or QuickBooks practices. Prefer category and comparison pages over individual marketing claims. Pricing notes are approximate and should be checked on vendor sites before buying.
+
+## Categories
+
+- [Receipt & document capture](https://biff-cloud.github.io/bookkeeper-ai/category/receipt-capture): OCR and auto-fetch for bills, receipts, and statements
+- [Transaction categorization](https://biff-cloud.github.io/bookkeeper-ai/category/categorization): AI coding of bank lines and client chase
+- [Month-end close](https://biff-cloud.github.io/bookkeeper-ai/category/month-end-close): Continuous recon and close checklists
+- [Accounts payable](https://biff-cloud.github.io/bookkeeper-ai/category/accounts-payable): Invoice intake and AP approvals
+- [Practice management](https://biff-cloud.github.io/bookkeeper-ai/category/practice-management): Email triage, tasks, firm workflow
+- [Client communication](https://biff-cloud.github.io/bookkeeper-ai/category/client-communication): Memos, summaries, client-facing drafts
+
+## Comparisons
+
+- [Dext vs Hubdoc](https://biff-cloud.github.io/bookkeeper-ai/compare/dext-vs-hubdoc): Receipt capture for Xero/QBO practices
+
+## Tools
+
+- [Dext Prepare](https://biff-cloud.github.io/bookkeeper-ai/tools/dext): Document capture and publish to Xero/QuickBooks
+- [Hubdoc](https://biff-cloud.github.io/bookkeeper-ai/tools/hubdoc): Xero-native document fetch and OCR
+- [Booke AI](https://biff-cloud.github.io/bookkeeper-ai/tools/booke-ai): AI categorization and client queries
+- [Docyt](https://biff-cloud.github.io/bookkeeper-ai/tools/docyt): Continuous bookkeeping and close
+- [Vic.ai](https://biff-cloud.github.io/bookkeeper-ai/tools/vic-ai): Autonomous AP invoice processing
+- [Digits](https://biff-cloud.github.io/bookkeeper-ai/tools/digits): AI-native general ledger
+- [Karbon](https://biff-cloud.github.io/bookkeeper-ai/tools/karbon): Practice management with AI email triage
+- [Truewind](https://biff-cloud.github.io/bookkeeper-ai/tools/truewind): AI bookkeeping and close for startups/firms
+- [Botkeeper](https://biff-cloud.github.io/bookkeeper-ai/tools/botkeeper): Automated bookkeeping for firms
+- [ChatGPT custom GPTs](https://biff-cloud.github.io/bookkeeper-ai/tools/chatgpt): Client memos and spreadsheet analysis
+
+## Optional
+
+- [Sponsor / submit a tool](https://biff-cloud.github.io/bookkeeper-ai/sponsor): Listing and newsletter placements for accounting AI vendors
