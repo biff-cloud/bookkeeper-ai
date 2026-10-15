@@ -1,0 +1,50 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+<Base
+  title="Docyt vs Digits vs Truewind for bookkeeping firms — AI close compared"
+  description="Docyt, Digits and Truewind side by side for accounting practices: published pricing, who each is built for, and which one fits your client base."
+>
+  <h1>Docyt vs Digits vs Truewind</h1>
+  <p>All three pitch an AI-driven month-end close. They differ most in who they are built for: Docyt for multi-location hospitality and retail, Digits as an AI-native ledger priced per client, Truewind as a close platform for growth-stage finance teams.</p>
+
+  <table>
+    <thead><tr><th></th><th><a href={`${import.meta.env.BASE_URL}/tools/docyt`}>Docyt</a></th><th><a href={`${import.meta.env.BASE_URL}/tools/digits`}>Digits</a></th><th><a href={`${import.meta.env.BASE_URL}/tools/truewind`}>Truewind</a></th></tr></thead>
+    <tbody>
+      <tr><td>Best for</td><td>Firms with hotel, restaurant, retail or franchise clients that run many locations</td><td>Firms with US small-business and startup clients willing to move to a new ledger</td><td>Firms and in-house teams that want a controlled, reviewer-led close workflow</td></tr>
+      <tr><td>Pricing (verified Oct 2026)</td><td>Accounting Suite from $299 per property/mo, unlimited users; Enterprise custom; catch-up $200 per month caught up</td><td>Per client: Essentials $65/mo, Core $100/mo, Pro $250/mo; firm's own books free for partner firms; no seat fees</td><td>Not published; quoted after a call based on close complexity and volume</td></tr>
+      <tr><td>Ledger</td><td>Its own AI-native ERP; migrates from QuickBooks, NetSuite, Sage Intacct and others</td><td>Its own general ledger (US entities only); imports via bank feeds or CSV</td><td>Works alongside your existing systems with integration setup during implementation</td></tr>
+      <tr><td>Core AI job</td><td>Nightly PMS/POS revenue posting, continuous bank and card reconciliation, closing agent</td><td>24/7 categorization and reconciliation, automated schedules, quality checks, Agentic Close across clients</td><td>Categorization, close execution with reviewer routing, exception handling and audit trail</td></tr>
+      <tr><td>Firm angle</td><td>Per-property meter; portfolio pricing drops with property count</td><td>Per-client billing with mixed plans, unlimited firm seats, certification and partner directory</td><td>Implementation-first onboarding; pricing by workflow depth</td></tr>
+    </tbody>
+  </table>
+
+  <h2>When to choose Docyt</h2>
+  <ul>
+    <li>Your clients are multi-location operators (hotels, restaurants, retail) with PMS or POS revenue to post nightly.</li>
+    <li>You want a published per-property price and unlimited users.</li>
+    <li>You need to catch up months of unreconciled books quickly.</li>
+  </ul>
+
+  <h2>When to choose Digits</h2>
+  <ul>
+    <li>Clients are US small businesses or startups and can move off QuickBooks or Xero.</li>
+    <li>You want to price each client separately and avoid per-seat fees for your team.</li>
+    <li>You want to trial the platform on your own firm's books before onboarding clients.</li>
+  </ul>
+
+  <h2>When to choose Truewind</h2>
+  <ul>
+    <li>You want close execution with reviewer sign-off and an audit trail more than a new ledger.</li>
+    <li>You are fine with a sales call and an implementation project before going live.</li>
+    <li>Your close is complex enough that a quoted, workflow-based price makes sense.</li>
+  </ul>
+
+  <p><a href={`${import.meta.env.BASE_URL}/category/month-end-close`}>All month-end close tools</a></p>
+</Base>
+
+<style>
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+  th, td { border: 1px solid #ddd; padding: 0.5rem 0.6rem; text-align: left; vertical-align: top; }
+  th { background: #f6f6f6; }
+</style>
