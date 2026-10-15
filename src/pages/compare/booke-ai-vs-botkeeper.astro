@@ -1,0 +1,43 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+<Base
+  title="Booke AI vs Botkeeper for bookkeeping firms — categorization compared"
+  description="Side-by-side: Booke AI and Botkeeper for AI transaction categorization in small accounting practices. Pricing, ledgers, and when to pick each."
+>
+  <h1>Booke AI vs Botkeeper</h1>
+  <p>Both automate bank feeds and month-end work for firms. Pick by stack depth, price meter, and whether you want software-only or a fuller firm platform.</p>
+
+  <table>
+    <thead><tr><th></th><th><a href={`${import.meta.env.BASE_URL}/tools/booke-ai`}>Booke AI</a></th><th><a href={`${import.meta.env.BASE_URL}/tools/botkeeper`}>Botkeeper</a></th></tr></thead>
+    <tbody>
+      <tr><td>Best for</td><td>Practices that want AI categorization inside existing QBO/Xero files at a published per-business price</td><td>Firms that want a full bookkeeping platform (close tracker, client hub, firm insights) priced per client license</td></tr>
+      <tr><td>Pricing (verified Oct 2026)</td><td>Business $129/business/mo; firm/white-label plans by quote</td><td>Infinite licenses from $149/mo (1–4) down to $59/mo (25+); annual lower; optional human bookkeeping services extra</td></tr>
+      <tr><td>Ledgers</td><td>Works inside QuickBooks Online and Xero</td><td>Firm platform with bank linking and firm-managed client books (QBO-oriented practice stacks)</td></tr>
+      <tr><td>Core AI job</td><td>Daily bank-feed categorization, OCR/doc matching, missing-doc requests, exception review</td><td>AI categorization, auto bank recs, journal entries, autonomous month-end review with anomaly detection</td></tr>
+      <tr><td>Firm angle</td><td>Multi-client + white-label available on firm tier; meter is per business</td><td>Built for firms: entity licenses, Activity Hub, Close Tracker, volume discounts as client count grows</td></tr>
+    </tbody>
+  </table>
+
+  <h2>When to choose Booke AI</h2>
+  <ul>
+    <li>You want a clear published price ($129/business/mo) before talking to sales.</li>
+    <li>Clients already live in QuickBooks Online or Xero and should stay there.</li>
+    <li>The main pain is daily categorization, document matching, and chasing missing docs.</li>
+  </ul>
+
+  <h2>When to choose Botkeeper</h2>
+  <ul>
+    <li>You need firm-wide close visibility, client collaboration, and a practice platform—not only a categorizer.</li>
+    <li>You have (or will have) enough clients for volume license tiers to beat flat per-business pricing.</li>
+    <li>You may later add Botkeeper’s human bookkeeping services on top of the software.</li>
+  </ul>
+
+  <p><a href={`${import.meta.env.BASE_URL}/category/categorization`}>All transaction categorization tools</a></p>
+</Base>
+
+<style>
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+  th, td { border: 1px solid #ddd; padding: 0.5rem 0.6rem; text-align: left; vertical-align: top; }
+  th { background: #f6f6f6; }
+</style>
