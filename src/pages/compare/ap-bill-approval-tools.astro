@@ -1,0 +1,69 @@
+---
+import Base from '../../layouts/Base.astro';
+const b = import.meta.env.BASE_URL;
+---
+<Base
+  title="Best AP bill approval tools for accounting firms — BILL vs Ramp vs Vic.ai"
+  description="Three ways bookkeepers automate bill intake, approval routing and vendor payments for clients on QBO and Xero: BILL, Ramp Bill Pay and Vic.ai. Pricing verified Oct 2026."
+>
+  <h1>AP bill approval: 3 tools compared</h1>
+  <p>Bills stuck waiting for a client's sign-off delay payments and close. All three tools below read invoices, route them to the right approver and pay once approved; they differ in who they're built for and how they charge. Directory entries only — not a full market scan.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Tool</th>
+        <th>Approval approach</th>
+        <th>Pricing (verified Oct 2026)</th>
+        <th>Best fit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href={`${b}/tools/bill`}>BILL</a></td>
+        <td>Approval workflows on every AP plan, with standard or custom approval policies depending on tier; discounted approver-only users</td>
+        <td>Essentials $49, Team $65, Corporate $89 per user/mo; Accountant console $49/mo; ACH $0.59, check $1.99</td>
+        <td>Firms running AP for many small clients from one accountant console</td>
+      </tr>
+      <tr>
+        <td><a href={`${b}/tools/ramp`}>Ramp Bill Pay</a></td>
+        <td>Routes bills by vendor, department, accounting field or payment type; mobile approvals; AI approval recommendations; payment release approvals</td>
+        <td>Free $0/user/mo includes Bill Pay and QBO/Xero sync; Plus $15/user/mo + platform fee</td>
+        <td>Clients who also want corporate cards and expenses in the same system</td>
+      </tr>
+      <tr>
+        <td><a href={`${b}/tools/vic-ai`}>Vic.ai</a></td>
+        <td>AI-driven approval workflows with mobile approvals, PO matching and an agent-run AP inbox</td>
+        <td>No public pricing; demo required</td>
+        <td>Larger clients with high invoice volume and PO matching needs</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Pick by where the bottleneck is</h2>
+  <ul>
+    <li><strong>Clients forget to approve:</strong> Ramp or BILL. Both offer mobile approvals so the owner can sign off from a phone.</li>
+    <li><strong>Many small clients, one AP team:</strong> BILL. The Accountant console manages multiple clients from one login.</li>
+    <li><strong>Price-sensitive client already on QBO or Xero:</strong> Ramp's Free plan includes Bill Pay and the accounting sync at $0 per user.</li>
+    <li><strong>Hundreds of invoices a month with POs:</strong> Vic.ai, built for high-volume AP; expect an enterprise sales process.</li>
+  </ul>
+
+  <h2>Cost for one client with 3 users (list prices, monthly)</h2>
+  <ul>
+    <li>Ramp Free: $0 in subscription fees.</li>
+    <li>BILL Essentials: 3 × $49 = $147, plus per-payment fees ($0.59 ACH, $1.99 check).</li>
+    <li>Vic.ai: not listed; ask for a quote.</li>
+  </ul>
+
+  <p>
+    <a href={`${b}/compare/missing-receipts-tools`}>Missing receipts tools</a>
+    · <a href={`${b}/compare/uncategorized-transactions-tools`}>Uncategorized transactions tools</a>
+    · <a href={`${b}/category/accounts-payable`}>All accounts payable tools</a>
+  </p>
+</Base>
+
+<style>
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+  th, td { border: 1px solid #ddd; padding: 0.5rem 0.6rem; text-align: left; vertical-align: top; }
+  th { background: #f6f6f6; }
+</style>
