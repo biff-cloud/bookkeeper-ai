@@ -1,0 +1,67 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+<Base
+  title="Dext alternatives for bookkeeping firms — receipt capture options"
+  description="Looking past Dext for receipt and bill capture? Compare Hubdoc and other firm-fit options for Xero and QuickBooks practices. Pricing verified Oct 2026."
+>
+  <h1>Dext alternatives</h1>
+  <p>Firms leave or skip Dext when clients are already on Xero (and capture is included), when per-client partner pricing does not fit a small list, or when they want categorization and OCR in one tool rather than a dedicated capture product. Below are the closest options in our directory — not a full market scan.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Alternative</th>
+        <th>Best fit vs Dext</th>
+        <th>Pricing (verified Oct 2026)</th>
+        <th>Trade-off</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href={`${import.meta.env.BASE_URL}/tools/hubdoc`}>Hubdoc</a></td>
+        <td>Primary alternative for receipt/bill capture on Xero practices</td>
+        <td>Included with qualifying Xero plans; standalone ~$12/mo</td>
+        <td>Strongest on Xero; fewer multi-ledger and extraction-credit options than Dext</td>
+      </tr>
+      <tr>
+        <td><a href={`${import.meta.env.BASE_URL}/tools/booke-ai`}>Booke AI</a></td>
+        <td>Partial overlap: OCR for bills/receipts plus daily bank categorization inside QBO/Xero</td>
+        <td>Business $129/business/mo; firm/white-label by quote</td>
+        <td>Not a pure Dext replacement — built for coding and exception review, not practice-wide capture credits</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>When Hubdoc is enough</h2>
+  <ul>
+    <li>Most clients sit on paid Xero plans where Hubdoc (or Smart Document Capture) is already included.</li>
+    <li>You mainly need email/mobile/upload capture and publish into Xero, not bank-statement or line-item extraction packs.</li>
+    <li>You want a free Hubdoc practice account as a Xero partner.</li>
+  </ul>
+
+  <h2>When to stay on Dext</h2>
+  <ul>
+    <li>You run mixed Xero and QuickBooks (or other) ledgers and need one capture stack.</li>
+    <li>You rely on bank-statement, line-item, or supplier-statement extraction beyond basic OCR.</li>
+    <li>Partner Essentials/Advanced plans and practice workflows matter more than Xero-bundled pricing.</li>
+  </ul>
+
+  <h2>When Booke AI is the better next step</h2>
+  <ul>
+    <li>Capture is secondary; the pain is uncategorized bank lines and chasing missing docs after OCR.</li>
+    <li>You want AI bookkeeping inside QBO/Xero with exception review, not a standalone document inbox.</li>
+  </ul>
+
+  <p>
+    <a href={`${import.meta.env.BASE_URL}/compare/dext-vs-hubdoc`}>Dext vs Hubdoc (head-to-head)</a>
+    · <a href={`${import.meta.env.BASE_URL}/tools/dext`}>Dext Prepare</a>
+    · <a href={`${import.meta.env.BASE_URL}/category/receipt-capture`}>All receipt &amp; document capture tools</a>
+  </p>
+</Base>
+
+<style>
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+  th, td { border: 1px solid #ddd; padding: 0.5rem 0.6rem; text-align: left; vertical-align: top; }
+  th { background: #f6f6f6; }
+</style>

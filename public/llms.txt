@@ -18,6 +18,7 @@ This site is workflow-first, not a horizontal AI laundry list. Audience: firm ow
 - [Dext vs Hubdoc](https://biff-cloud.github.io/bookkeeper-ai/compare/dext-vs-hubdoc): Receipt capture for Xero/QBO practices
 - [Booke AI vs Botkeeper](https://biff-cloud.github.io/bookkeeper-ai/compare/booke-ai-vs-botkeeper): Categorization and firm bookkeeping platforms
 - [Docyt vs Digits vs Truewind](https://biff-cloud.github.io/bookkeeper-ai/compare/docyt-vs-digits-vs-truewind): AI month-end close for firms
+- [Dext alternatives](https://biff-cloud.github.io/bookkeeper-ai/compare/dext-alternatives): Receipt capture options beyond Dext for accounting firms
 
 ## Tools
 
