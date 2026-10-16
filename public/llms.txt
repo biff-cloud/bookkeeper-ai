@@ -35,6 +35,8 @@ This site is workflow-first, not a horizontal AI laundry list. Audience: firm ow
 - [ChatGPT custom GPTs](https://biff-cloud.github.io/bookkeeper-ai/tools/chatgpt): Client memos and spreadsheet analysis
 - [Financial Cents](https://biff-cloud.github.io/bookkeeper-ai/tools/financial-cents): Firm workflow, client requests, month-end close add-on
 - [Double (formerly Keeper)](https://biff-cloud.github.io/bookkeeper-ai/tools/double): Month-end close and client review on QuickBooks Online
+- [Uncat](https://biff-cloud.github.io/bookkeeper-ai/tools/uncat): Client explanations for uncategorized transactions, QBO/QBD/Xero sync
+- [Xenett](https://biff-cloud.github.io/bookkeeper-ai/tools/xenett): AI financials review and close workflow per client
 
 ## Optional
 
