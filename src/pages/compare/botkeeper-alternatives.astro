@@ -1,0 +1,86 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+<Base
+  title="Botkeeper alternatives for bookkeeping firms — AI categorization & close"
+  description="Comparing options after Botkeeper’s Feb 2026 wind-down scare, for vendor-risk diversification, or for a different fit. Booke AI, Digits, Truewind, Docyt. Pricing verified Oct 2026."
+>
+  <h1>Botkeeper alternatives</h1>
+  <p>In Feb 2026 Botkeeper announced a wind-down; later that month Xendoo acquired Infinite and the platform kept operating. botkeeper.com and pricing are live today (Infinite ~$149→$59/mo by volume). Firms still compare alternatives for vendor-risk diversification, a different stack fit, or after that scare — not because the product is gone. Below are the closest options already in our directory.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Alternative</th>
+        <th>Best fit vs Botkeeper</th>
+        <th>Pricing (verified Oct 2026)</th>
+        <th>Trade-off</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href={`${import.meta.env.BASE_URL}/tools/booke-ai`}>Booke AI</a></td>
+        <td>Closest swap: daily categorization, OCR, exception review inside existing QBO/Xero files</td>
+        <td>Business $129/business/mo; firm/white-label by quote</td>
+        <td>Software layer on the ledger — not a full firm platform (no Close Tracker / Activity Hub equivalent)</td>
+      </tr>
+      <tr>
+        <td><a href={`${import.meta.env.BASE_URL}/tools/digits`}>Digits</a></td>
+        <td>AI-native ledger with 24/7 bookkeeping and recon; firm pays per client, no seat fees</td>
+        <td>Per client: Essentials $65/mo, Core $100/mo, Pro $250/mo (US only)</td>
+        <td>Clients leave QBO/Xero for Digits’ GL; US entities only</td>
+      </tr>
+      <tr>
+        <td><a href={`${import.meta.env.BASE_URL}/tools/truewind`}>Truewind</a></td>
+        <td>AI bookkeeping and close workflows for startups and firms</td>
+        <td>By quote</td>
+        <td>No published price; sales-led fit vs Botkeeper’s transparent license tiers</td>
+      </tr>
+      <tr>
+        <td><a href={`${import.meta.env.BASE_URL}/tools/docyt`}>Docyt</a></td>
+        <td>AI-native accounting ERP with continuous close — hospitality / multi-location focus</td>
+        <td>Accounting Suite from $299/property/mo; Enterprise custom</td>
+        <td>Not a generic SMB firm swap; priced per property for hotels/retail multi-unit</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>When Booke AI is the better next step</h2>
+  <ul>
+    <li>Clients should stay in QuickBooks Online or Xero; you want AI on top, not a new ledger.</li>
+    <li>You want a published per-business price before talking to sales.</li>
+    <li>Pain is daily bank coding, doc matching, and exception review — not firm-wide practice tooling.</li>
+  </ul>
+
+  <h2>When Digits fits</h2>
+  <ul>
+    <li>You’re willing to run clients on an AI-native GL instead of QBO/Xero.</li>
+    <li>US-only clients; per-client pricing with no seat fees works for your firm model.</li>
+    <li>You want continuous recon and Agentic Close in one product.</li>
+  </ul>
+
+  <h2>When to stay on Botkeeper</h2>
+  <ul>
+    <li>You already use Infinite’s firm stack (Close Tracker, Activity Hub, volume licenses) and it still fits.</li>
+    <li>Volume tiers ($149→$59/mo) beat flat per-business pricing at your client count.</li>
+    <li>Vendor risk is acceptable now that Infinite is operating again under Xendoo.</li>
+  </ul>
+
+  <h2>When Docyt or Truewind instead</h2>
+  <ul>
+    <li>Docyt: hospitality or multi-location retail/franchise books priced per property — not generic SMB write-up.</li>
+    <li>Truewind: close-complexity and workflow depth matter more than a published license card; expect a quote.</li>
+  </ul>
+
+  <p>
+    <a href={`${import.meta.env.BASE_URL}/compare/booke-ai-vs-botkeeper`}>Booke AI vs Botkeeper (head-to-head)</a>
+    · <a href={`${import.meta.env.BASE_URL}/tools/botkeeper`}>Botkeeper</a>
+    · <a href={`${import.meta.env.BASE_URL}/category/categorization`}>All transaction categorization tools</a>
+  </p>
+</Base>
+
+<style>
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+  th, td { border: 1px solid #ddd; padding: 0.5rem 0.6rem; text-align: left; vertical-align: top; }
+  th { background: #f6f6f6; }
+</style>
