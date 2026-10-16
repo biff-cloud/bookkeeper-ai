@@ -1,0 +1,93 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+<Base
+  title="Digits alternatives for bookkeeping firms — keep QBO/Xero or go elsewhere"
+  description="Looking past Digits’ AI-native ledger? Compare Booke AI, Truewind, Double, Xenett, Botkeeper, and Docyt for firms that stay on QBO/Xero or need non-US clients. Pricing verified Oct 2026."
+>
+  <h1>Digits alternatives</h1>
+  <p>Firms leave or skip Digits when clients must stay on existing QuickBooks Online or Xero ledgers (Digits is an AI-native new GL), when clients are outside the US, when they want per-seat or existing-stack tools, or when Digits’ per-client tiers don’t fit. Below are the closest options in our directory — not a full market scan.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Alternative</th>
+        <th>Best fit vs Digits</th>
+        <th>Pricing (verified Oct 2026)</th>
+        <th>Trade-off</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href={`${import.meta.env.BASE_URL}/tools/booke-ai`}>Booke AI</a></td>
+        <td>AI bookkeeping inside existing QBO/Xero files — not a new ledger</td>
+        <td>Business $129/business/mo; firm/white-label by quote</td>
+        <td>Layer on the client’s ledger; no Digits-style continuous native GL or firm free-books model</td>
+      </tr>
+      <tr>
+        <td><a href={`${import.meta.env.BASE_URL}/tools/truewind`}>Truewind</a></td>
+        <td>AI month-end / bookkeeping for startups and firms</td>
+        <td>By quote</td>
+        <td>No published price card; sales-led vs Digits’ transparent per-client tiers</td>
+      </tr>
+      <tr>
+        <td><a href={`${import.meta.env.BASE_URL}/tools/double`}>Double (formerly Keeper)</a></td>
+        <td>Close and automation layer on the existing QBO stack</td>
+        <td>Per-client mix-and-match plans; demo required</td>
+        <td>QBO-focused close/review — not a replacement GL; plan prices behind demo</td>
+      </tr>
+      <tr>
+        <td><a href={`${import.meta.env.BASE_URL}/tools/xenett`}>Xenett</a></td>
+        <td>Review/close layer on QBO — flags P&amp;L and Balance Sheet issues</td>
+        <td>AI Financials Review $7.50/client/mo; Workflow $10/client/mo (USD); add-ons e.g. Accruals + AI $15/client/mo</td>
+        <td>Review and workflow on top of QBO, not 24/7 native bookkeeping or a new ledger</td>
+      </tr>
+      <tr>
+        <td><a href={`${import.meta.env.BASE_URL}/tools/botkeeper`}>Botkeeper Infinite</a></td>
+        <td>Firm platform / categorization (Infinite under Xendoo)</td>
+        <td>From $149/license/mo (volume down to $59 at 25+)</td>
+        <td>License/volume model and firm tooling vs Digits per-client no-seat pricing; not an AI-native GL</td>
+      </tr>
+      <tr>
+        <td><a href={`${import.meta.env.BASE_URL}/tools/docyt`}>Docyt</a></td>
+        <td>Partial overlap only: AI-native continuous close — hospitality / multi-location focus</td>
+        <td>Accounting Suite from $299/property/mo; Enterprise custom</td>
+        <td>Not a generic SMB firm swap; priced per property for hotels/retail multi-unit</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>When Booke AI (or Double / Xenett) fits better</h2>
+  <ul>
+    <li>Clients must keep QuickBooks Online or Xero as the system of record.</li>
+    <li>You want AI categorization, exception review, or a close/review layer on the existing stack.</li>
+    <li>You prefer a published per-business or per-client add-on price without migrating the GL.</li>
+  </ul>
+
+  <h2>When to stay on Digits</h2>
+  <ul>
+    <li>You’re willing to run clients on Digits’ AI-native general ledger instead of QBO/Xero.</li>
+    <li>US-only entities; per-client Essentials/Core/Pro with no seat fees fits the firm model.</li>
+    <li>You want continuous recon, Agentic Close, and firm free books in one product.</li>
+  </ul>
+
+  <h2>When Truewind, Botkeeper, or Docyt instead</h2>
+  <ul>
+    <li>Truewind: close-complexity and workflow depth matter more than a published price card; expect a quote.</li>
+    <li>Botkeeper Infinite: you want firm-platform tooling (Close Tracker, volume licenses) on categorization, not a new ledger.</li>
+    <li>Docyt: hospitality or multi-location retail/franchise books priced per property — partial overlap only.</li>
+  </ul>
+
+  <p>
+    <a href={`${import.meta.env.BASE_URL}/compare/docyt-vs-digits-vs-truewind`}>Docyt vs Digits vs Truewind</a>
+    · <a href={`${import.meta.env.BASE_URL}/tools/digits`}>Digits</a>
+    · <a href={`${import.meta.env.BASE_URL}/category/month-end-close`}>All month-end close tools</a>
+    · <a href={`${import.meta.env.BASE_URL}/compare/bank-reconciliation-tools`}>Bank reconciliation tools</a>
+  </p>
+</Base>
+
+<style>
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+  th, td { border: 1px solid #ddd; padding: 0.5rem 0.6rem; text-align: left; vertical-align: top; }
+  th { background: #f6f6f6; }
+</style>
