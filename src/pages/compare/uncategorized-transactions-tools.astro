@@ -1,0 +1,76 @@
+---
+import Base from '../../layouts/Base.astro';
+const b = import.meta.env.BASE_URL;
+---
+<Base
+  title="Best tools to clear uncategorized transactions — Uncat vs Financial Cents vs Booke AI vs Double"
+  description="Four ways accounting firms clear uncategorized bank transactions before month-end close in QBO and Xero: client portal, practice add-on, AI categorization, or close platform. Pricing verified Oct 2026."
+>
+  <h1>Clearing uncategorized transactions: 4 tools compared</h1>
+  <p>Uncategorized bank lines (Ask My Accountant, suspense, "uncategorized expense") are the most common blocker at month-end close. The tools below attack it in different ways: ask the client faster, track the chase inside practice management, let AI code most lines first, or run the whole close review in one place. Directory entries only — not a full market scan.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Tool</th>
+        <th>Approach</th>
+        <th>Pricing (verified Oct 2026)</th>
+        <th>Ledgers</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href={`${b}/tools/uncat`}>Uncat</a></td>
+        <td>Client portal: clients explain lines and upload receipts; answers sync back</td>
+        <td>$9/month per client; unlimited users and transactions</td>
+        <td>QBO, QuickBooks Desktop, Xero</td>
+      </tr>
+      <tr>
+        <td><a href={`${b}/tools/financial-cents`}>Financial Cents</a></td>
+        <td>Practice-management add-on: pull uncategorized transactions into client requests and close checklists</td>
+        <td>Month-End Close add-on $5/client/mo, on top of Solo $19/mo, Team $49/user/mo or Scale $69/user/mo (annual)</td>
+        <td>QuickBooks Online (integration listed on pricing page)</td>
+      </tr>
+      <tr>
+        <td><a href={`${b}/tools/booke-ai`}>Booke AI</a></td>
+        <td>AI categorizes daily, then chases clients only for the exceptions</td>
+        <td>Business $129/business/mo; firm/white-label by quote</td>
+        <td>QBO, Xero</td>
+      </tr>
+      <tr>
+        <td><a href={`${b}/tools/double`}>Double (formerly Keeper)</a></td>
+        <td>Close platform: AI transaction review, flag uncategorized lines, client Q&amp;A before close</td>
+        <td>Per-client mix-and-match plans; demo required, prices not published</td>
+        <td>QBO</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Pick by where the bottleneck is</h2>
+  <ul>
+    <li><strong>Clients never answer:</strong> Uncat. A per-client portal for explanations and receipts is a cheap fix if your coding is fine and the delay is the client.</li>
+    <li><strong>You already run Financial Cents:</strong> add the Month-End Close add-on before buying a separate tool; at $5/client it works with every plan and is the lowest per-client cost here.</li>
+    <li><strong>Too many lines to code by hand:</strong> Booke AI. Pay per business to cut the volume of uncategorized lines first, then chase only what the AI cannot place.</li>
+    <li><strong>QBO-only firm wanting one close workspace:</strong> Double. Review, flags and client questions live together, but expect a sales call to get pricing.</li>
+  </ul>
+
+  <h2>Cost at 20 clients (list prices, monthly)</h2>
+  <ul>
+    <li>Uncat: 20 × $9 = $180.</li>
+    <li>Financial Cents: 20 × $5 = $100 add-on, plus your existing plan (from $19/mo Solo).</li>
+    <li>Booke AI: 20 × $129 = $2,580 at Business list price; firms should ask for firm pricing.</li>
+    <li>Double: not published.</li>
+  </ul>
+
+  <p>
+    <a href={`${b}/compare/booke-ai-vs-botkeeper`}>Booke AI vs Botkeeper</a>
+    · <a href={`${b}/category/categorization`}>All categorization tools</a>
+    · <a href={`${b}/category/month-end-close`}>All month-end close tools</a>
+  </p>
+</Base>
+
+<style>
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+  th, td { border: 1px solid #ddd; padding: 0.5rem 0.6rem; text-align: left; vertical-align: top; }
+  th { background: #f6f6f6; }
+</style>

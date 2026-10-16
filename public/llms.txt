@@ -20,6 +20,7 @@ This site is workflow-first, not a horizontal AI laundry list. Audience: firm ow
 - [Docyt vs Digits vs Truewind](https://biff-cloud.github.io/bookkeeper-ai/compare/docyt-vs-digits-vs-truewind): AI month-end close for firms
 - [Dext alternatives](https://biff-cloud.github.io/bookkeeper-ai/compare/dext-alternatives): Receipt capture options beyond Dext for accounting firms
 - [Botkeeper alternatives](https://biff-cloud.github.io/bookkeeper-ai/compare/botkeeper-alternatives): AI categorization and close options beyond Botkeeper for accounting firms
+- [Uncategorized transactions tools](https://biff-cloud.github.io/bookkeeper-ai/compare/uncategorized-transactions-tools): Uncat vs Financial Cents vs Booke AI vs Double for clearing uncategorized bank lines before close
 
 ## Tools
 
