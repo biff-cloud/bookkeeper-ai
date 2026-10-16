@@ -39,6 +39,8 @@ This site is workflow-first, not a horizontal AI laundry list. Audience: firm ow
 - [Double (formerly Keeper)](https://biff-cloud.github.io/bookkeeper-ai/tools/double): Month-end close and client review on QuickBooks Online
 - [Uncat](https://biff-cloud.github.io/bookkeeper-ai/tools/uncat): Client explanations for uncategorized transactions, QBO/QBD/Xero sync
 - [Xenett](https://biff-cloud.github.io/bookkeeper-ai/tools/xenett): AI financials review and close workflow per client
+- [BILL](https://biff-cloud.github.io/bookkeeper-ai/tools/bill): AP/AR automation with accountant console for multiple clients
+- [Ramp](https://biff-cloud.github.io/bookkeeper-ai/tools/ramp): Cards, expenses and Bill Pay with QBO/Xero sync
 
 ## Optional
 
