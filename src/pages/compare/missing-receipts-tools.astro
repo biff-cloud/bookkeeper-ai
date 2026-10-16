@@ -1,0 +1,76 @@
+---
+import Base from '../../layouts/Base.astro';
+const b = import.meta.env.BASE_URL;
+---
+<Base
+  title="Best tools to chase missing receipts — Dext vs Hubdoc vs Uncat vs Booke AI"
+  description="Four ways accounting firms get missing receipts out of clients before close in QBO and Xero: capture apps, a per-client request portal, or AI that requests only unmatched documents. Pricing verified Oct 2026."
+>
+  <h1>Chasing missing receipts: 4 tools compared</h1>
+  <p>Missing receipts hold up reconciliation and close as often as uncategorized lines do. Two kinds of tool help: capture apps make it easy for clients to send documents, and request tools ask for the specific receipt a bank line is missing. Directory entries only — not a full market scan.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Tool</th>
+        <th>Approach</th>
+        <th>Pricing (verified Oct 2026)</th>
+        <th>Ledgers</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href={`${b}/tools/dext`}>Dext Prepare</a></td>
+        <td>Capture: mobile app, upload and email-in; extracts data from receipts and invoices</td>
+        <td>Business from ~$25.21/mo annual (250 docs, 5 users); partner plans per client</td>
+        <td>QBO, Xero and others</td>
+      </tr>
+      <tr>
+        <td><a href={`${b}/tools/hubdoc`}>Hubdoc</a></td>
+        <td>Capture: photo from mobile, desktop upload, email forward; extracts key data from bills and receipts</td>
+        <td>Included with qualifying Xero plans; standalone $12/mo after 30-day free trial</td>
+        <td>Xero, QBO</td>
+      </tr>
+      <tr>
+        <td><a href={`${b}/tools/uncat`}>Uncat</a></td>
+        <td>Request: follows up with the client for a specific line (explanation or receipt) and matches the upload</td>
+        <td>$9/month per client; unlimited users, requests and receipt matching</td>
+        <td>QBO, QuickBooks Desktop, Xero</td>
+      </tr>
+      <tr>
+        <td><a href={`${b}/tools/booke-ai`}>Booke AI</a></td>
+        <td>AI: matches documents to bank lines and sends missing-document requests for the rest</td>
+        <td>Business $129/business/mo; firm/white-label by quote</td>
+        <td>QBO, Xero</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Pick by where the bottleneck is</h2>
+  <ul>
+    <li><strong>Clients have receipts but don't send them:</strong> Hubdoc (if you're on Xero, it may already be included) or Dext. Lower the effort of sending and volume goes up.</li>
+    <li><strong>You don't know which receipt is missing until close:</strong> Uncat. Ask for the receipt against the exact bank line instead of a generic "send us everything" email.</li>
+    <li><strong>Missing receipts are part of a larger coding backlog:</strong> Booke AI. It categorizes, matches documents and requests only the exceptions, at a higher per-business price.</li>
+    <li><strong>High document volume and extraction accuracy matter most:</strong> Dext, priced by document volume rather than per bank line.</li>
+  </ul>
+
+  <h2>Cost at 20 clients (list prices, monthly)</h2>
+  <ul>
+    <li>Hubdoc: $0 extra on qualifying Xero plans; otherwise 20 × $12 = $240 if each client is billed standalone.</li>
+    <li>Uncat: 20 × $9 = $180.</li>
+    <li>Dext: partner pricing is per client and not listed here; ask Dext for a firm quote.</li>
+    <li>Booke AI: 20 × $129 = $2,580 at Business list price; firms should ask for firm pricing.</li>
+  </ul>
+
+  <p>
+    <a href={`${b}/compare/dext-vs-hubdoc`}>Dext vs Hubdoc</a>
+    · <a href={`${b}/compare/uncategorized-transactions-tools`}>Uncategorized transactions tools</a>
+    · <a href={`${b}/category/receipt-capture`}>All receipt capture tools</a>
+  </p>
+</Base>
+
+<style>
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+  th, td { border: 1px solid #ddd; padding: 0.5rem 0.6rem; text-align: left; vertical-align: top; }
+  th { background: #f6f6f6; }
+</style>
