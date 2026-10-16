@@ -23,6 +23,7 @@ This site is workflow-first, not a horizontal AI laundry list. Audience: firm ow
 - [Uncategorized transactions tools](https://biff-cloud.github.io/bookkeeper-ai/compare/uncategorized-transactions-tools): Uncat vs Financial Cents vs Booke AI vs Double for clearing uncategorized bank lines before close
 - [Missing receipts tools](https://biff-cloud.github.io/bookkeeper-ai/compare/missing-receipts-tools): Dext vs Hubdoc vs Uncat vs Booke AI for chasing missing client receipts before close
 - [AP bill approval tools](https://biff-cloud.github.io/bookkeeper-ai/compare/ap-bill-approval-tools): BILL vs Ramp vs Vic.ai for routing client bill approvals and vendor payments
+- [Bank reconciliation tools](https://biff-cloud.github.io/bookkeeper-ai/compare/bank-reconciliation-tools): Booke AI vs Digits vs Double vs Xenett for automating bank reconciliation for QBO and Xero clients
 
 ## Tools
 
