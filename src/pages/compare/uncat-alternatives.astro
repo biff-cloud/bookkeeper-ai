@@ -1,0 +1,78 @@
+---
+import Base from '../../layouts/Base.astro';
+const b = import.meta.env.BASE_URL;
+---
+<Base
+  title="Uncat alternatives for bookkeeping firms: chase fewer uncategorized transactions"
+  description="Options beyond Uncat's $9/client portal: Financial Cents Month-End Close, Booke AI, Double and Xenett for firms on QBO or Xero. Pricing verified Oct 2026."
+>
+  <h1>Uncat alternatives</h1>
+  <p>Uncat does one job: it sends clients their uncategorized transactions, collects explanations and receipts, and syncs the answers back to QuickBooks Online, QuickBooks Desktop or Xero for $9/month per client. Firms look elsewhere when they want that chase inside the tool they already run, when there are too many lines for clients to answer one by one, or when they want the whole month-end review in one place. These are the closest options in our directory, not a full market scan.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Alternative</th>
+        <th>Best fit vs Uncat</th>
+        <th>Pricing (verified Oct 2026)</th>
+        <th>Trade-off</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href={`${b}/tools/financial-cents`}>Financial Cents</a> (Month-End Close add-on)</td>
+        <td>You already track client work in Financial Cents and want uncategorized transactions in the same client requests and checklists</td>
+        <td>Add-on $5/client/mo, on top of Solo $19/mo, Team $49/user/mo or Scale $69/user/mo (annual)</td>
+        <td>Only cheaper than Uncat if you use the practice-management plan anyway; QBO integration listed on its pricing page</td>
+      </tr>
+      <tr>
+        <td><a href={`${b}/tools/booke-ai`}>Booke AI</a></td>
+        <td>Too many lines to send to clients: AI codes daily, clients see only the exceptions</td>
+        <td>Business $129/business/mo; firm pricing by quote</td>
+        <td>Far higher list price per client; QBO and Xero only</td>
+      </tr>
+      <tr>
+        <td><a href={`${b}/tools/double`}>Double (formerly Keeper)</a></td>
+        <td>QBO firm that wants AI transaction review, flags and client questions in one close workspace</td>
+        <td>Per-client mix-and-match plans; demo required to start</td>
+        <td>QBO-focused; you need a sales call to get started</td>
+      </tr>
+      <tr>
+        <td><a href={`${b}/tools/xenett`}>Xenett</a></td>
+        <td>The problem is review, not the client chase: flags P&amp;L and Balance Sheet issues across every file</td>
+        <td>AI Financials Review $7.50/client/mo; Workflow $10/client/mo (USD); 14-day free trial</td>
+        <td>QBO and Xero; doesn't replace a client-facing portal for explanations and receipts</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Cost at 20 clients (list prices, monthly)</h2>
+  <ul>
+    <li>Uncat: 20 × $9 = $180.</li>
+    <li>Financial Cents: 20 × $5 = $100 add-on, plus your plan (from $19/mo Solo).</li>
+    <li>Xenett: 20 × $7.50 = $150 (review only) or 20 × $10 = $200 (Workflow).</li>
+    <li>Booke AI: 20 × $129 = $2,580 at Business list price; ask for firm pricing.</li>
+    <li>Double: not published.</li>
+  </ul>
+
+  <h2>When to stay on Uncat</h2>
+  <ul>
+    <li>Your coding is fine and the delay is clients not answering.</li>
+    <li>You have QuickBooks Desktop clients. Uncat lists Desktop sync; the other sites we checked list only QBO and/or Xero.</li>
+    <li>You want unlimited accountant and client users at a flat per-client price, with a free trial.</li>
+  </ul>
+
+  <p>
+    <a href={`${b}/tools/uncat`}>Uncat</a>
+    · <a href={`${b}/compare/uncategorized-transactions-tools`}>Uncategorized transactions tools</a>
+    · <a href={`${b}/compare/missing-receipts-tools`}>Missing receipts tools</a>
+    · <a href={`${b}/compare/karbon-vs-financial-cents`}>Karbon vs Financial Cents</a>
+    · <a href={`${b}/category/client-communication`}>All client communication tools</a>
+  </p>
+</Base>
+
+<style>
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+  th, td { border: 1px solid #ddd; padding: 0.5rem 0.6rem; text-align: left; vertical-align: top; }
+  th { background: #f6f6f6; }
+</style>
