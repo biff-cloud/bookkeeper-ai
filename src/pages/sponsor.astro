@@ -1,6 +1,36 @@
 ---
 import Base from '../layouts/Base.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
-<Base title="Sponsor or submit a tool"><h1>Sponsor / submit</h1>
-<ul><li><b>Free listing</b> — editorial review queue.</li><li><b>Verified listing — $149 one-time</b>: fast review, workflow write-up, sponsored-labelled link.</li><li><b>Featured category slot — $299/month</b>: top of one category page, max 1 per category.</li><li><b>Newsletter sponsor — $199/issue</b> (launch price, rises with subscribers).</li><li><b>Founding bundle — $699</b>: verified + 1 month featured + 2 newsletter slots.</li></ul>
-<p>All paid links are marked rel="sponsored". Contact form coming soon.</p></Base>
+<Base title="Founding sponsor: $249 for 60 days | Bookkeeper AI" description="One sponsor offer for vendors selling to small bookkeeping firms: labeled placement on category and buyer-intent compare pages for 60 days. Max 3 sponsors. Rankings never change.">
+<h1>Founding sponsor</h1>
+<p><b>$249 for 60 days. Max 3 sponsors.</b> For tools that sell to small accounting and bookkeeping firms.</p>
+
+<div class="card">
+<h2>What you get</h2>
+<ul>
+<li>A card labeled <b>Sponsored</b> at the top of your category page, linked with <code>rel="sponsored"</code>.</li>
+<li>The same labeled card on 2 relevant workflow or compare pages, for example <a href={`${base}/compare/bank-reconciliation-tools/`}>bank reconciliation tools</a> or <a href={`${base}/compare/digits-alternatives/`}>Digits alternatives</a>.</li>
+<li>A verified-listing badge and an expanded write-up on your tool page. Every fact is checked against your public site.</li>
+<li>A sponsor slot in the first newsletter issue when it launches.</li>
+<li>The $249 price is locked if you renew.</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>What you don't get</h2>
+<ul>
+<li>No change to rankings, verdicts or "pick by bottleneck" advice. Sponsors are ranked like everyone else.</li>
+<li>No traffic promises. The site is new, and we only quote numbers we've measured.</li>
+</ul>
+</div>
+
+<h2>Why it's worth it anyway</h2>
+<p>Your placement sits on buyer-intent pages: "alternatives", "vs" and workflow pages that firms read while choosing a tool. We publish list prices checked against vendor sites, and our <a href={`${base}/llms.txt`}>llms.txt</a> helps AI assistants cite these pages.</p>
+
+<h2>How to book</h2>
+<p>Founding slots are booked by direct contact with the founder. Payment comes before placement, and the placement goes live within 2 business days of payment.</p>
+
+<h2>Just want a free listing?</h2>
+<p>Free listings are always open and go through the same editorial review. <a href="https://github.com/biff-cloud/bookkeeper-ai/issues/new?title=Tool%20submission:%20">Submit a tool</a> with its name, URL and pricing page.</p>
+</Base>
