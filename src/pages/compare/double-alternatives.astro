@@ -1,0 +1,78 @@
+---
+import Base from '../../layouts/Base.astro';
+const b = import.meta.env.BASE_URL;
+---
+<Base
+  title="Double alternatives for bookkeeping firms: close and client review tools with published prices"
+  description="Options beyond Double's demo-first, per-client close platform: Financial Cents, Karbon, Xenett and Uncat, with pricing verified Oct 2026 and cost at 20 clients."
+>
+  <h1>Double alternatives</h1>
+  <p>Double (formerly Keeper) is a month-end close and client management workspace for accounting firms. It connects to each client's QuickBooks Online or Xero file and adds AI bank feeds, AI reconciliation fixes, file review, a client portal and task tracking. It bills per connected client on mix-and-match tiers (Core, Plus, Scale, Enterprise), but the tier prices are not published and the first step is a demo. Firms look elsewhere when they want a price they can see up front, a free trial without a sales call, or one narrow job done well. These are the closest options in our directory, not a full market scan.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Alternative</th>
+        <th>Best fit vs Double</th>
+        <th>Pricing (verified Oct 2026)</th>
+        <th>Trade-off</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href={`${b}/tools/financial-cents`}>Financial Cents</a></td>
+        <td>Small QBO firms that want practice management plus a month-end close add-on for uncategorized transactions</td>
+        <td>Solo $19/mo; Team $49/user/mo; Scale $69/user/mo (annual); Month-End Close add-on $5/client/mo</td>
+        <td>Close add-on is QBO only; no AI bank feeds or flux analysis like Double's higher tiers</td>
+      </tr>
+      <tr>
+        <td><a href={`${b}/tools/karbon`}>Karbon</a></td>
+        <td>Firms whose bottleneck is shared email, client requests and task automation across the team</td>
+        <td>Team $59/user/mo annual ($79 monthly); Business $89/user/mo annual ($99 monthly)</td>
+        <td>Practice management first; no per-client AI review of the ledger itself</td>
+      </tr>
+      <tr>
+        <td><a href={`${b}/tools/xenett`}>Xenett</a></td>
+        <td>QBO or Xero clients where you mainly need AI review of the P&amp;L and Balance Sheet before close</td>
+        <td>AI Financials Review $7.50/client/mo; Workflow $10/client/mo; 14-day free trial</td>
+        <td>Flags issues and tracks tasks; no client portal for receipts, W-9s and questions on Double's scale</td>
+      </tr>
+      <tr>
+        <td><a href={`${b}/tools/uncat`}>Uncat</a></td>
+        <td>Firms whose month-end delay is clients not answering about uncategorized transactions</td>
+        <td>$9/client/mo; free trial</td>
+        <td>Does one job: client questions on transactions. You still need a close checklist and review tool</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Cost at 20 clients, 3-person team (list prices, monthly)</h2>
+  <ul>
+    <li>Double: not published. The pricing page lists only add-ons: integrated email at $10 per connected team email per month, and the Tax Suite included with a $200/month annual commitment.</li>
+    <li>Financial Cents: 3 × $49 Team + 20 × $5 close add-on = $247.</li>
+    <li>Karbon: 3 × $59 = $177 (annual Team), with no per-client close review.</li>
+    <li>Xenett: 20 × $7.50 = $150 (review only) or 20 × $10 = $200 (Workflow).</li>
+    <li>Uncat: 20 × $9 = $180, for client chasing only.</li>
+  </ul>
+
+  <h2>When to stay on Double</h2>
+  <ul>
+    <li>You want AI bank feeds, reconciliation fixes, file review and the client portal in one tool instead of two or three.</li>
+    <li>You need accruals, allocations, AI journal entries or flux analysis, which Double lists on its Scale tier.</li>
+    <li>You run an in-house finance team on NetSuite or Sage Intacct: Double's annual Internal Finance plan lists two-way sync with both.</li>
+  </ul>
+
+  <p>
+    <a href={`${b}/tools/double`}>Double</a>
+    · <a href={`${b}/compare/xenett-vs-financial-cents`}>Xenett vs Financial Cents MEC</a>
+    · <a href={`${b}/compare/uncategorized-transactions-tools`}>Uncategorized transactions tools</a>
+    · <a href={`${b}/compare/bank-reconciliation-tools`}>Bank reconciliation tools</a>
+    · <a href={`${b}/category/month-end-close`}>All month-end close tools</a>
+  </p>
+</Base>
+
+<style>
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+  th, td { border: 1px solid #ddd; padding: 0.5rem 0.6rem; text-align: left; vertical-align: top; }
+  th { background: #f6f6f6; }
+</style>
