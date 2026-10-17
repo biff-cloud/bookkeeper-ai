@@ -1,0 +1,61 @@
+---
+import Base from '../../layouts/Base.astro';
+const b = import.meta.env.BASE_URL;
+---
+<Base
+  title="Xenett vs Financial Cents Month-End Close for bookkeeping firms — compared"
+  description="Xenett AI Financials Review vs the Financial Cents Month-End Close add-on: per-client pricing, QBO and Xero support, what each review catches, and 20-client cost math. Prices verified Oct 2026."
+>
+  <h1>Xenett vs Financial Cents Month-End Close</h1>
+  <p>Both help a bookkeeping firm review client books before close. Xenett scans each client's P&amp;L and Balance Sheet for issues and works with QuickBooks Online and Xero. Financial Cents Month-End Close (MEC) is a $5/client add-on to its practice management plans that reviews and fixes client books and syncs corrections back to QuickBooks Online.</p>
+
+  <table>
+    <thead><tr><th></th><th><a href={`${b}/tools/xenett`}>Xenett</a></th><th><a href={`${b}/tools/financial-cents`}>Financial Cents MEC</a></th></tr></thead>
+    <tbody>
+      <tr><td>Best for</td><td>Firms with QBO and Xero clients that want an automated review of every file, with unlimited users</td><td>Firms already on (or moving to) Financial Cents with QBO clients, where uncategorized transactions are the bottleneck</td></tr>
+      <tr><td>Pricing (verified Oct 2026)</td><td>AI Financials Review $7.50/client/mo; Workflow $10/client/mo (adds projects, tasks, time tracking); add-ons Accruals + AI $15/client/mo and Inter-company Rec $10/client/mo; Enterprise custom. Unlimited users.</td><td>MEC add-on $5/client/mo, billed annually, on top of a plan: Solo $19/mo, Team $49/user/mo, Scale $69/user/mo (annual). 12-month agreement.</td></tr>
+      <tr><td>Ledgers</td><td>QuickBooks Online and Xero</td><td>QuickBooks Online (corrections sync back to QBO)</td></tr>
+      <tr><td>What the review covers</td><td>Default review points: duplicate entries and vendors, GL inconsistencies, AR/AP issues, undeposited funds, uncategorized entries, entries missing name/class/location; custom review points</td><td>Transaction review, uncategorized transactions, account reconciliation, 1099 and W-9 prep, shared transactions, new vendors and accounts</td></tr>
+      <tr><td>Client questions</td><td>White-labeled client portal for transaction questions with email/text reminders</td><td>Client tasks and requests with automatic follow-ups (auto follow-ups on Scale)</td></tr>
+      <tr><td>Where you work</td><td>Xenett app plus a browser extension inside QBO and Xero</td><td>Inside Financial Cents, next to your workflows and client portal</td></tr>
+      <tr><td>Trial</td><td>14-day free trial</td><td>14-day free trial on plans; MEC is added after a demo</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Cost for a 3-person firm with 20 clients</h2>
+  <ul>
+    <li>Already on Financial Cents: MEC adds $100/mo (20 × $5). Xenett AI Financials Review on top would be $150/mo (20 × $7.50).</li>
+    <li>Starting from nothing: Financial Cents Team for 3 users ($147) plus MEC ($100) is $247/mo. Xenett Workflow is $200/mo (20 × $10) with unlimited users, but its practice management is lighter (no billing or proposals listed).</li>
+    <li>Solo firm: Financial Cents Solo ($19) plus MEC ($100) is $119/mo, below Xenett Workflow at $200/mo.</li>
+  </ul>
+  <p>All figures are list prices, annual billing where offered, before discounts or promotions.</p>
+
+  <h2>When to choose Xenett</h2>
+  <ul>
+    <li>You have Xero clients, or a mix of QBO and Xero.</li>
+    <li>You want a broad automated check of every file (duplicates, GL coding, AR/AP, missing class/location), not just uncategorized lines.</li>
+    <li>Your team is growing and per-user pricing would hurt; Xenett charges per client.</li>
+  </ul>
+
+  <h2>When to choose Financial Cents MEC</h2>
+  <ul>
+    <li>You already run the firm on Financial Cents, so the review is $5/client and sits next to your workflows.</li>
+    <li>All your clients are on QuickBooks Online.</li>
+    <li>Your main close problem is uncategorized transactions and client follow-up, plus 1099/W-9 prep.</li>
+  </ul>
+
+  <p>Sources: xenett.com/pricing and financial-cents.com/pricing, checked 2026-10-18. No sponsor has paid for this comparison.</p>
+
+  <p>
+    <a href={`${b}/category/month-end-close`}>All month-end close tools</a> ·
+    <a href={`${b}/compare/karbon-vs-financial-cents`}>Karbon vs Financial Cents</a> ·
+    <a href={`${b}/compare/uncategorized-transactions-tools`}>Uncategorized transactions tools</a> ·
+    <a href={`${b}/compare/bank-reconciliation-tools`}>Bank reconciliation tools</a>
+  </p>
+</Base>
+
+<style>
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+  th, td { border: 1px solid #ddd; padding: 0.5rem 0.6rem; text-align: left; vertical-align: top; }
+  th { background: #f6f6f6; }
+</style>
