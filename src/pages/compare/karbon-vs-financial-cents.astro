@@ -1,0 +1,50 @@
+---
+import Base from '../../layouts/Base.astro';
+const b = import.meta.env.BASE_URL;
+---
+<Base
+  title="Karbon vs Financial Cents for bookkeeping firms — practice management compared"
+  description="Karbon vs Financial Cents: per-user pricing, month-end close, client requests, and AI features for small bookkeeping and accounting firms. Prices verified Oct 2026."
+>
+  <h1>Karbon vs Financial Cents</h1>
+  <p>Both run a bookkeeping firm's recurring work: deadlines, client requests, and team visibility. The split is price and depth. Financial Cents is cheaper per seat and adds a $5/client month-end close add-on for uncategorized transactions. Karbon costs more per seat and is built around shared email, task automation, and its own AI features.</p>
+
+  <table>
+    <thead><tr><th></th><th><a href={`${b}/tools/karbon`}>Karbon</a></th><th><a href={`${b}/tools/financial-cents`}>Financial Cents</a></th></tr></thead>
+    <tbody>
+      <tr><td>Best for</td><td>Growing firms that run client work through shared email and want automation and AI on top</td><td>Solo and small firms that want simple workflows and client chasing at a low per-seat price</td></tr>
+      <tr><td>Pricing (verified Oct 2026)</td><td>Team $59/user/mo annual ($79 monthly); Business $89/user/mo annual ($99 monthly); Enterprise custom. Monthly billing has a minimum team size.</td><td>Solo $19/mo; Team $49/user/mo annual ($69 monthly); Scale $69/user/mo annual ($89 monthly); Enterprise custom. 12-month agreement; monthly billing needs 5+ users.</td></tr>
+      <tr><td>Month-end close</td><td>Workflow templates and to-do lists; close automation marketed as a product area</td><td>Month-End Close add-on, $5/client/mo (annual): review, fix, and finalize client books, including uncategorized transactions</td></tr>
+      <tr><td>Client requests</td><td>Client portal; automatic client reminders on Business</td><td>Client requests and reminders for missing docs and transactions</td></tr>
+      <tr><td>AI angle</td><td>Karbon AI for email triage and summaries; Kai AI coworker and AI agents marketed as new</td><td>Automation focus; the AI-adjacent piece is the MEC add-on's transaction cleanup</td></tr>
+      <tr><td>Extras</td><td>Time tracking and budgets, billing, payments, engagements included from Team</td><td>Solo plan for single-user firms; add-ons priced outside the plan</td></tr>
+    </tbody>
+  </table>
+
+  <h2>When to choose Karbon</h2>
+  <ul>
+    <li>Your team lives in shared client email and you want it turned into tasks with AI summaries.</li>
+    <li>You want billing, payments, and engagement letters in the same tool.</li>
+    <li>You have 4+ staff and the higher per-seat price is covered by automation.</li>
+  </ul>
+
+  <h2>When to choose Financial Cents</h2>
+  <ul>
+    <li>You are solo or a small team and want to start at $19/mo or $49/user/mo.</li>
+    <li>Uncategorized transactions are your month-end bottleneck and $5/client for the close add-on is cheaper than a separate tool.</li>
+    <li>You want simple recurring workflows and client chasing more than an email-centric platform.</li>
+  </ul>
+
+  <p>Sources: karbonhq.com/pricing and financial-cents.com/pricing, checked 2026-10-17. No sponsor has paid for this comparison.</p>
+
+  <p>
+    <a href={`${b}/category/practice-management`}>All practice management tools</a> ·
+    <a href={`${b}/compare/uncategorized-transactions-tools`}>Uncategorized transactions tools</a>
+  </p>
+</Base>
+
+<style>
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+  th, td { border: 1px solid #ddd; padding: 0.5rem 0.6rem; text-align: left; vertical-align: top; }
+  th { background: #f6f6f6; }
+</style>
