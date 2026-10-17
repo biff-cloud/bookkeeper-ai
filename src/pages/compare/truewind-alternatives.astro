@@ -1,0 +1,78 @@
+---
+import Base from '../../layouts/Base.astro';
+const b = import.meta.env.BASE_URL;
+---
+<Base
+  title="Truewind alternatives for bookkeeping firms: AI month-end close with published prices"
+  description="Options beyond Truewind's quoted close platform: Digits, Docyt, Xenett and Double, with pricing verified Oct 2026 and when each fits better."
+>
+  <h1>Truewind alternatives</h1>
+  <p>Truewind runs the close on top of the ledger you keep: Sage Intacct or QuickBooks Online stays the source of truth, and Truewind handles categorization, reconciliation and close tasks with reviewer sign-off and an audit trail. Pricing is not published; plans are quoted after a demo based on close complexity and volume. Firms look elsewhere when they want a price they can see up front, a per-client meter, or a lighter tool for small clients. These are the closest options in our directory, not a full market scan.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Alternative</th>
+        <th>Best fit vs Truewind</th>
+        <th>Pricing (verified Oct 2026)</th>
+        <th>Trade-off</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href={`${b}/tools/digits`}>Digits</a></td>
+        <td>US small-business and startup clients, priced per client, with AI bookkeeping and an Agentic Close across the book</td>
+        <td>Per client: Essentials $65/mo, Core $100/mo, Pro $250/mo</td>
+        <td>Clients move to Digits' own ledger (US entities only) instead of keeping QBO or Sage Intacct</td>
+      </tr>
+      <tr>
+        <td><a href={`${b}/tools/docyt`}>Docyt</a></td>
+        <td>Hotel, restaurant and multi-location clients with PMS or POS revenue to post nightly</td>
+        <td>Accounting Suite from $299/property/mo, unlimited users; catch-up $200 per month caught up</td>
+        <td>Built around hospitality and per-property billing; also replaces the ledger</td>
+      </tr>
+      <tr>
+        <td><a href={`${b}/tools/xenett`}>Xenett</a></td>
+        <td>Small clients on QBO or Xero where you need AI review of the P&amp;L and Balance Sheet, not a full close platform</td>
+        <td>AI Financials Review $7.50/client/mo; Workflow $10/client/mo (USD); 14-day free trial</td>
+        <td>Flags issues and tracks tasks; doesn't run reconciliation and close execution the way Truewind does</td>
+      </tr>
+      <tr>
+        <td><a href={`${b}/tools/double`}>Double (formerly Keeper)</a></td>
+        <td>QBO firms that want AI transaction review, client questions and close checklists in one workspace</td>
+        <td>Per-client mix-and-match plans; demo required to start</td>
+        <td>QBO-focused, no Sage Intacct; price also needs a sales call</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Cost at 10 clients (list prices, monthly)</h2>
+  <ul>
+    <li>Truewind: not published.</li>
+    <li>Digits: 10 × $65 = $650 (Essentials) to 10 × $100 = $1,000 (Core).</li>
+    <li>Docyt: from $299 per property, so 10 single-location clients start at $2,990.</li>
+    <li>Xenett: 10 × $7.50 = $75 (review only) or 10 × $10 = $100 (Workflow).</li>
+    <li>Double: not published.</li>
+  </ul>
+
+  <h2>When to stay on Truewind</h2>
+  <ul>
+    <li>Clients are on Sage Intacct. Of the tools above, only Truewind lists Sage Intacct as a ledger it runs on.</li>
+    <li>You want to keep QBO or Sage Intacct as the books and add close execution on top, not migrate ledgers.</li>
+    <li>Reviewer ownership and an audit trail on every workflow matter more than a published price.</li>
+  </ul>
+
+  <p>
+    <a href={`${b}/tools/truewind`}>Truewind</a>
+    · <a href={`${b}/compare/docyt-vs-digits-vs-truewind`}>Docyt vs Digits vs Truewind</a>
+    · <a href={`${b}/compare/digits-alternatives`}>Digits alternatives</a>
+    · <a href={`${b}/compare/bank-reconciliation-tools`}>Bank reconciliation tools</a>
+    · <a href={`${b}/category/month-end-close`}>All month-end close tools</a>
+  </p>
+</Base>
+
+<style>
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+  th, td { border: 1px solid #ddd; padding: 0.5rem 0.6rem; text-align: left; vertical-align: top; }
+  th { background: #f6f6f6; }
+</style>

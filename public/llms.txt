@@ -23,6 +23,7 @@ This site is workflow-first, not a horizontal AI laundry list. Audience: firm ow
 - [Digits alternatives](https://biff-cloud.github.io/bookkeeper-ai/compare/digits-alternatives): Options beyond Digits’ AI-native ledger for firms that keep QBO/Xero or need non-US clients
 - [Booke AI alternatives](https://biff-cloud.github.io/bookkeeper-ai/compare/booke-ai-alternatives): Options beyond Booke AI for firm volume pricing, AI-native ledgers, or cheaper QBO/Xero review
 - [Uncat alternatives](https://biff-cloud.github.io/bookkeeper-ai/compare/uncat-alternatives): Options beyond Uncat for chasing uncategorized transactions: Financial Cents, Booke AI, Double, Xenett
+- [Truewind alternatives](https://biff-cloud.github.io/bookkeeper-ai/compare/truewind-alternatives): Options beyond Truewind for AI month-end close: Digits, Docyt, Xenett, Double, with published prices
 - [Uncategorized transactions tools](https://biff-cloud.github.io/bookkeeper-ai/compare/uncategorized-transactions-tools): Uncat vs Financial Cents vs Booke AI vs Double for clearing uncategorized bank lines before close
 - [Missing receipts tools](https://biff-cloud.github.io/bookkeeper-ai/compare/missing-receipts-tools): Dext vs Hubdoc vs Uncat vs Booke AI for chasing missing client receipts before close
 - [AP bill approval tools](https://biff-cloud.github.io/bookkeeper-ai/compare/ap-bill-approval-tools): BILL vs Ramp vs Vic.ai for routing client bill approvals and vendor payments
