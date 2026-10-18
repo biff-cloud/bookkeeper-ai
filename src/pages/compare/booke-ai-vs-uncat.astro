@@ -1,0 +1,59 @@
+---
+import Base from '../../layouts/Base.astro';
+const b = import.meta.env.BASE_URL;
+---
+<Base
+  title="Booke AI vs Uncat for bookkeeping firms — AI categorization vs asking the client"
+  description="Booke AI ($129/business/mo, daily AI categorization, document matching and missing document requests in QBO and Xero) vs Uncat ($9/client/mo, client portal for uncategorized transactions in QBO, QBD and Xero): what each automates and 20-client cost math. Prices verified Oct 2026."
+>
+  <h1>Booke AI vs Uncat</h1>
+  <p>Both deal with transactions that are not coded yet, but they solve it from opposite ends. Booke AI is an AI bookkeeper: it categorizes the bank feed every day, matches documents, and sends you the exceptions. Uncat does not guess at all: it takes the transactions sitting in your uncategorized or "ask my accountant" accounts, asks the client what they were, collects the explanation and receipt, and syncs the answer back to the ledger. AI categorization still leaves some transactions it cannot place without the client, so plenty of firms would use both.</p>
+
+  <table>
+    <thead><tr><th></th><th><a href={`${b}/tools/booke-ai`}>Booke AI</a></th><th><a href={`${b}/tools/uncat`}>Uncat</a></th></tr></thead>
+    <tbody>
+      <tr><td>Best for</td><td>Firms that want the daily coding of bank transactions done by AI, with staff reviewing exceptions</td><td>Firms whose bottleneck is getting clients to explain transactions and send receipts before close</td></tr>
+      <tr><td>Pricing (verified Oct 2026)</td><td>AI Bookkeeper (Business): $129 per business/month, prorated when you add a business mid-period. Firm plan (multi-client management, white-label, priority onboarding) is custom-priced.</td><td>$9 per client/month. Unlimited accountant and client users, transactions, client requests and receipt matching.</td></tr>
+      <tr><td>Ledger</td><td>QuickBooks Online and Xero</td><td>QuickBooks Online, QuickBooks Desktop and Xero</td></tr>
+      <tr><td>What it automates</td><td>Daily bank feed categorization, smart document matching, missing document requests, custom thresholds and rules, OCR for bills, invoices and receipts, exception review with audit trail</td><td>Client follow-up on transactions in the ledger accounts you point it at; collects an explanation, class or receipt; supports card accounts with several cardholders; syncs answers back</td></tr>
+      <tr><td>Who does the work</td><td>The AI codes; your staff reviews what it flags</td><td>The client answers; your staff reviews and posts what comes back</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Cost at 20 clients (list prices, monthly)</h2>
+  <ul>
+    <li>Booke AI Business: 20 × $129 = $2,580. The firm plan is custom-priced, so a firm at this size would likely ask for a quote.</li>
+    <li>Uncat: 20 × $9 = $180.</li>
+  </ul>
+  <p>The numbers are not like for like. Booke replaces daily coding work; Uncat only handles the transactions that need the client. Running both at list price is $2,760 a month at 20 clients, before any Booke firm discount. All figures before discounts or promotions.</p>
+
+  <h2>When to choose Booke AI</h2>
+  <ul>
+    <li>Most of your hours go into coding bank transactions, not chasing clients.</li>
+    <li>You want OCR and document matching for bills, invoices and receipts in the same tool.</li>
+    <li>You want a white-labeled client experience (firm plan).</li>
+  </ul>
+
+  <h2>When to choose Uncat</h2>
+  <ul>
+    <li>Your coding is under control, but every month-end stalls on a pile of transactions only the client can explain.</li>
+    <li>You have clients on QuickBooks Desktop, which Booke does not list.</li>
+    <li>You want a low, published per-client price with unlimited users.</li>
+  </ul>
+
+  <p>Sources: booke.ai/pricing and uncat.com, checked 2026-10-19. No sponsor has paid for this comparison.</p>
+
+  <p>
+    <a href={`${b}/compare/booke-ai-alternatives`}>Booke AI alternatives</a> ·
+    <a href={`${b}/compare/uncat-alternatives`}>Uncat alternatives</a> ·
+    <a href={`${b}/compare/uncat-vs-financial-cents`}>Uncat vs Financial Cents MEC</a> ·
+    <a href={`${b}/compare/booke-ai-vs-xenett`}>Booke AI vs Xenett</a> ·
+    <a href={`${b}/compare/uncategorized-transactions-tools`}>Uncategorized transactions tools</a>
+  </p>
+</Base>
+
+<style>
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+  th, td { border: 1px solid #ddd; padding: 0.5rem 0.6rem; text-align: left; vertical-align: top; }
+  th { background: #f6f6f6; }
+</style>
