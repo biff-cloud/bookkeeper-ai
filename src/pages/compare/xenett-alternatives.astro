@@ -1,0 +1,81 @@
+---
+import Base from '../../layouts/Base.astro';
+const b = import.meta.env.BASE_URL;
+---
+<Base
+  title="Xenett alternatives for bookkeeping firms: client review and close tools compared"
+  description="Options beyond Xenett's per-client AI Financials Review: Financial Cents Month-End Close, Double, Uncat and Digits, with pricing verified Oct 2026 and cost at 20 clients."
+>
+  <h1>Xenett alternatives</h1>
+  <p>Xenett reviews each client's P&amp;L and Balance Sheet in QuickBooks Online or Xero and flags issues before close: duplicates, GL inconsistencies, AR/AP problems, uncategorized entries and missing class or location. It bills per client ($7.50 for AI Financials Review, $10 for Workflow) with unlimited users. Firms look elsewhere when they want the review inside the practice management tool they already use, a client portal that does more of the chasing, or a different ledger altogether. These are the closest options in our directory, not a full market scan.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Alternative</th>
+        <th>Best fit vs Xenett</th>
+        <th>Pricing (verified Oct 2026)</th>
+        <th>Trade-off</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href={`${b}/tools/financial-cents`}>Financial Cents</a> (Month-End Close)</td>
+        <td>QBO firms already running workflows and client requests in Financial Cents</td>
+        <td>Month-End Close add-on $5/client/mo (annual) on top of Solo $19/mo, Team $49/user/mo or Scale $69/user/mo</td>
+        <td>QBO only; review centers on uncategorized transactions and reconciliation, not Xenett's wider GL checks</td>
+      </tr>
+      <tr>
+        <td><a href={`${b}/tools/double`}>Double</a></td>
+        <td>Firms that want AI bank feeds, reconciliation fixes, file review and a client portal in one tool</td>
+        <td>Per-client tiers (Core, Plus, Scale, Enterprise); prices not published; demo first</td>
+        <td>No price you can check up front and no self-serve trial listed</td>
+      </tr>
+      <tr>
+        <td><a href={`${b}/tools/uncat`}>Uncat</a></td>
+        <td>Firms whose close is held up by clients not answering about uncategorized transactions</td>
+        <td>$9/client/mo; free trial</td>
+        <td>Client questions and receipts only; no P&amp;L or Balance Sheet review</td>
+      </tr>
+      <tr>
+        <td><a href={`${b}/tools/digits`}>Digits</a></td>
+        <td>US clients willing to move to an AI-native ledger instead of reviewing QBO or Xero</td>
+        <td>Per client: Essentials $65/mo, Core $100/mo, Pro $250/mo</td>
+        <td>Replaces the ledger rather than reviewing it; a much bigger change for clients</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Cost at 20 clients, 3-person team (list prices, monthly)</h2>
+  <ul>
+    <li>Xenett: 20 × $7.50 = $150 (AI Financials Review) or 20 × $10 = $200 (Workflow), unlimited users.</li>
+    <li>Financial Cents: 3 × $49 Team + 20 × $5 Month-End Close = $247, including practice management.</li>
+    <li>Double: not published.</li>
+    <li>Uncat: 20 × $9 = $180, for client chasing only.</li>
+    <li>Digits: 20 × $65 = $1,300 on Essentials, as the client's ledger, not a review layer.</li>
+  </ul>
+
+  <h2>When to stay on Xenett</h2>
+  <ul>
+    <li>You have Xero clients, or a mix of QBO and Xero.</li>
+    <li>You want a broad automated check of every file, with custom review points, not just uncategorized lines.</li>
+    <li>Your team is growing: per-client pricing with unlimited users beats per-user plans.</li>
+    <li>You need accruals or inter-company reconciliation: Xenett lists both as $15 and $10/client add-ons, free for the first 60 days.</li>
+  </ul>
+
+  <p>Sources: xenett.com/pricing, uncat.com and digits.com/pricing checked 2026-10-18; financial-cents.com/pricing and doublehq.com/pricing checked 2026-10-18 for earlier pages. No sponsor has paid for this comparison.</p>
+
+  <p>
+    <a href={`${b}/tools/xenett`}>Xenett</a>
+    · <a href={`${b}/compare/xenett-vs-financial-cents`}>Xenett vs Financial Cents MEC</a>
+    · <a href={`${b}/compare/double-alternatives`}>Double alternatives</a>
+    · <a href={`${b}/compare/bank-reconciliation-tools`}>Bank reconciliation tools</a>
+    · <a href={`${b}/category/month-end-close`}>All month-end close tools</a>
+  </p>
+</Base>
+
+<style>
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+  th, td { border: 1px solid #ddd; padding: 0.5rem 0.6rem; text-align: left; vertical-align: top; }
+  th { background: #f6f6f6; }
+</style>
