@@ -1,0 +1,59 @@
+---
+import Base from '../../layouts/Base.astro';
+const b = import.meta.env.BASE_URL;
+---
+<Base
+  title="Docyt vs Xenett for bookkeeping firms — AI-native hospitality ERP vs AI review on QBO and Xero"
+  description="Docyt (from $299/property/mo, AI-native ERP with continuous reconciliation and a Closing Agent for hotels, restaurants and multi-location retail) vs Xenett ($7.50-$10/client, AI review of P&L and Balance Sheet on QBO and Xero): who each fits and 20-client cost math. Prices verified Oct 2026."
+>
+  <h1>Docyt vs Xenett</h1>
+  <p>These two rarely compete for the same client. Docyt is an AI-native accounting ERP built for multi-location hospitality and retail: it posts PMS and POS revenue nightly, reconciles bank and card accounts continuously, and runs a Closing Agent, and it migrates you off QuickBooks, Sage Intacct or NetSuite rather than sitting on top of them. Xenett is a review layer on QuickBooks Online and Xero: it scans each client's P&amp;L and Balance Sheet for errors before sign-off, and its Workflow plan adds light practice management. The question is mostly whether your clients are hotel and restaurant portfolios or a general small-business book.</p>
+
+  <table>
+    <thead><tr><th></th><th><a href={`${b}/tools/docyt`}>Docyt</a></th><th><a href={`${b}/tools/xenett`}>Xenett</a></th></tr></thead>
+    <tbody>
+      <tr><td>Best for</td><td>Firms and in-house teams closing books for multi-property hotels, restaurant groups, retailers and franchisees</td><td>Firms reviewing many general small-business clients on QBO or Xero before sign-off</td></tr>
+      <tr><td>Pricing (verified Oct 2026)</td><td>Accounting Suite from $299 per property (or location)/month. Enterprise Suite (Accounting, Payments and BI) custom, with portfolio pricing that drops with property count. Daily Flash standalone from $100/location/month. Catch-up accounting $200 per month caught up. Unlimited users; annual plans billed monthly.</td><td>Per client: AI Financials Review $7.50/mo, Workflow $10/mo. Add-ons: Accruals + AI $15/client/mo, Inter-company Rec $10/client/mo ($0 for the first 60 days). Unlimited users. Enterprise by quote.</td></tr>
+      <tr><td>Ledger</td><td>Its own AI-native ERP; migrates from QuickBooks, Sage Intacct, NetSuite, M3 and others</td><td>Works on QuickBooks Online and Xero</td></tr>
+      <tr><td>What it automates</td><td>Nightly PMS/POS revenue posting with USALI mapping, deposit, OTA and chargeback tracking, continuous bank and card reconciliation, Closing Agent and Quality of Books Agent, payroll accounting, multi-entity and intercompany, owner reporting</td><td>Review points: duplicates, GL inconsistencies, AR/AP issues, undeposited funds, uncategorized entries, missing name/class/location, custom rules; Accruals add-on covers prepaids, payroll accruals, deferred revenue, flux analysis</td></tr>
+      <tr><td>Firm workflow</td><td>Multi-owner permissioning and portfolio roll-ups (Enterprise); dedicated hospitality accountant on the Accounting Suite</td><td>Workflow plan: projects and tasks, time tracking, capacity planning, 1099s (US), documents, email and Drive integration</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Cost at 20 clients or properties (list prices, monthly)</h2>
+  <ul>
+    <li>Docyt Accounting Suite: 20 × $299 = $5,980 at the "from" price. Portfolio pricing scales down with property count, so a 20-property group would likely get a quote below that.</li>
+    <li>Xenett AI Financials Review: 20 × $7.50 = $150. Workflow: 20 × $10 = $200. Workflow plus Accruals + AI: 20 × $25 = $500.</li>
+  </ul>
+  <p>The numbers are not like for like. Docyt's price replaces the ledger, revenue posting and much of the close for a hotel or restaurant; Xenett's price checks books that already live in QBO or Xero. All figures before discounts or promotions.</p>
+
+  <h2>When to choose Docyt</h2>
+  <ul>
+    <li>Your clients are hotels, restaurant groups or multi-location retailers, and PMS or POS revenue posting eats your month.</li>
+    <li>You want USALI statements, intercompany and owner reporting from one system instead of three to five.</li>
+    <li>The client is willing to move off QuickBooks or another ledger onto Docyt's ERP.</li>
+  </ul>
+
+  <h2>When to choose Xenett</h2>
+  <ul>
+    <li>Your clients are general small businesses that should stay on QBO or Xero.</li>
+    <li>The bottleneck is catching errors before review and sign-off, not posting revenue.</li>
+    <li>You want a low, published per-client price with unlimited users.</li>
+  </ul>
+
+  <p>Sources: docyt.com/pricing checked 2026-10-19; xenett.com/pricing checked 2026-10-18. No sponsor has paid for this comparison.</p>
+
+  <p>
+    <a href={`${b}/compare/xenett-alternatives`}>Xenett alternatives</a> ·
+    <a href={`${b}/compare/docyt-vs-digits-vs-truewind`}>Docyt vs Digits vs Truewind</a> ·
+    <a href={`${b}/compare/digits-vs-xenett`}>Digits vs Xenett</a> ·
+    <a href={`${b}/compare/booke-ai-vs-xenett`}>Booke AI vs Xenett</a> ·
+    <a href={`${b}/compare/bank-reconciliation-tools`}>Bank reconciliation tools</a>
+  </p>
+</Base>
+
+<style>
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+  th, td { border: 1px solid #ddd; padding: 0.5rem 0.6rem; text-align: left; vertical-align: top; }
+  th { background: #f6f6f6; }
+</style>
