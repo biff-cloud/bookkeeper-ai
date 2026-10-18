@@ -30,6 +30,7 @@ This site is workflow-first, not a horizontal AI laundry list. Audience: firm ow
 - [AP bill approval tools](https://biff-cloud.github.io/bookkeeper-ai/compare/ap-bill-approval-tools): BILL vs Ramp vs Vic.ai for routing client bill approvals and vendor payments
 - [Bank reconciliation tools](https://biff-cloud.github.io/bookkeeper-ai/compare/bank-reconciliation-tools): Booke AI vs Digits vs Double vs Xenett for automating bank reconciliation for QBO and Xero clients
 - [Xenett vs Financial Cents MEC](https://biff-cloud.github.io/bookkeeper-ai/compare/xenett-vs-financial-cents): Per-client AI review of client books before close: Xenett (QBO and Xero) vs the Financial Cents Month-End Close add-on (QBO), with 20-client cost math
+- [Karbon alternatives](https://biff-cloud.github.io/bookkeeper-ai/compare/karbon-alternatives): Options beyond Karbon for practice management: Financial Cents, TaxDome, Double, with 3-person, 20-client cost math
 - [Karbon vs Financial Cents](https://biff-cloud.github.io/bookkeeper-ai/compare/karbon-vs-financial-cents): Practice management and month-end close for small firms
 
 ## Tools
@@ -40,6 +41,7 @@ This site is workflow-first, not a horizontal AI laundry list. Audience: firm ow
 - [Docyt](https://biff-cloud.github.io/bookkeeper-ai/tools/docyt): Continuous bookkeeping and close
 - [Vic.ai](https://biff-cloud.github.io/bookkeeper-ai/tools/vic-ai): Autonomous AP invoice processing
 - [Digits](https://biff-cloud.github.io/bookkeeper-ai/tools/digits): AI-native general ledger
+- [TaxDome](https://biff-cloud.github.io/bookkeeper-ai/tools/taxdome): Practice management with client portal and a QBO Bookkeeping Hub
 - [Karbon](https://biff-cloud.github.io/bookkeeper-ai/tools/karbon): Practice management with AI email triage
 - [Truewind](https://biff-cloud.github.io/bookkeeper-ai/tools/truewind): AI bookkeeping and close for startups/firms
 - [Botkeeper](https://biff-cloud.github.io/bookkeeper-ai/tools/botkeeper): Automated bookkeeping for firms
