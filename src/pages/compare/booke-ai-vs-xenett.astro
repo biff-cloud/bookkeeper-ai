@@ -1,0 +1,59 @@
+---
+import Base from '../../layouts/Base.astro';
+const b = import.meta.env.BASE_URL;
+---
+<Base
+  title="Booke AI vs Xenett for bookkeeping firms — daily AI categorization vs AI review before close"
+  description="Booke AI ($129/business/mo, daily categorization and document matching inside QBO and Xero) vs Xenett ($7.50-$10/client, AI review of P&L and Balance Sheet before sign-off): what each automates and 20-client cost math. Prices verified Oct 2026."
+>
+  <h1>Booke AI vs Xenett</h1>
+  <p>Both work on top of QuickBooks Online and Xero, but at different points in the month. Booke AI is an AI bookkeeper that works the bank feed every day: it categorizes transactions, matches documents, and asks clients for missing receipts, then hands you the exceptions. Xenett is a review layer: it scans each client's P&amp;L and Balance Sheet for errors before you sign off, and its Workflow plan adds light practice management. Many firms would use one for the daily work and the other for review, so this is less either/or than it looks.</p>
+
+  <table>
+    <thead><tr><th></th><th><a href={`${b}/tools/booke-ai`}>Booke AI</a></th><th><a href={`${b}/tools/xenett`}>Xenett</a></th></tr></thead>
+    <tbody>
+      <tr><td>Best for</td><td>Firms that want daily bank coding, document matching and client receipt requests done by AI</td><td>Firms that want every client file checked for errors before review and sign-off</td></tr>
+      <tr><td>Pricing (verified Oct 2026)</td><td>AI Bookkeeper (Business): $129 per business/month, prorated when you add a business mid-period. Firm plan (multi-client management, white-label, priority onboarding) is custom-priced.</td><td>Per client: AI Financials Review $7.50/mo, Workflow $10/mo. Add-ons: Accruals + AI $15/client/mo, Inter-company Rec $10/client/mo ($0 for the first 60 days). Unlimited users. Enterprise by quote.</td></tr>
+      <tr><td>Ledger</td><td>Works inside QuickBooks Online and Xero</td><td>Works on QuickBooks Online and Xero</td></tr>
+      <tr><td>What it automates</td><td>Daily bank feed categorization, smart document matching, missing document requests, custom thresholds and rules, OCR for bills, invoices and receipts, exception review with audit trail</td><td>Review points: duplicates, GL inconsistencies, AR/AP issues, undeposited funds, uncategorized entries, missing name/class/location, custom rules; Accruals add-on covers prepaids, payroll accruals, deferred revenue, flux analysis</td></tr>
+      <tr><td>Firm workflow</td><td>Multi-client management on the custom firm plan</td><td>Workflow plan: projects and tasks, time tracking, capacity planning, 1099s (US), documents, email and Drive integration</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Cost at 20 clients (list prices, monthly)</h2>
+  <ul>
+    <li>Booke AI Business: 20 × $129 = $2,580. The firm plan is custom-priced, so a firm at this size would likely get a quote instead.</li>
+    <li>Xenett AI Financials Review: 20 × $7.50 = $150. Workflow: 20 × $10 = $200. Workflow plus Accruals + AI: 20 × $25 = $500.</li>
+  </ul>
+  <p>The numbers are not like for like. Booke does the daily coding work; Xenett checks the result. Running both at list price would be $2,730 to $3,080 a month at 20 clients, before any Booke firm discount. All figures before discounts or promotions.</p>
+
+  <h2>When to choose Booke AI</h2>
+  <ul>
+    <li>Your time goes into coding bank transactions and chasing receipts, not into review.</li>
+    <li>You want OCR and document matching for bills, invoices and receipts in the same tool.</li>
+    <li>You want to offer clients a white-labeled experience (firm plan).</li>
+  </ul>
+
+  <h2>When to choose Xenett</h2>
+  <ul>
+    <li>Your staff or another tool already codes transactions, and the bottleneck is catching errors before sign-off.</li>
+    <li>You want a low, published per-client price with unlimited users.</li>
+    <li>You want accruals, flux analysis, or a light practice management layer on the same per-client bill.</li>
+  </ul>
+
+  <p>Sources: booke.ai/pricing and xenett.com/pricing, checked 2026-10-18. No sponsor has paid for this comparison.</p>
+
+  <p>
+    <a href={`${b}/compare/booke-ai-alternatives`}>Booke AI alternatives</a> ·
+    <a href={`${b}/compare/xenett-alternatives`}>Xenett alternatives</a> ·
+    <a href={`${b}/compare/booke-ai-vs-botkeeper`}>Booke AI vs Botkeeper</a> ·
+    <a href={`${b}/compare/digits-vs-xenett`}>Digits vs Xenett</a> ·
+    <a href={`${b}/compare/bank-reconciliation-tools`}>Bank reconciliation tools</a>
+  </p>
+</Base>
+
+<style>
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+  th, td { border: 1px solid #ddd; padding: 0.5rem 0.6rem; text-align: left; vertical-align: top; }
+  th { background: #f6f6f6; }
+</style>
