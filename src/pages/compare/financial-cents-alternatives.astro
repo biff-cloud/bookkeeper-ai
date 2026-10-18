@@ -1,0 +1,80 @@
+---
+import Base from '../../layouts/Base.astro';
+const b = import.meta.env.BASE_URL;
+---
+<Base
+  title="Financial Cents alternatives for bookkeeping firms: practice management and close review"
+  description="Options beyond Financial Cents: Karbon, TaxDome, Xenett and Double, with pricing verified Oct 2026 and cost for a 3-person, 20-client firm."
+>
+  <h1>Financial Cents alternatives</h1>
+  <p>Financial Cents is practice management for accounting and bookkeeping firms: workflows, client tasks with automatic follow-ups, a client portal, time tracking, billing and proposals, with a QuickBooks Online integration. It charges per user: Solo $19/month (one user), Team $49/user/month and Scale $69/user/month on annual billing, all on 12-month agreements, and monthly billing needs at least 5 users. Its Month-End Close add-on reviews uncategorized transactions for $5/client/month (annual) and works with QuickBooks Online only. Firms look elsewhere when they run client work out of shared email, want tax and bookkeeping in one portal, need Xero support for close review, or want a close tool without paying for seats. These are the closest options in our directory, not a full market scan.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Alternative</th>
+        <th>Best fit vs Financial Cents</th>
+        <th>Pricing (verified Oct 2026)</th>
+        <th>Trade-off</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href={`${b}/tools/karbon`}>Karbon</a></td>
+        <td>Teams that run client work out of shared email and want it turned into tasks, with AI email summaries</td>
+        <td>Team $59/user/mo; Business $89/user/mo (annual); monthly billing only for teams of 4+</td>
+        <td>Higher seat price; no per-client close review add-on like Financial Cents MEC</td>
+      </tr>
+      <tr>
+        <td><a href={`${b}/tools/taxdome`}>TaxDome</a></td>
+        <td>Firms that do tax and bookkeeping and want a branded client portal and mobile app, billing and workflows in one system</td>
+        <td>Essentials $800/seat/yr (solo only); Pro $1,000/seat/yr; Business $1,200/seat/yr; 1-year terms, billed upfront</td>
+        <td>Annual upfront billing only; its Bookkeeping Hub syncs with QuickBooks Online, like Financial Cents MEC</td>
+      </tr>
+      <tr>
+        <td><a href={`${b}/tools/xenett`}>Xenett</a></td>
+        <td>Firms on QBO or Xero that mainly want AI review of client P&amp;L and Balance Sheet before close</td>
+        <td>AI Financials Review $7.50/client/mo; Workflow $10/client/mo; 14-day free trial</td>
+        <td>Priced per client, not per user; not a full practice management system (no billing, proposals or client portal like Financial Cents)</td>
+      </tr>
+      <tr>
+        <td><a href={`${b}/tools/double`}>Double</a></td>
+        <td>Bookkeeping firms whose bottleneck is month-end close and client file review on QBO or Xero</td>
+        <td>Per connected client on Core, Plus, Scale and Enterprise tiers; prices not published, demo first</td>
+        <td>A close and client review tool, not full practice management; price needs a demo</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Cost for a 3-person firm with 20 clients (list prices, per month)</h2>
+  <ul>
+    <li>Financial Cents: 3 × $49 = $147 (Team, annual), or $247 with Month-End Close for 20 clients (20 × $5).</li>
+    <li>Karbon: 3 × $59 = $177 (Team, annual) or 3 × $89 = $267 (Business, annual). A 3-person team cannot pay Karbon monthly.</li>
+    <li>TaxDome: 3 × $1,000 per year = $3,000 per year, about $250 per month (Pro), paid upfront.</li>
+    <li>Xenett: 20 × $7.50 = $150 for AI Financials Review, or 20 × $10 = $200 for Workflow. Compare the review against Financial Cents MEC at $100.</li>
+    <li>Double: not published.</li>
+  </ul>
+
+  <h2>When to stay on Financial Cents</h2>
+  <ul>
+    <li>You are a solo firm: $19/month on annual billing is the lowest published seat price here.</li>
+    <li>Your clients respond to task requests with automatic follow-ups, and you bill and send proposals from the same tool.</li>
+    <li>Your clients are on QuickBooks Online, so the $5/client close add-on covers uncategorized transactions without a second tool.</li>
+  </ul>
+
+  <p>Sources: financial-cents.com/pricing, karbonhq.com/pricing and taxdome.com/pricing checked 2026-10-18; xenett.com and doublehq.com/pricing checked 2026-10-17 and 2026-10-18. No sponsor has paid for this comparison.</p>
+
+  <p>
+    <a href={`${b}/tools/financial-cents`}>Financial Cents</a>
+    · <a href={`${b}/compare/karbon-vs-financial-cents`}>Karbon vs Financial Cents</a>
+    · <a href={`${b}/compare/xenett-vs-financial-cents`}>Xenett vs Financial Cents MEC</a>
+    · <a href={`${b}/compare/karbon-alternatives`}>Karbon alternatives</a>
+    · <a href={`${b}/category/practice-management`}>All practice management tools</a>
+  </p>
+</Base>
+
+<style>
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+  th, td { border: 1px solid #ddd; padding: 0.5rem 0.6rem; text-align: left; vertical-align: top; }
+  th { background: #f6f6f6; }
+</style>

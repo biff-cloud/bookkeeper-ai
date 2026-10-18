@@ -31,6 +31,7 @@ This site is workflow-first, not a horizontal AI laundry list. Audience: firm ow
 - [Bank reconciliation tools](https://biff-cloud.github.io/bookkeeper-ai/compare/bank-reconciliation-tools): Booke AI vs Digits vs Double vs Xenett for automating bank reconciliation for QBO and Xero clients
 - [Xenett vs Financial Cents MEC](https://biff-cloud.github.io/bookkeeper-ai/compare/xenett-vs-financial-cents): Per-client AI review of client books before close: Xenett (QBO and Xero) vs the Financial Cents Month-End Close add-on (QBO), with 20-client cost math
 - [Karbon alternatives](https://biff-cloud.github.io/bookkeeper-ai/compare/karbon-alternatives): Options beyond Karbon for practice management: Financial Cents, TaxDome, Double, with 3-person, 20-client cost math
+- [Financial Cents alternatives](https://biff-cloud.github.io/bookkeeper-ai/compare/financial-cents-alternatives): Options beyond Financial Cents: Karbon, TaxDome, Xenett, Double, with 3-person, 20-client cost math
 - [Karbon vs Financial Cents](https://biff-cloud.github.io/bookkeeper-ai/compare/karbon-vs-financial-cents): Practice management and month-end close for small firms
 
 ## Tools
