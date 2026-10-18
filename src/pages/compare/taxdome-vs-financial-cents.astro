@@ -1,0 +1,61 @@
+---
+import Base from '../../layouts/Base.astro';
+const b = import.meta.env.BASE_URL;
+---
+<Base
+  title="TaxDome vs Financial Cents for bookkeeping firms: pricing and uncategorized transactions"
+  description="TaxDome vs Financial Cents: per-seat pricing, billing terms, client portal and uncategorized-transaction review (Bookkeeping Hub vs the Month-End Close add-on). Prices verified Oct 2026, with solo and 3-person, 20-client cost math."
+>
+  <h1>TaxDome vs Financial Cents</h1>
+  <p>Both are practice management for accounting firms, both charge per seat, and both review uncategorized QuickBooks Online transactions with clients. The difference is how that review is priced. TaxDome includes its Bookkeeping Hub in Pro and Business with no per-client fee, but bills a year or more upfront. Financial Cents has cheaper seats and a Month-End Close (MEC) add-on charged per client. So the bigger your client list, the better TaxDome looks; the smaller your team and list, the better Financial Cents looks.</p>
+
+  <table>
+    <thead><tr><th></th><th><a href={`${b}/tools/taxdome`}>TaxDome</a></th><th><a href={`${b}/tools/financial-cents`}>Financial Cents</a></th></tr></thead>
+    <tbody>
+      <tr><td>Best for</td><td>Firms doing tax and bookkeeping that want one branded client portal and app, billing and workflows, with transaction review included</td><td>Small bookkeeping firms that want low seat prices, client task follow-ups, and close review they pay for only on the clients that need it</td></tr>
+      <tr><td>Pricing (verified Oct 2026)</td><td>Essentials $800/seat/yr (solo only); Pro $1,000/seat/yr; Business $1,200/seat/yr on 1-year terms ($950 and $1,150 on 2-year). All plans billed upfront.</td><td>Solo $19/mo (one user); Team $49/user/mo; Scale $69/user/mo on annual billing ($69 and $89 billed monthly, 5-user minimum). All plans are 12-month agreements.</td></tr>
+      <tr><td>Uncategorized transactions</td><td>Bookkeeping Hub on Pro (120 client ledger connections) and Business (unlimited): review, reclassify, send to clients, sync back to QuickBooks Online. Not on Essentials.</td><td>MEC add-on on any plan: $5/client/mo billed annually, for QuickBooks Online</td></tr>
+      <tr><td>Client side</td><td>Client portal and mobile app, secure chat, organizers and intake forms, e-signatures; white-labeled app as a paid add-on</td><td>Client portal and client tasks with automatic follow-ups</td></tr>
+      <tr><td>Tax work</td><td>Tax organizers, return delivery, IRS transcripts (Pro and up)</td><td>Workflows and deadlines; no tax-specific portal features like organizers or transcripts</td></tr>
+      <tr><td>Seasonal staff</td><td>Pro: monthly seats at $100/seat/mo. Business: 4-month seats at $500.</td><td>Not listed on the pricing page</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Cost at list prices</h2>
+  <ul>
+    <li>3 people, 20 clients needing transaction review. TaxDome Pro: 3 × $1,000 = $3,000 per year, upfront, Hub included. Financial Cents Team: 3 × $49 × 12 = $1,764, plus MEC 20 × $5 × 12 = $1,200, total $2,964 per year. Nearly the same.</li>
+    <li>Each extra client in MEC adds $60 per year on Financial Cents and nothing on TaxDome Pro up to 120 connections. At 40 clients: Financial Cents Team $4,164 vs TaxDome Pro $3,000.</li>
+    <li>On Financial Cents Scale ($69/user) the 3-person, 20-client total is $2,484 + $1,200 = $3,684, more than TaxDome Business ($3,600).</li>
+    <li>Solo bookkeeper, 20 clients. Financial Cents Solo + MEC: $228 + $1,200 = $1,428 per year. TaxDome needs Pro for the Hub: $1,000 per year. Without close review, Financial Cents Solo is $228 vs TaxDome Essentials $800.</li>
+  </ul>
+
+  <h2>When to choose TaxDome</h2>
+  <ul>
+    <li>You review uncategorized transactions for many clients and do not want a per-client fee.</li>
+    <li>You also do tax work and want organizers, IRS transcripts and return delivery in the same portal.</li>
+    <li>You can pay a year upfront.</li>
+  </ul>
+
+  <h2>When to choose Financial Cents</h2>
+  <ul>
+    <li>You are a solo or small team and only a few clients need close review, so per-client MEC costs less than a TaxDome Pro seat.</li>
+    <li>You do bookkeeping, not tax, and want lower seat prices.</li>
+    <li>You want monthly billing and have at least 5 users (still a 12-month agreement).</li>
+  </ul>
+
+  <p>Sources: taxdome.com/pricing and financial-cents.com/pricing, checked 2026-10-18. No sponsor has paid for this comparison.</p>
+
+  <p>
+    <a href={`${b}/compare/taxdome-alternatives`}>TaxDome alternatives</a>
+    · <a href={`${b}/compare/financial-cents-alternatives`}>Financial Cents alternatives</a>
+    · <a href={`${b}/compare/taxdome-vs-karbon`}>TaxDome vs Karbon</a>
+    · <a href={`${b}/compare/xenett-vs-financial-cents`}>Xenett vs Financial Cents MEC</a>
+    · <a href={`${b}/compare/uncategorized-transactions-tools`}>Uncategorized transactions tools</a>
+  </p>
+</Base>
+
+<style>
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+  th, td { border: 1px solid #ddd; padding: 0.5rem 0.6rem; text-align: left; vertical-align: top; }
+  th { background: #f6f6f6; }
+</style>
