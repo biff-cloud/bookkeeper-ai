@@ -1,0 +1,59 @@
+---
+import Base from '../../layouts/Base.astro';
+const b = import.meta.env.BASE_URL;
+---
+<Base
+  title="Uncat vs Financial Cents Month-End Close for uncategorized transactions — compared"
+  description="Uncat ($9/client) vs the Financial Cents Month-End Close add-on ($5/client) for chasing clients on uncategorized transactions: ledgers, users, billing terms and 20-client cost math. Prices verified Oct 2026."
+>
+  <h1>Uncat vs Financial Cents Month-End Close</h1>
+  <p>Both get uncategorized transactions answered by clients so you can close. Uncat is a standalone tool: it asks the client, collects the explanation and receipt, and syncs the answer back to the ledger for $9/month per client. Financial Cents Month-End Close (MEC) is a $5/client add-on to the Financial Cents practice management plans that reviews client books, chases uncategorized transactions and syncs corrections back to QuickBooks Online.</p>
+
+  <table>
+    <thead><tr><th></th><th><a href={`${b}/tools/uncat`}>Uncat</a></th><th><a href={`${b}/tools/financial-cents`}>Financial Cents MEC</a></th></tr></thead>
+    <tbody>
+      <tr><td>Best for</td><td>Firms whose bottleneck is clients not answering, on any of QBO, QuickBooks Desktop or Xero, without changing practice management</td><td>Firms already on (or moving to) Financial Cents with QBO clients that want the client chase inside their workflows</td></tr>
+      <tr><td>Pricing (verified Oct 2026)</td><td>$9/month/client. Unlimited accountant and client users, transactions, client requests and receipt matching.</td><td>MEC add-on $5/client/mo, billed annually, on top of a plan: Solo $19/mo, Team $49/user/mo, Scale $69/user/mo (annual). 12-month agreement.</td></tr>
+      <tr><td>Ledgers</td><td>QuickBooks Online, QuickBooks Desktop and Xero (two-way sync)</td><td>QuickBooks Online (corrections sync back to QBO)</td></tr>
+      <tr><td>What it covers</td><td>Uncategorized transactions in the ledger accounts you point it at (for example "Ask my accountant"); explanation, class or receipt from the client; card accounts with multiple cardholders</td><td>Transaction review, uncategorized transactions, account reconciliation, 1099 and W-9 prep, shared transactions, new vendors and accounts</td></tr>
+      <tr><td>Also gives you</td><td>Nothing else; it is one job done well</td><td>Practice management: workflows, client portal, client tasks and requests (auto follow-ups on Scale)</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Cost at 20 clients (list prices, monthly)</h2>
+  <ul>
+    <li>Already on Financial Cents: MEC adds $100 (20 × $5). Uncat on top would be $180 (20 × $9).</li>
+    <li>Solo firm, no practice management yet: Financial Cents Solo ($19) plus MEC ($100) is $119, below Uncat at $180. Solo plus MEC is cheaper than Uncat from 5 clients up.</li>
+    <li>3-person firm, no practice management yet: Financial Cents Team ($147) plus MEC ($100) is $247, versus Uncat at $180. The extra $67 buys practice management, not a better client chase.</li>
+  </ul>
+  <p>Financial Cents is billed annually on a 12-month agreement; Uncat lists a flat monthly per-client price. All figures before discounts or promotions.</p>
+
+  <h2>When to choose Uncat</h2>
+  <ul>
+    <li>You have QuickBooks Desktop or Xero clients.</li>
+    <li>You are happy with your practice management tool and only need the client chase.</li>
+    <li>You want unlimited users and a per-client price with no annual plan on top.</li>
+  </ul>
+
+  <h2>When to choose Financial Cents MEC</h2>
+  <ul>
+    <li>You already run the firm on Financial Cents, so the chase costs $5/client instead of $9 and sits next to your checklists.</li>
+    <li>All your clients are on QuickBooks Online.</li>
+    <li>You want the wider month-end review (reconciliation, 1099/W-9, new vendors), not only uncategorized lines.</li>
+  </ul>
+
+  <p>Sources: uncat.com and financial-cents.com/pricing, checked 2026-10-18. No sponsor has paid for this comparison.</p>
+
+  <p>
+    <a href={`${b}/compare/uncat-alternatives`}>Uncat alternatives</a> ·
+    <a href={`${b}/compare/financial-cents-alternatives`}>Financial Cents alternatives</a> ·
+    <a href={`${b}/compare/uncategorized-transactions-tools`}>Uncategorized transactions tools</a> ·
+    <a href={`${b}/compare/xenett-vs-financial-cents`}>Xenett vs Financial Cents MEC</a>
+  </p>
+</Base>
+
+<style>
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+  th, td { border: 1px solid #ddd; padding: 0.5rem 0.6rem; text-align: left; vertical-align: top; }
+  th { background: #f6f6f6; }
+</style>
