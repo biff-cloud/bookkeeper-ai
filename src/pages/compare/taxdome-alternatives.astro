@@ -1,0 +1,73 @@
+---
+import Base from '../../layouts/Base.astro';
+const b = import.meta.env.BASE_URL;
+---
+<Base
+  title="TaxDome alternatives for bookkeeping firms: practice management with published prices"
+  description="Options beyond TaxDome's per-seat portal and Bookkeeping Hub: Karbon, Financial Cents and Double, with pricing verified Oct 2026 and cost for a 3-person, 20-client firm."
+>
+  <h1>TaxDome alternatives</h1>
+  <p>TaxDome is practice management for tax and bookkeeping firms: CRM, a branded client portal and mobile app, workflows, billing and proposals, plus a Bookkeeping Hub that pulls uncategorized QuickBooks Online transactions for client review with no per-client fee. It charges per seat and bills upfront: Essentials $800/seat/year (solo only), Pro $1,000/seat/year and Business $1,200/seat/year on 1-year terms ($950 and $1,150 on 2-year). Pro includes 120 ledger connections; Business includes unlimited. Firms look elsewhere when they want monthly billing, a lower seat price, shared-email triage, or month-end close on Xero as well as QBO. These are the closest options in our directory, not a full market scan.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Alternative</th>
+        <th>Best fit vs TaxDome</th>
+        <th>Pricing (verified Oct 2026)</th>
+        <th>Trade-off</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href={`${b}/tools/karbon`}>Karbon</a></td>
+        <td>Teams that run client work out of shared email and want it turned into tasks, with AI email summaries, and prefer monthly billing (teams of 4+)</td>
+        <td>Team $59/user/mo; Business $89/user/mo (annual); monthly $79/$99 only for teams of 4+</td>
+        <td>No Bookkeeping Hub for uncategorized QBO transactions; no branded client mobile app like TaxDome</td>
+      </tr>
+      <tr>
+        <td><a href={`${b}/tools/financial-cents`}>Financial Cents</a></td>
+        <td>Solo and small QBO firms that want workflows, client chasing and billing at a lower seat price, plus an optional close add-on</td>
+        <td>Solo $19/mo; Team $49/user/mo; Scale $69/user/mo (annual); Month-End Close add-on $5/client/mo</td>
+        <td>Close review is a paid per-client add-on (QBO only), not included in the seat like TaxDome's Hub; lighter on tax organizers and IRS tools</td>
+      </tr>
+      <tr>
+        <td><a href={`${b}/tools/double`}>Double</a></td>
+        <td>Bookkeeping firms whose bottleneck is month-end close and client file review on QBO or Xero, not a full tax-and-bookkeeping portal</td>
+        <td>Per connected client on Core, Plus, Scale and Enterprise tiers; prices not published, demo first</td>
+        <td>A close and client review tool, not full practice management: no firm-wide client portal, tax organizers or time-and-billing like TaxDome</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Cost for a 3-person firm with 20 clients (list prices, per month)</h2>
+  <ul>
+    <li>TaxDome: 3 × $1,000 per year = $3,000 per year, about $250 per month (Pro), paid upfront. Pro includes the Bookkeeping Hub with 120 client ledger connections (covers 20 clients with no per-client fee).</li>
+    <li>Karbon: 3 × $59 = $177 (Team, annual) or 3 × $89 = $267 (Business, annual). A 3-person team cannot pay monthly.</li>
+    <li>Financial Cents: 3 × $49 = $147 (Team, annual), or $247 with the close add-on for 20 clients (20 × $5).</li>
+    <li>Double: not published.</li>
+  </ul>
+
+  <h2>When to stay on TaxDome</h2>
+  <ul>
+    <li>You also do tax work and want organizers, IRS transcripts and return delivery in the same portal as bookkeeping.</li>
+    <li>Your month-end bottleneck is getting clients to explain uncategorized QBO transactions, and you want that without paying per client.</li>
+    <li>You want a branded client portal and mobile app, and you are fine paying a year upfront.</li>
+  </ul>
+
+  <p>Sources: taxdome.com/pricing, karbonhq.com/pricing, financial-cents.com/pricing and doublehq.com/pricing checked 2026-10-18. No sponsor has paid for this comparison.</p>
+
+  <p>
+    <a href={`${b}/tools/taxdome`}>TaxDome</a>
+    · <a href={`${b}/compare/taxdome-vs-karbon`}>TaxDome vs Karbon</a>
+    · <a href={`${b}/compare/karbon-alternatives`}>Karbon alternatives</a>
+    · <a href={`${b}/compare/financial-cents-alternatives`}>Financial Cents alternatives</a>
+    · <a href={`${b}/category/practice-management`}>All practice management tools</a>
+  </p>
+</Base>
+
+<style>
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+  th, td { border: 1px solid #ddd; padding: 0.5rem 0.6rem; text-align: left; vertical-align: top; }
+  th { background: #f6f6f6; }
+</style>
