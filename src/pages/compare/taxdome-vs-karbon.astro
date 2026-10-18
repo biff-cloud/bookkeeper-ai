@@ -1,0 +1,61 @@
+---
+import Base from '../../layouts/Base.astro';
+const b = import.meta.env.BASE_URL;
+---
+<Base
+  title="TaxDome vs Karbon for bookkeeping firms: pricing, client portal and uncategorized transactions"
+  description="TaxDome vs Karbon: per-seat pricing, billing terms, client portal, AI features and uncategorized-transaction review for small bookkeeping and tax firms. Prices verified Oct 2026, with 3-person cost math."
+>
+  <h1>TaxDome vs Karbon</h1>
+  <p>Both are practice management for accounting firms, and both charge per seat. The split is where the work happens. Karbon is built around shared client email turned into tasks, with AI email triage and summaries. TaxDome is built around the client: a branded portal and mobile app, organizers, payments, and a Bookkeeping Hub that pulls uncategorized QuickBooks Online transactions and sends them to clients, with no per-client fee. TaxDome bills a year or more upfront; Karbon has monthly billing for teams of 4 or more.</p>
+
+  <table>
+    <thead><tr><th></th><th><a href={`${b}/tools/taxdome`}>TaxDome</a></th><th><a href={`${b}/tools/karbon`}>Karbon</a></th></tr></thead>
+    <tbody>
+      <tr><td>Best for</td><td>Firms doing tax and bookkeeping that want one client portal and app, billing and workflows, plus client review of uncategorized QBO transactions</td><td>Growing firms that run client work through shared email and want it turned into tasks with AI summaries</td></tr>
+      <tr><td>Pricing (verified Oct 2026)</td><td>Essentials $800/seat/yr (solo only); Pro $1,000/seat/yr; Business $1,200/seat/yr on 1-year terms ($950 and $1,150 on 2-year). All plans billed upfront.</td><td>Team $59/user/mo annual ($79 monthly); Business $89/user/mo annual ($99 monthly). Monthly billing only for teams of 4+.</td></tr>
+      <tr><td>Uncategorized transactions</td><td>Bookkeeping Hub on Pro (120 client ledger connections) and Business (unlimited): review, reclassify, send to clients, sync back to QuickBooks Online</td><td>No transaction review listed on the pricing page; client chasing runs through tasks, the client portal and email</td></tr>
+      <tr><td>Client side</td><td>Client portal and mobile app, secure chat, organizers and intake forms, e-signatures; white-labeled app as a paid add-on</td><td>Client portal; automatic client reminders on Business</td></tr>
+      <tr><td>AI angle</td><td>AI-powered reporting and analytics on Pro and up</td><td>Karbon AI for email triage and summaries; Kai AI coworker and AI agents marketed as new</td></tr>
+      <tr><td>Billing and time</td><td>Proposals and engagement letters, payments, recurring invoices, time tracking</td><td>Time tracking and budgets, billing, payments and engagements from Team</td></tr>
+      <tr><td>Seasonal staff</td><td>Pro: monthly seats at $100/seat/mo. Business: 4-month seats at $500.</td><td>Not listed on the pricing page</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Cost for a 3-person firm (list prices)</h2>
+  <ul>
+    <li>TaxDome Pro: 3 × $1,000 = $3,000 per year, about $250 per month, paid upfront. Includes the Bookkeeping Hub with 120 connections. Business: $3,600 per year.</li>
+    <li>Karbon Team: 3 × $59 = $177 per month, $2,124 per year (annual). Business: 3 × $89 = $267 per month, $3,204 per year. A 3-person team cannot pay monthly.</li>
+    <li>If you would otherwise add a per-client transaction tool next to Karbon, compare its cost: for example Financial Cents' close add-on is $5/client/mo, or $1,200 per year for 20 clients.</li>
+  </ul>
+
+  <h2>When to choose TaxDome</h2>
+  <ul>
+    <li>You also do tax work and want organizers, IRS transcripts and return delivery in the same portal as bookkeeping.</li>
+    <li>Your month-end bottleneck is getting clients to explain uncategorized QBO transactions, and you want that without paying per client.</li>
+    <li>You are fine paying a year upfront in exchange for a lower effective price on multi-year terms.</li>
+  </ul>
+
+  <h2>When to choose Karbon</h2>
+  <ul>
+    <li>Your team works out of shared client email and wants it triaged into tasks with AI summaries.</li>
+    <li>You want to pay monthly (teams of 4+) instead of a year upfront.</li>
+    <li>You are on Xero or another ledger, so a QBO-only transaction hub does not help you.</li>
+  </ul>
+
+  <p>Sources: taxdome.com/pricing and karbonhq.com/pricing, checked 2026-10-18; financial-cents.com/pricing checked 2026-10-18. No sponsor has paid for this comparison.</p>
+
+  <p>
+    <a href={`${b}/compare/karbon-alternatives`}>Karbon alternatives</a>
+    · <a href={`${b}/compare/karbon-vs-financial-cents`}>Karbon vs Financial Cents</a>
+    · <a href={`${b}/compare/financial-cents-alternatives`}>Financial Cents alternatives</a>
+    · <a href={`${b}/compare/uncategorized-transactions-tools`}>Uncategorized transactions tools</a>
+    · <a href={`${b}/category/practice-management`}>All practice management tools</a>
+  </p>
+</Base>
+
+<style>
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+  th, td { border: 1px solid #ddd; padding: 0.5rem 0.6rem; text-align: left; vertical-align: top; }
+  th { background: #f6f6f6; }
+</style>
