@@ -1,0 +1,61 @@
+---
+import Base from '../../layouts/Base.astro';
+const b = import.meta.env.BASE_URL;
+---
+<Base
+  title="Karbon vs Double for bookkeeping firms — email-centric practice management vs a month-end close workspace"
+  description="Karbon (Team $59, Business $89 per user/mo annual) vs Double (formerly Keeper; per-connected-client tiers, prices not published, demo first, QBO and Xero): month-end close, client requests, who each fits, and 20-client cost math. Prices verified Oct 2026."
+>
+  <h1>Karbon vs Double</h1>
+  <p>These two overlap less than their marketing suggests. Karbon is practice management built around shared email: workflows, task automation, client requests, time tracking, billing, payments and engagement letters, priced per user. Double (formerly Keeper) is a close and client management workspace built around each client's QuickBooks Online or Xero file: file review, uncategorized transaction questions sent to clients, close tracking, and AI that flags coding errors and runs flux, billed per connected client. Karbon tells you who owes what work; Double does the review work inside the client's books. Many firms could run both.</p>
+
+  <table>
+    <thead><tr><th></th><th><a href={`${b}/tools/karbon`}>Karbon</a></th><th><a href={`${b}/tools/double`}>Double</a></th></tr></thead>
+    <tbody>
+      <tr><td>Best for</td><td>Firms that run client work through shared email and want workflow, billing and engagements in one practice platform</td><td>Firms whose bottleneck is the close itself across many QBO and Xero clients</td></tr>
+      <tr><td>Pricing (verified Oct 2026)</td><td>Per user: Team $59/mo annual ($79 monthly); Business $89/mo annual ($99 monthly); Enterprise custom. Monthly billing only for teams of 4+.</td><td>Per connected client per month, mix-and-match tiers chosen per client. Tier prices not published on doublehq.com/pricing; demo and pilot first. Team members, client contacts and unconnected clients are free. Extra team email inboxes $10 each/month (one included in Core).</td></tr>
+      <tr><td>Ledger work</td><td>Not a review tool for the client's books; ledger and other apps connect through integrations (industry integrations listed on Business)</td><td>Works inside QuickBooks Online and Xero files: file review, AI coding-error checks, flux analysis, schedules</td></tr>
+      <tr><td>Month-end close</td><td>Close run as workflow templates, to-do lists and work scheduler</td><td>Close tracking per client with the review done in the same tool</td></tr>
+      <tr><td>Client communication</td><td>Integrated email triage, client portal; automatic client reminders (10 on Team, 25 on Business, unlimited on Enterprise)</td><td>Client Portal with magic-link login (no passwords) for transaction questions; integrated team inbox</td></tr>
+      <tr><td>Billing and engagements</td><td>Billing, payments (card 2.6% + $0.30, ACH 1% + $0.30, max $5) and engagements included from Team</td><td>Not a billing or engagement tool</td></tr>
+      <tr><td>Getting started</td><td>Self-serve plans on the pricing page</td><td>Demo, then a contracted pilot with a Customer Success contact</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Cost at 20 clients, 3-person team (list prices, monthly)</h2>
+  <ul>
+    <li>Karbon: Team 3 × $59 = $177, Business 3 × $89 = $267, both annual. Client count doesn't change the price. A 3-person team can't pay monthly.</li>
+    <li>Double: we can't do the math from public numbers, because the per-client tier prices are only quoted in a demo. Seats are free, so for the same spend as Karbon Team at 20 clients the per-client price would be about $8.85; for Karbon Business, about $13.35.</li>
+  </ul>
+  <p>All figures before discounts or promotions. Karbon's cost grows with headcount and Double's with client count, so the comparison flips as a firm adds staff or clients.</p>
+
+  <h2>When to choose Karbon</h2>
+  <ul>
+    <li>Your work is coordinated through client email and you want it turned into assigned, tracked tasks.</li>
+    <li>You want billing, payments and engagement letters in the same tool as your workflows.</li>
+    <li>You want a published per-user price you can sign up for without a demo.</li>
+  </ul>
+
+  <h2>When to choose Double</h2>
+  <ul>
+    <li>Close review across many QBO and Xero files is where your hours go.</li>
+    <li>You want AI coding-error checks, flux and client transaction questions tied to each client's books.</li>
+    <li>Your team is growing and you'd rather pay per connected client than per seat.</li>
+  </ul>
+
+  <p>Sources: karbonhq.com/pricing and doublehq.com/pricing, checked 2026-10-19. No sponsor has paid for this comparison.</p>
+
+  <p>
+    <a href={`${b}/compare/karbon-alternatives`}>Karbon alternatives</a> ·
+    <a href={`${b}/compare/double-alternatives`}>Double alternatives</a> ·
+    <a href={`${b}/compare/karbon-vs-financial-cents`}>Karbon vs Financial Cents</a> ·
+    <a href={`${b}/compare/double-vs-financial-cents`}>Double vs Financial Cents</a> ·
+    <a href={`${b}/compare/taxdome-vs-karbon`}>TaxDome vs Karbon</a>
+  </p>
+</Base>
+
+<style>
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+  th, td { border: 1px solid #ddd; padding: 0.5rem 0.6rem; text-align: left; vertical-align: top; }
+  th { background: #f6f6f6; }
+</style>
