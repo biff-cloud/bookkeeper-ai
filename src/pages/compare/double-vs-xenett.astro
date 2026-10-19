@@ -1,0 +1,60 @@
+---
+import Base from '../../layouts/Base.astro';
+const b = import.meta.env.BASE_URL;
+---
+<Base
+  title="Double vs Xenett for bookkeeping firms — month-end close workspace vs AI review before close"
+  description="Double (formerly Keeper; per-connected-client tiers, prices not published, demo first) vs Xenett ($7.50-$10/client, AI review of P&L and Balance Sheet on QBO and Xero): client review before close, who each fits, and 20-client cost math. Prices verified Oct 2026."
+>
+  <h1>Double vs Xenett</h1>
+  <p>Both sit on top of each client's QuickBooks Online or Xero file and both help a firm get books review-ready before month-end sign-off. Double (formerly Keeper) is a full close and client management workspace: file review, client questions through a portal, close tracking, and AI that flags coding errors, builds schedules and runs flux. Xenett starts narrower: it scans each client's P&amp;L and Balance Sheet against review points and custom rules, and its Workflow plan adds projects, tasks and time tracking. The practical difference today is pricing: Xenett publishes per-client prices with a 14-day trial; Double bills per connected client on tiers it doesn't publish, and the first step is a demo.</p>
+
+  <table>
+    <thead><tr><th></th><th><a href={`${b}/tools/double`}>Double</a></th><th><a href={`${b}/tools/xenett`}>Xenett</a></th></tr></thead>
+    <tbody>
+      <tr><td>Best for</td><td>Firms that want one workspace for the whole close: client questions, file review, close status and reporting across the book</td><td>Firms that mainly need an automated second pair of eyes on each client's ledger before review and sign-off</td></tr>
+      <tr><td>Pricing (verified Oct 2026)</td><td>Per connected client per month, mix-and-match tiers chosen per client. Tier prices not published on doublehq.com/pricing; start with a personalized demo and a pilot. Published extras: Tax Suite included with a $200/month annual commitment; extra team email inboxes $10 each/month (one included in Core). Team members, client contacts and unconnected clients are free.</td><td>Per client: AI Financials Review $7.50/mo, Workflow $10/mo. Add-ons: Accruals + AI $15/client/mo, Inter-company Rec $10/client/mo ($0 for the first 60 days). Enterprise by quote. Unlimited users. Discount offered to firms with fewer than 10 clients.</td></tr>
+      <tr><td>Ledgers</td><td>QuickBooks Online and Xero for firm clients; an internal-finance annual plan also syncs with NetSuite and Sage Intacct</td><td>QuickBooks Online and Xero</td></tr>
+      <tr><td>Review before close</td><td>File review across client books, AI that catches coding errors, AI flux analysis, uncategorized transaction questions sent to clients</td><td>Review points: duplicate entries and vendors, GL inconsistency, AR/AP issues, undeposited funds, uncategorized entries, missing name/class/location, custom review points; working papers and comments at GL level; browser extension inside QBO and Xero</td></tr>
+      <tr><td>Client communication</td><td>Client Portal with magic-link login (no passwords); integrated team inbox</td><td>Client portal for transaction questions with email/text reminders, white-label option</td></tr>
+      <tr><td>Getting started</td><td>Demo, then a contracted pilot with a Customer Success contact</td><td>Self-serve 14-day free trial; free onboarding and training</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Cost at 20 clients (list prices, monthly)</h2>
+  <ul>
+    <li>Xenett AI Financials Review: 20 × $7.50 = $150. Workflow: 20 × $10 = $200. Workflow plus Accruals + AI: 20 × $25 = $500.</li>
+    <li>Double: we can't do the math from public numbers, because the per-client tier prices are only quoted in a demo. Ask for the per-client price at your mix of tiers and compare it to the Xenett lines above.</li>
+  </ul>
+  <p>All figures before discounts or promotions.</p>
+
+  <h2>When to choose Double</h2>
+  <ul>
+    <li>You want client questions, file review, close tracking and reporting in one tool rather than review plus a separate practice-management app.</li>
+    <li>Some clients need richer services (schedules, flux, management reports) and you want to price each client's tier separately.</li>
+    <li>You're fine starting with a demo and a pilot.</li>
+  </ul>
+
+  <h2>When to choose Xenett</h2>
+  <ul>
+    <li>The bottleneck is catching ledger errors before review, not running the whole client relationship.</li>
+    <li>You want a published per-client price and a trial without a sales call.</li>
+    <li>You already have practice management (Karbon, Financial Cents, TaxDome) and just need the review layer, or the $10 Workflow plan is enough.</li>
+  </ul>
+
+  <p>Sources: doublehq.com/pricing, xenett.com/pricing and xenett.com (14-day trial) checked 2026-10-19. No sponsor has paid for this comparison.</p>
+
+  <p>
+    <a href={`${b}/compare/double-alternatives`}>Double alternatives</a> ·
+    <a href={`${b}/compare/xenett-alternatives`}>Xenett alternatives</a> ·
+    <a href={`${b}/compare/xenett-vs-financial-cents`}>Xenett vs Financial Cents MEC</a> ·
+    <a href={`${b}/compare/uncategorized-transactions-tools`}>Uncategorized transactions tools</a> ·
+    <a href={`${b}/compare/bank-reconciliation-tools`}>Bank reconciliation tools</a>
+  </p>
+</Base>
+
+<style>
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+  th, td { border: 1px solid #ddd; padding: 0.5rem 0.6rem; text-align: left; vertical-align: top; }
+  th { background: #f6f6f6; }
+</style>
