@@ -1,0 +1,61 @@
+---
+import Base from '../../layouts/Base.astro';
+const b = import.meta.env.BASE_URL;
+---
+<Base
+  title="Double vs Financial Cents for bookkeeping firms — close workspace vs practice management with a close add-on"
+  description="Double (formerly Keeper; per-connected-client tiers, prices not published, demo first, QBO and Xero) vs Financial Cents (Solo $19, Team $49/user; Month-End Close add-on $5/client, QBO only): month-end close, client questions, who each fits, and 20-client cost math. Prices verified Oct 2026."
+>
+  <h1>Double vs Financial Cents</h1>
+  <p>Both help a bookkeeping firm chase clients and get books ready for month-end sign-off, but they start from different ends. Double (formerly Keeper) is a close and client management workspace built around each client's QuickBooks Online or Xero file: file review, uncategorized transaction questions sent to clients, close tracking, and AI that flags coding errors and runs flux. Financial Cents is practice management (workflows, client tasks with automatic follow-ups, client portal, time tracking, billing and proposals) priced per user, with a Month-End Close (MEC) add-on at $5/client that reviews uncategorized transactions and syncs fixes back to QuickBooks Online. Financial Cents publishes its prices; Double bills per connected client on tiers it only quotes in a demo.</p>
+
+  <table>
+    <thead><tr><th></th><th><a href={`${b}/tools/double`}>Double</a></th><th><a href={`${b}/tools/financial-cents`}>Financial Cents</a></th></tr></thead>
+    <tbody>
+      <tr><td>Best for</td><td>Firms whose bottleneck is the close itself across many QBO and Xero clients, and that want review, client questions and close status in one place</td><td>Small firms that need to run the whole practice (workflows, deadlines, billing) and add close review only for the QBO clients that need it</td></tr>
+      <tr><td>Pricing (verified Oct 2026)</td><td>Per connected client per month, mix-and-match tiers chosen per client. Tier prices not published on doublehq.com/pricing; start with a personalized demo and a pilot. Published extras: Tax Suite included with a $200/month annual commitment; extra team email inboxes $10 each/month (one included in Core). Team members, client contacts and unconnected clients are free.</td><td>Per user: Solo $19/mo (one user), Team $49/user/mo, Scale $69/user/mo on annual billing ($69 and $89 billed monthly, 5-user minimum). 12-month agreements. MEC add-on $5/client/mo billed annually.</td></tr>
+      <tr><td>Ledgers</td><td>QuickBooks Online and Xero</td><td>QuickBooks Online integration; MEC works with QuickBooks Online only</td></tr>
+      <tr><td>Month-end close</td><td>File review across client books, AI that catches coding errors, AI flux analysis, schedules, close tracking</td><td>MEC: review uncategorized transactions and reconciliation inside Financial Cents, sync corrections back to QBO</td></tr>
+      <tr><td>Client communication</td><td>Client Portal with magic-link login (no passwords); integrated team inbox</td><td>Client portal and client tasks with automatic follow-ups</td></tr>
+      <tr><td>Practice management</td><td>Close-focused: client management, close tracking and reporting around each client file</td><td>Workflows, deadlines, time tracking, billing and proposals</td></tr>
+      <tr><td>Getting started</td><td>Demo, then a contracted pilot with a Customer Success contact</td><td>Self-serve plans on the pricing page</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Cost at 20 clients (list prices, monthly)</h2>
+  <ul>
+    <li>Financial Cents Solo + MEC: $19 + 20 × $5 = $119. Team for 3 users + MEC: 3 × $49 + $100 = $247. Scale for 3 users + MEC: 3 × $69 + $100 = $307. All on annual billing.</li>
+    <li>Double: we can't do the math from public numbers, because the per-client tier prices are only quoted in a demo. Ask for the per-client price at your mix of tiers; to beat Financial Cents Team + MEC at 20 clients it would need to come in under about $12.35 per client per month, before you count Financial Cents' billing and workflow features.</li>
+  </ul>
+  <p>All figures before discounts or promotions. Team members are free on Double and paid per seat on Financial Cents, so the gap moves with headcount.</p>
+
+  <h2>When to choose Double</h2>
+  <ul>
+    <li>Many of your clients are on Xero, which Financial Cents MEC doesn't cover.</li>
+    <li>You want AI review, flux and schedules beyond uncategorized transactions, with close status for every client in one view.</li>
+    <li>Your team is growing and you'd rather pay per connected client than per seat.</li>
+  </ul>
+
+  <h2>When to choose Financial Cents</h2>
+  <ul>
+    <li>You need practice management first (workflows, deadlines, billing, proposals) and close review second.</li>
+    <li>Your clients are on QuickBooks Online and the close pain is mostly uncategorized transactions.</li>
+    <li>You want a published price you can sign up for without a demo; a solo firm pays $119/month at 20 clients with MEC.</li>
+  </ul>
+
+  <p>Sources: doublehq.com/pricing and financial-cents.com/pricing, checked 2026-10-19. No sponsor has paid for this comparison.</p>
+
+  <p>
+    <a href={`${b}/compare/double-alternatives`}>Double alternatives</a> ·
+    <a href={`${b}/compare/financial-cents-alternatives`}>Financial Cents alternatives</a> ·
+    <a href={`${b}/compare/double-vs-xenett`}>Double vs Xenett</a> ·
+    <a href={`${b}/compare/xenett-vs-financial-cents`}>Xenett vs Financial Cents MEC</a> ·
+    <a href={`${b}/compare/uncategorized-transactions-tools`}>Uncategorized transactions tools</a>
+  </p>
+</Base>
+
+<style>
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+  th, td { border: 1px solid #ddd; padding: 0.5rem 0.6rem; text-align: left; vertical-align: top; }
+  th { background: #f6f6f6; }
+</style>
