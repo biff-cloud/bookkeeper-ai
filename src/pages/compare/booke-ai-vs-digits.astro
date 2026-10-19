@@ -1,0 +1,59 @@
+---
+import Base from '../../layouts/Base.astro';
+const b = import.meta.env.BASE_URL;
+---
+<Base
+  title="Booke AI vs Digits for bookkeeping firms — AI on top of QBO/Xero vs an AI-native ledger"
+  description="Booke AI ($129/business/mo, daily AI categorization inside QuickBooks Online and Xero) vs Digits ($65-$100/client/mo, AI-native general ledger that replaces QBO/Xero, no seat fees): who keeps the ledger, what each automates, and 20-client cost math. Prices verified Oct 2026."
+>
+  <h1>Booke AI vs Digits</h1>
+  <p>Both put AI on the daily bookkeeping work, but they make a different bet about the ledger. Booke AI works inside the client's existing QuickBooks Online or Xero file: it categorizes the bank feed every day, matches documents, and flags exceptions for your staff. Digits replaces QBO or Xero with its own AI-native general ledger that categorizes and reconciles continuously, priced per client with no seat fees. The real question is whether you want to move clients off their current ledger.</p>
+
+  <table>
+    <thead><tr><th></th><th><a href={`${b}/tools/booke-ai`}>Booke AI</a></th><th><a href={`${b}/tools/digits`}>Digits</a></th></tr></thead>
+    <tbody>
+      <tr><td>Best for</td><td>Firms that want to keep every client on QBO or Xero and cut the daily coding work</td><td>Firms willing to move clients to a new ledger in exchange for one AI-native platform across all clients</td></tr>
+      <tr><td>Pricing (verified Oct 2026)</td><td>AI Bookkeeper (Business): $129 per business/month, prorated when you add a business mid-period. Firm plan (multi-client management, white-label, priority onboarding) is custom-priced.</td><td>Per client: Essentials $65/mo, Core $100/mo; Pro $250/mo is listed as coming soon. No per-seat fees; firm's own books free on Free Firm Books; 30-day free trial.</td></tr>
+      <tr><td>Ledger</td><td>Your existing QuickBooks Online or Xero file. You still pay for that subscription.</td><td>Digits is the ledger (replaces QBO/Xero). US entities only.</td></tr>
+      <tr><td>What it automates</td><td>Daily bank feed categorization, smart document matching, missing document requests, rules and thresholds, OCR for bills, invoices and receipts, exception review with audit trail</td><td>Continuous AI categorization and reconciliation in the ledger, reporting and dashboards; firm plans add practice management and close tools</td></tr>
+      <tr><td>Switching cost</td><td>Low: connect to the file the client already has</td><td>High: migrate each client's books and get the client used to a new system</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Cost at 20 clients (list prices, monthly)</h2>
+  <ul>
+    <li>Booke AI Business: 20 × $129 = $2,580, plus the QBO or Xero subscriptions you or your clients already pay. The firm plan is custom-priced, so a firm at this size would likely ask for a quote.</li>
+    <li>Digits Essentials: 20 × $65 = $1,300. Core: 20 × $100 = $2,000. The ledger is included, so the QBO or Xero subscription goes away.</li>
+  </ul>
+  <p>At list price Digits is cheaper per client and also removes the ledger fee, but that saving only shows up after you migrate each client. All figures before discounts or promotions; neither firm-level discount is published.</p>
+
+  <h2>When to choose Booke AI</h2>
+  <ul>
+    <li>Your clients are staying on QBO or Xero, or some are outside the US.</li>
+    <li>You want AI on the coding work without a migration project.</li>
+    <li>You want OCR and document matching for bills, invoices and receipts, or a white-labeled client experience (firm plan).</li>
+  </ul>
+
+  <h2>When to choose Digits</h2>
+  <ul>
+    <li>Your clients are US entities and you are open to moving them to a new ledger.</li>
+    <li>You want a published per-client price with unlimited team seats.</li>
+    <li>You are onboarding new clients and can start them on Digits instead of QBO or Xero.</li>
+  </ul>
+
+  <p>Sources: booke.ai/pricing and digits.com/pricing, checked 2026-10-19. No sponsor has paid for this comparison.</p>
+
+  <p>
+    <a href={`${b}/compare/booke-ai-alternatives`}>Booke AI alternatives</a> ·
+    <a href={`${b}/compare/digits-alternatives`}>Digits alternatives</a> ·
+    <a href={`${b}/compare/digits-vs-xenett`}>Digits vs Xenett</a> ·
+    <a href={`${b}/compare/booke-ai-vs-xenett`}>Booke AI vs Xenett</a> ·
+    <a href={`${b}/compare/bank-reconciliation-tools`}>Bank reconciliation tools</a>
+  </p>
+</Base>
+
+<style>
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+  th, td { border: 1px solid #ddd; padding: 0.5rem 0.6rem; text-align: left; vertical-align: top; }
+  th { background: #f6f6f6; }
+</style>
