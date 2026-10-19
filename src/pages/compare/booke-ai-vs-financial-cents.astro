@@ -1,0 +1,60 @@
+---
+import Base from '../../layouts/Base.astro';
+const b = import.meta.env.BASE_URL;
+---
+<Base
+  title="Booke AI vs Financial Cents Month-End Close — AI categorization vs close review"
+  description="Booke AI ($129/business/mo, daily AI categorization and document matching in QBO and Xero) vs the Financial Cents Month-End Close add-on ($5/client/mo on a Financial Cents plan, QBO review, uncategorized transactions and reconciliation): what each automates and 20-client cost math. Prices verified Oct 2026."
+>
+  <h1>Booke AI vs Financial Cents Month-End Close</h1>
+  <p>These sit at different points of the month. Booke AI works every day: it categorizes the bank feed with AI, matches documents, and hands your staff the exceptions. Financial Cents Month-End Close (MEC) works at close: it is a $5/client add-on to the Financial Cents practice management plans where you review client books, chase uncategorized transactions, reconcile accounts and sync corrections back to QuickBooks Online. Booke reduces the coding work; MEC organizes the review and the client chase that is left.</p>
+
+  <table>
+    <thead><tr><th></th><th><a href={`${b}/tools/booke-ai`}>Booke AI</a></th><th><a href={`${b}/tools/financial-cents`}>Financial Cents MEC</a></th></tr></thead>
+    <tbody>
+      <tr><td>Best for</td><td>Firms whose hours go into coding bank transactions every day</td><td>Firms on (or moving to) Financial Cents that want the close review and client chase inside their workflows</td></tr>
+      <tr><td>Pricing (verified Oct 2026)</td><td>AI Bookkeeper (Business): $129 per business/month, prorated when you add a business mid-period. Firm plan (multi-client management, white-label, priority onboarding) is custom-priced.</td><td>MEC add-on $5/client/month, billed annually, on top of a plan: Solo $19/mo, Team $49/user/mo, Scale $69/user/mo (annual; Team $69 and Scale $89 monthly with a 5-user minimum). All plans are a 12-month agreement.</td></tr>
+      <tr><td>Ledger</td><td>QuickBooks Online and Xero</td><td>QuickBooks Online (corrections sync back to QBO)</td></tr>
+      <tr><td>What it automates</td><td>Daily bank feed categorization, smart document matching, missing document requests, custom thresholds and rules, OCR for bills, invoices and receipts, exception review with audit trail</td><td>Transaction review, uncategorized transactions, account reconciliation, 1099 and W-9 prep, shared transactions, newly added vendors and accounts</td></tr>
+      <tr><td>Also gives you</td><td>Nothing outside bookkeeping; it is not practice management</td><td>Practice management: workflows, client portal, client tasks and requests (auto follow-ups on Scale), time tracking, billing</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Cost at 20 clients (list prices, monthly)</h2>
+  <ul>
+    <li>Booke AI Business: 20 × $129 = $2,580. The firm plan is custom-priced, so a firm this size would likely ask for a quote.</li>
+    <li>Financial Cents MEC, solo firm: Solo $19 plus MEC 20 × $5 = $100, so $119.</li>
+    <li>Financial Cents MEC, 3-person firm: Team 3 × $49 = $147 plus MEC $100, so $247.</li>
+  </ul>
+  <p>The numbers are not like for like. Booke replaces daily coding labor; MEC is the review and chase step plus a practice management plan. A solo firm running both pays $2,699 a month at list, before any Booke firm discount. Financial Cents is billed annually on a 12-month agreement. All figures before discounts or promotions.</p>
+
+  <h2>When to choose Booke AI</h2>
+  <ul>
+    <li>Coding the bank feed is your biggest time cost, not the client chase.</li>
+    <li>You have Xero clients; MEC syncs with QuickBooks Online only.</li>
+    <li>You want OCR and document matching in the same tool, or a white-labeled client experience (firm plan).</li>
+  </ul>
+
+  <h2>When to choose Financial Cents MEC</h2>
+  <ul>
+    <li>You already run the firm on Financial Cents, so close review costs $5/client and sits next to your checklists.</li>
+    <li>Your clients are on QuickBooks Online and the bottleneck is review, reconciliation and getting answers from clients.</li>
+    <li>You want 1099 and W-9 prep in the same place as month-end review.</li>
+  </ul>
+
+  <p>Sources: booke.ai/pricing and financial-cents.com/pricing, checked 2026-10-19. No sponsor has paid for this comparison.</p>
+
+  <p>
+    <a href={`${b}/compare/booke-ai-alternatives`}>Booke AI alternatives</a> ·
+    <a href={`${b}/compare/financial-cents-alternatives`}>Financial Cents alternatives</a> ·
+    <a href={`${b}/compare/booke-ai-vs-uncat`}>Booke AI vs Uncat</a> ·
+    <a href={`${b}/compare/uncat-vs-financial-cents`}>Uncat vs Financial Cents MEC</a> ·
+    <a href={`${b}/compare/xenett-vs-financial-cents`}>Xenett vs Financial Cents MEC</a>
+  </p>
+</Base>
+
+<style>
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+  th, td { border: 1px solid #ddd; padding: 0.5rem 0.6rem; text-align: left; vertical-align: top; }
+  th { background: #f6f6f6; }
+</style>
