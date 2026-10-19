@@ -58,6 +58,7 @@ This site is workflow-first, not a horizontal AI laundry list. Audience: firm ow
 - [Vic.ai](https://biff-cloud.github.io/bookkeeper-ai/tools/vic-ai): Autonomous AP invoice processing
 - [Digits](https://biff-cloud.github.io/bookkeeper-ai/tools/digits): AI-native general ledger
 - [TaxDome](https://biff-cloud.github.io/bookkeeper-ai/tools/taxdome): Practice management with client portal and a QBO Bookkeeping Hub
+- [Client Hub](https://biff-cloud.github.io/bookkeeper-ai/tools/client-hub): Practice management and client portal with QBO/Xero uncategorized-transaction tools
 - [Karbon](https://biff-cloud.github.io/bookkeeper-ai/tools/karbon): Practice management with AI email triage
 - [Truewind](https://biff-cloud.github.io/bookkeeper-ai/tools/truewind): AI bookkeeping and close for startups/firms
 - [Botkeeper](https://biff-cloud.github.io/bookkeeper-ai/tools/botkeeper): Automated bookkeeping for firms
