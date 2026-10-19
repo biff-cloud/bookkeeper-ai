@@ -1,0 +1,79 @@
+---
+import Base from '../../layouts/Base.astro';
+const b = import.meta.env.BASE_URL;
+---
+<Base
+  title="Docyt alternatives for bookkeeping firms: AI close without per-property ERP"
+  description="Options beyond Docyt’s hospitality/retail ERP for multi-location books: Digits, Truewind, Booke AI and Xenett, with pricing verified Oct 2026 and when each fits better."
+>
+
+  <h1>Docyt alternatives</h1>
+  <p>Docyt is an AI-native accounting ERP aimed at multi-location hospitality and retail: nightly PMS/POS revenue posting, continuous reconciliation, and a zero-day close that replaces the ledger. Accounting Suite starts at $299 per property per month with unlimited users; catch-up is $200 per month caught up. Firms look elsewhere when clients are not hotels or multi-unit retail, when they must keep QuickBooks Online or Xero as the books, when per-property pricing is too heavy for small SMB clients, or when they want a published per-client meter instead of a property suite. These are the closest options in our directory, not a full market scan.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Alternative</th>
+        <th>Best fit vs Docyt</th>
+        <th>Pricing (verified Oct 2026)</th>
+        <th>Trade-off</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href={`${b}/tools/digits`}>Digits</a></td>
+        <td>US small-business and startup clients that can move onto an AI-native ledger with 24/7 bookkeeping and Agentic Close</td>
+        <td>Per client: Essentials $65/mo, Core $100/mo, Pro $250/mo (US only; no seat fees)</td>
+        <td>Also replaces the ledger, but for generic SMB/startup books — not hospitality PMS/POS or per-property billing</td>
+      </tr>
+      <tr>
+        <td><a href={`${b}/tools/truewind`}>Truewind</a></td>
+        <td>Close execution on top of Sage Intacct or QuickBooks Online you already keep, with reviewer sign-off and an audit trail</td>
+        <td>By quote (demo based on close complexity and volume)</td>
+        <td>Keeps the existing ledger instead of replacing it; no published price card; not built around hotels or per-property suites</td>
+      </tr>
+      <tr>
+        <td><a href={`${b}/tools/booke-ai`}>Booke AI</a></td>
+        <td>Daily AI categorization, OCR document matching and exception review inside existing QBO or Xero files</td>
+        <td>Business $129/business/mo; firm/white-label by quote</td>
+        <td>Layer on the client’s ledger, not a continuous multi-entity ERP or hospitality revenue posting</td>
+      </tr>
+      <tr>
+        <td><a href={`${b}/tools/xenett`}>Xenett</a></td>
+        <td>Cheap per-client AI review of the P&amp;L and Balance Sheet on QBO or Xero before sign-off</td>
+        <td>AI Financials Review $7.50/client/mo; Workflow $10/client/mo (USD); 14-day free trial</td>
+        <td>Flags issues and tracks tasks; does not run continuous recon, replace the ledger, or post PMS/POS revenue</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Cost at 10 properties / clients (list prices, monthly)</h2>
+  <ul>
+    <li>Docyt: from $299 per property, so 10 single-location properties start at $2,990 (portfolio pricing can scale down; Enterprise custom).</li>
+    <li>Digits: 10 × $65 = $650 (Essentials) to 10 × $100 = $1,000 (Core); Pro would be 10 × $250 = $2,500.</li>
+    <li>Truewind: not published.</li>
+    <li>Booke AI: 10 × $129 = $1,290 (Business); firm plan custom.</li>
+    <li>Xenett: 10 × $7.50 = $75 (review only) or 10 × $10 = $100 (Workflow).</li>
+  </ul>
+
+  <h2>When to stay on Docyt</h2>
+  <ul>
+    <li>Clients are hotels, restaurants, or multi-location retail/franchise with PMS or POS revenue to post nightly and USALI-style operating statements.</li>
+    <li>You want one AI-native ERP that replaces the ledger, with continuous bank/card recon and a zero-day close, priced per property with unlimited users.</li>
+    <li>Portfolio migration, catch-up accounting, and dedicated hospitality onboarding matter more than keeping QBO/Xero or a cheap per-client review layer.</li>
+  </ul>
+
+  <p>
+    <a href={`${b}/tools/docyt`}>Docyt</a>
+    · <a href={`${b}/compare/docyt-vs-digits-vs-truewind`}>Docyt vs Digits vs Truewind</a>
+    · <a href={`${b}/compare/docyt-vs-xenett`}>Docyt vs Xenett</a>
+    · <a href={`${b}/compare/digits-alternatives`}>Digits alternatives</a>
+    · <a href={`${b}/category/month-end-close`}>All month-end close tools</a>
+  </p>
+</Base>
+
+<style>
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+  th, td { border: 1px solid #ddd; padding: 0.5rem 0.6rem; text-align: left; vertical-align: top; }
+  th { background: #f6f6f6; }
+</style>
