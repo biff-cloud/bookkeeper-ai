@@ -1,6 +1,7 @@
 ---
 const { title, description = 'AI agents and tools for small accounting & bookkeeping firms, with real workflows.' } = Astro.props;
-const canonical = new URL(Astro.url.pathname, Astro.site);
+const path = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : Astro.url.pathname + '/';
+const canonical = new URL(path, Astro.site);
 ---
 <html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>{title}</title><meta name="description" content={description}/><link rel="canonical" href={canonical}/>
