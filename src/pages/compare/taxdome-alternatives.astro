@@ -1,6 +1,17 @@
 ---
 import Base from '../../layouts/Base.astro';
 const b = import.meta.env.BASE_URL;
+const faqs = [
+  ['How much does TaxDome cost?', 'TaxDome charges per seat and bills upfront: Essentials $800/seat/year (solo only), Pro $1,000/seat/year and Business $1,200/seat/year on 1-year terms, or $950 and $1,150 on 2-year terms. A 3-person firm on Pro pays 3 × $1,000 = $3,000 a year, about $250 a month.'],
+  ['Does TaxDome charge per client for the Bookkeeping Hub?', 'No. The Bookkeeping Hub pulls uncategorized QuickBooks Online transactions for client review with no per-client fee. Pro includes 120 ledger connections and Business includes unlimited.'],
+  ['Which TaxDome alternative is cheapest for a 3-person, 20-client firm?', 'Among published prices, Financial Cents Team at 3 × $49 = $147 a month on annual billing, or $247 with the Month-End Close add-on for 20 clients. Karbon Team is 3 × $59 = $177 a month on annual billing. Double does not publish prices.'],
+  ['When should a firm stay on TaxDome?', 'Stay if you also do tax work and want organizers, IRS transcripts and return delivery in the same portal, if you want clients to explain uncategorized QBO transactions without a per-client fee, or if you want a branded client portal and mobile app and are fine paying a year upfront.'],
+];
+const faqLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+});
 ---
 <Base
   title="TaxDome alternatives for bookkeeping firms: practice management with published prices"
@@ -54,6 +65,10 @@ const b = import.meta.env.BASE_URL;
     <li>Your month-end bottleneck is getting clients to explain uncategorized QBO transactions, and you want that without paying per client.</li>
     <li>You want a branded client portal and mobile app, and you are fine paying a year upfront.</li>
   </ul>
+
+  <h2>FAQ</h2>
+  {faqs.map(([q, a]) => (<><h3>{q}</h3><p>{a}</p></>))}
+  <script type="application/ld+json" set:html={faqLd} />
 
   <p>Sources: taxdome.com/pricing, karbonhq.com/pricing, financial-cents.com/pricing and doublehq.com/pricing checked 2026-10-18. No sponsor has paid for this comparison.</p>
 
