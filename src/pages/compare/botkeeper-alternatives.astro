@@ -1,5 +1,16 @@
 ---
 import Base from '../../layouts/Base.astro';
+const faqs = [
+  ['Is Botkeeper shutting down?', 'In Feb 2026 Botkeeper announced a wind-down; later that month Xendoo acquired Infinite and the platform kept operating. botkeeper.com and pricing are live today, so firms compare alternatives for vendor-risk diversification or a different stack fit, not because the product is gone.'],
+  ['What is the closest Botkeeper alternative?', 'Booke AI is the closest swap: daily categorization, OCR, and exception review inside existing QuickBooks Online or Xero files, at Business $129/business/month. It is a software layer on the ledger, not a full firm platform with a Close Tracker or Activity Hub equivalent.'],
+  ['How does Botkeeper pricing compare with the alternatives?', 'Botkeeper Infinite runs about $149 down to $59 per month by volume. Booke AI is $129/business/month, Digits is $65, $100, or $250 per client per month (US only), Docyt starts at $299 per property per month, and Truewind is by quote.'],
+  ['When should a firm stay on Botkeeper?', 'Stay when you already use the Infinite firm stack (Close Tracker, Activity Hub, volume licenses) and it still fits, when volume tiers beat flat per-business pricing at your client count, and when vendor risk is acceptable now that Infinite operates under Xendoo.'],
+];
+const faqLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+});
 ---
 <Base
   title="Botkeeper alternatives for bookkeeping firms — AI categorization & close"
@@ -71,6 +82,10 @@ import Base from '../../layouts/Base.astro';
     <li>Docyt: hospitality or multi-location retail/franchise books priced per property — not generic SMB write-up.</li>
     <li>Truewind: close-complexity and workflow depth matter more than a published license card; expect a quote.</li>
   </ul>
+
+  <h2>FAQ</h2>
+  {faqs.map(([q, a]) => (<><h3>{q}</h3><p>{a}</p></>))}
+  <script type="application/ld+json" set:html={faqLd} />
 
   <p>
     <a href={`${import.meta.env.BASE_URL}/compare/booke-ai-vs-botkeeper`}>Booke AI vs Botkeeper (head-to-head)</a>
