@@ -1,5 +1,16 @@
 ---
 import Base from '../../layouts/Base.astro';
+const faqs = [
+  ['What is the main reason firms look for a Digits alternative?', 'Digits is an AI-native new general ledger. Firms whose clients must stay on QuickBooks Online or Xero, or whose clients are outside the US, usually need a tool that works on the existing ledger instead.'],
+  ['Which Digits alternative keeps clients on QuickBooks Online or Xero?', 'Booke AI does AI bookkeeping inside existing QBO/Xero files; its Business plan lists $129/business/month, with firm pricing by quote. Double and Xenett add a close and review layer on QBO.'],
+  ['What is the cheapest published price among these alternatives?', 'Xenett AI Financials Review lists $7.50/client/month and Workflow $10/client/month (USD). Truewind and firm plans for Booke AI are by quote, and Double plan prices are behind a demo.'],
+  ['Is Docyt a direct Digits replacement?', 'Only partly. Docyt focuses on hospitality and multi-location businesses, with the Accounting Suite from $299/property/month, so it is not a generic swap for a small-business firm.'],
+];
+const faqLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+});
 ---
 <Base
   title="Digits alternatives for bookkeeping firms — keep QBO/Xero or go elsewhere"
@@ -77,6 +88,10 @@ import Base from '../../layouts/Base.astro';
     <li>Botkeeper Infinite: you want firm-platform tooling (Close Tracker, volume licenses) on categorization, not a new ledger.</li>
     <li>Docyt: hospitality or multi-location retail/franchise books priced per property — partial overlap only.</li>
   </ul>
+
+  <h2>FAQ</h2>
+  {faqs.map(([q, a]) => (<><h3>{q}</h3><p>{a}</p></>))}
+  <script type="application/ld+json" set:html={faqLd} />
 
   <p>
     <a href={`${import.meta.env.BASE_URL}/compare/docyt-vs-digits-vs-truewind`}>Docyt vs Digits vs Truewind</a>
