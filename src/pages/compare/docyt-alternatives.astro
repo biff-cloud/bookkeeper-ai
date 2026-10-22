@@ -1,6 +1,17 @@
 ---
 import Base from '../../layouts/Base.astro';
 const b = import.meta.env.BASE_URL;
+const faqs = [
+  ['Why do firms look for a Docyt alternative?', 'Docyt is an AI-native accounting ERP built for multi-location hospitality and retail, from $299 per property per month. Firms look elsewhere when clients are not hotels or multi-unit retail, must keep QuickBooks Online or Xero, or are too small for per-property pricing.'],
+  ['Which Docyt alternative keeps QuickBooks Online or Xero as the books?', 'Booke AI works inside existing QBO or Xero files (Business $129/business/month), Xenett reviews QBO or Xero financials before sign-off, and Truewind runs the close on top of Sage Intacct or QuickBooks Online.'],
+  ['What is the cheapest alternative to Docyt?', 'Xenett lists AI Financials Review at $7.50/client/month and Workflow at $10/client/month (USD), with a 14-day free trial. At 10 clients that is $75 to $100 a month, against $2,990 for 10 single-location Docyt properties at list price.'],
+  ['When should a firm stay on Docyt?', 'Stay when clients are hotels, restaurants, or multi-location retail or franchise businesses with PMS or POS revenue to post nightly, and you want one ERP that replaces the ledger with continuous reconciliation and a zero-day close.'],
+];
+const faqLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+});
 ---
 <Base
   title="Docyt alternatives for bookkeeping firms: AI close without per-property ERP"
@@ -62,6 +73,10 @@ const b = import.meta.env.BASE_URL;
     <li>You want one AI-native ERP that replaces the ledger, with continuous bank/card recon and a zero-day close, priced per property with unlimited users.</li>
     <li>Portfolio migration, catch-up accounting, and dedicated hospitality onboarding matter more than keeping QBO/Xero or a cheap per-client review layer.</li>
   </ul>
+
+  <h2>FAQ</h2>
+  {faqs.map(([q, a]) => (<><h3>{q}</h3><p>{a}</p></>))}
+  <script type="application/ld+json" set:html={faqLd} />
 
   <p>
     <a href={`${b}/tools/docyt`}>Docyt</a>
