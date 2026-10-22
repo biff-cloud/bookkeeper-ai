@@ -1,5 +1,16 @@
 ---
 import Base from '../../layouts/Base.astro';
+const faqs = [
+  ['How much does Booke AI cost?', 'Booke AI publishes a Business tier at $129 per business per month on top of QuickBooks Online or Xero. Firm and white-label plans are by quote.'],
+  ['Which Booke AI alternative has volume pricing for firms?', 'Botkeeper Infinite is licensed per client from $149 per license per month, dropping to $59 at 25+ licenses. Below that volume, Booke AI\'s flat $129 is cheaper per business.'],
+  ['What is the cheapest published alternative for review rather than daily categorization?', 'Xenett: AI Financials Review is $7.50 per client per month and Workflow is $10 per client per month (USD), on QuickBooks Online or Xero. It flags P&L and Balance Sheet issues but does not do daily bank-feed categorization or OCR document matching.'],
+  ['When should a firm stay on Booke AI?', 'Stay if clients must remain on QuickBooks Online or Xero, you want a published per-business price before talking to sales, and your main pain is daily bank coding, document matching and missing-document chase rather than firm-wide practice tooling.'],
+];
+const faqLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+});
 ---
 <Base
   title="Booke AI alternatives for bookkeeping firms — categorization & close"
@@ -72,6 +83,10 @@ import Base from '../../layouts/Base.astro';
     <li>Xenett: you need cheap, published review/workflow per client on QBO/Xero, not full daily AI bookkeeping.</li>
     <li>Truewind: close-complexity and Sage/QBO workflow depth matter more than a list price; expect a quote.</li>
   </ul>
+
+  <h2>FAQ</h2>
+  {faqs.map(([q, a]) => (<><h3>{q}</h3><p>{a}</p></>))}
+  <script type="application/ld+json" set:html={faqLd} />
 
   <p>
     <a href={`${import.meta.env.BASE_URL}/compare/booke-ai-vs-botkeeper`}>Booke AI vs Botkeeper (head-to-head)</a>
