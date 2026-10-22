@@ -1,6 +1,17 @@
 ---
 import Base from '../../layouts/Base.astro';
 const b = import.meta.env.BASE_URL;
+const faqs = [
+  ['How much does Financial Cents cost?', 'Financial Cents charges per user on annual billing: Solo $19/month (one user), Team $49/user/month and Scale $69/user/month, all on 12-month agreements. Monthly billing needs at least 5 users. A 3-person firm on Team pays 3 × $49 = $147 a month.'],
+  ['What does the Financial Cents Month-End Close add-on cost?', 'It costs $5 per client per month on annual billing and reviews uncategorized transactions. It works with QuickBooks Online only. For 20 clients that adds $100, so a 3-person Team firm pays $247 a month.'],
+  ['Which Financial Cents alternative is cheapest for a 3-person, 20-client firm?', 'Among published prices, Xenett AI Financials Review at 20 × $7.50 = $150 a month, but it is a close review tool, not full practice management. For practice management, Karbon Team is 3 × $59 = $177 a month on annual billing and TaxDome Pro is about $250 a month, paid upfront. Double does not publish prices.'],
+  ['When should a firm stay on Financial Cents?', 'Stay if you are a solo firm ($19/month is the lowest published seat price here), if you bill and send proposals from the same tool as your client task follow-ups, or if your clients are on QuickBooks Online so the $5/client close add-on covers uncategorized transactions without a second tool.'],
+];
+const faqLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+});
 ---
 <Base
   title="Financial Cents alternatives for bookkeeping firms: practice management and close review"
@@ -61,6 +72,10 @@ const b = import.meta.env.BASE_URL;
     <li>Your clients respond to task requests with automatic follow-ups, and you bill and send proposals from the same tool.</li>
     <li>Your clients are on QuickBooks Online, so the $5/client close add-on covers uncategorized transactions without a second tool.</li>
   </ul>
+
+  <h2>FAQ</h2>
+  {faqs.map(([q, a]) => (<><h3>{q}</h3><p>{a}</p></>))}
+  <script type="application/ld+json" set:html={faqLd} />
 
   <p>Sources: financial-cents.com/pricing, karbonhq.com/pricing and taxdome.com/pricing checked 2026-10-18; xenett.com and doublehq.com/pricing checked 2026-10-17 and 2026-10-18. No sponsor has paid for this comparison.</p>
 
