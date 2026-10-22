@@ -1,6 +1,17 @@
 ---
 import Base from '../../layouts/Base.astro';
 const b = import.meta.env.BASE_URL;
+const faqs = [
+  ['How much does Karbon cost?', 'Karbon charges per user: Team $59/user/month and Business $89/user/month on annual billing. Monthly billing is only offered to teams of 4 or more, so a 3-person team pays annually.'],
+  ['What is the cheapest Karbon alternative?', 'Financial Cents has the lowest published seat price in this comparison: Solo $19/month, Team $49/user/month and Scale $69/user/month (annual). For a 3-person firm, Team costs $147/month versus $177 on Karbon Team.'],
+  ['Is TaxDome cheaper than Karbon?', 'Not for a 3-person firm on list prices. TaxDome Pro is $1,000/seat/year, about $250/month for 3 seats, paid upfront, versus $177/month on Karbon Team. TaxDome Pro includes the Bookkeeping Hub with 120 client ledger connections.'],
+  ['When should a firm stay on Karbon?', 'Stay when your team runs client work out of shared email and wants it turned into tasks with AI summaries, when you want time tracking, billing, payments and engagement letters from the Team plan, or when you need the client reminders and automation listed on Business.'],
+];
+const faqLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+});
 ---
 <Base
   title="Karbon alternatives for bookkeeping firms: practice management with published prices"
@@ -54,6 +65,10 @@ const b = import.meta.env.BASE_URL;
     <li>You want time tracking, budgets, billing, payments and engagement letters included from the Team plan.</li>
     <li>You need automatic client reminders and task automation, which Karbon lists on Business.</li>
   </ul>
+
+  <h2>FAQ</h2>
+  {faqs.map(([q, a]) => (<><h3>{q}</h3><p>{a}</p></>))}
+  <script type="application/ld+json" set:html={faqLd} />
 
   <p>Sources: karbonhq.com/pricing and taxdome.com/pricing checked 2026-10-18; financial-cents.com/pricing and doublehq.com/pricing checked 2026-10-17 and 2026-10-18. No sponsor has paid for this comparison.</p>
 
