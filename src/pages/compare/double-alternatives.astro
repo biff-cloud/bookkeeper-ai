@@ -1,6 +1,17 @@
 ---
 import Base from '../../layouts/Base.astro';
 const b = import.meta.env.BASE_URL;
+const faqs = [
+  ['How much does Double cost?', 'Double bills per connected client on Core, Plus, Scale and Enterprise tiers, but the tier prices are not published and the first step is a demo. The pricing page lists only add-ons: integrated email at $10 per connected team email per month, and the Tax Suite included with a $200/month annual commitment.'],
+  ['What is the cheapest Double alternative?', 'At 20 clients and a 3-person team, Xenett is lowest at 20 × $7.50 = $150 a month for AI Financials Review, or $200 with Workflow, with a 14-day free trial. It flags issues in the P&L and Balance Sheet and tracks tasks, but has no client portal on Double\'s scale.'],
+  ['Which alternative is closest to Double for QBO firms?', 'Financial Cents: practice management plus a $5/client/month Month-End Close add-on for uncategorized transactions. At 20 clients and 3 users on Team it costs $247 a month. The close add-on is QBO only and has no AI bank feeds or flux analysis.'],
+  ['When should a firm stay on Double?', 'Stay when you want AI bank feeds, reconciliation fixes, file review and the client portal in one tool, when you need accruals, allocations, AI journal entries or flux analysis (listed on its Scale tier), or when an in-house team needs NetSuite or Sage Intacct sync on the annual Internal Finance plan.'],
+];
+const faqLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+});
 ---
 <Base
   title="Double alternatives for bookkeeping firms: close and client review tools with published prices"
@@ -61,6 +72,10 @@ const b = import.meta.env.BASE_URL;
     <li>You need accruals, allocations, AI journal entries or flux analysis, which Double lists on its Scale tier.</li>
     <li>You run an in-house finance team on NetSuite or Sage Intacct: Double's annual Internal Finance plan lists two-way sync with both.</li>
   </ul>
+
+  <h2>FAQ</h2>
+  {faqs.map(([q, a]) => (<><h3>{q}</h3><p>{a}</p></>))}
+  <script type="application/ld+json" set:html={faqLd} />
 
   <p>
     <a href={`${b}/tools/double`}>Double</a>
