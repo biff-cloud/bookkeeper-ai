@@ -1,6 +1,17 @@
 ---
 import Base from '../../layouts/Base.astro';
 const b = import.meta.env.BASE_URL;
+const faqs = [
+  ['How much does Xenett cost?', 'Xenett bills per client with unlimited users: $7.50 per client per month for AI Financials Review, or $10 for Workflow. At 20 clients that is $150 or $200 a month. Accruals and inter-company reconciliation are listed as $15 and $10 per client add-ons, free for the first 60 days.'],
+  ['What is the cheapest Xenett alternative?', 'Uncat, at $9 per client per month (20 × $9 = $180), with a free trial. It only handles client questions and receipts for uncategorized transactions; it does not review the P&L or Balance Sheet.'],
+  ['Which alternative is closest to Xenett for QBO firms?', 'Financial Cents with its Month-End Close add-on: $5 per client per month on top of a Solo, Team or Scale plan. At 20 clients and 3 users on Team it costs $247 a month, including practice management. It is QBO only and centers on uncategorized transactions and reconciliation, not Xenett\'s wider GL checks.'],
+  ['When should a firm stay on Xenett?', 'Stay when you have Xero clients or a mix of QBO and Xero, when you want a broad automated check of every file with custom review points, or when your team is growing, since per-client pricing with unlimited users beats per-user plans.'],
+];
+const faqLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+});
 ---
 <Base
   title="Xenett alternatives for bookkeeping firms: client review and close tools compared"
@@ -62,6 +73,10 @@ const b = import.meta.env.BASE_URL;
     <li>Your team is growing: per-client pricing with unlimited users beats per-user plans.</li>
     <li>You need accruals or inter-company reconciliation: Xenett lists both as $15 and $10/client add-ons, free for the first 60 days.</li>
   </ul>
+
+  <h2>FAQ</h2>
+  {faqs.map(([q, a]) => (<><h3>{q}</h3><p>{a}</p></>))}
+  <script type="application/ld+json" set:html={faqLd} />
 
   <p>Sources: xenett.com/pricing, uncat.com and digits.com/pricing checked 2026-10-18; financial-cents.com/pricing and doublehq.com/pricing checked 2026-10-18 for earlier pages. No sponsor has paid for this comparison.</p>
 
