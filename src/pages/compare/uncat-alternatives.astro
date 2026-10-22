@@ -1,6 +1,17 @@
 ---
 import Base from '../../layouts/Base.astro';
 const b = import.meta.env.BASE_URL;
+const faqs = [
+  ['How much does Uncat cost?', 'Uncat lists $9/month per client. At 20 clients that is $180/month.'],
+  ['What is the cheapest Uncat alternative for a firm already on Financial Cents?', 'The Financial Cents Month-End Close add-on at $5/client/month, on top of your Financial Cents plan (from $19/month Solo). At 20 clients the add-on is $100/month.'],
+  ['Which alternative works when there are too many transactions to send to clients?', 'Booke AI codes transactions daily with AI so clients see only the exceptions. Its Business plan lists $129/business/month; firm pricing is by quote.'],
+  ['Do the alternatives support QuickBooks Desktop?', 'Uncat lists QuickBooks Desktop sync. The other sites we checked (Financial Cents, Booke AI, Double, Xenett) list only QuickBooks Online and/or Xero.'],
+];
+const faqLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+});
 ---
 <Base
   title="Uncat alternatives for bookkeeping firms: chase fewer uncategorized transactions"
@@ -61,6 +72,10 @@ const b = import.meta.env.BASE_URL;
     <li>You have QuickBooks Desktop clients. Uncat lists Desktop sync; the other sites we checked list only QBO and/or Xero.</li>
     <li>You want unlimited accountant and client users at a flat per-client price, with a free trial.</li>
   </ul>
+
+  <h2>FAQ</h2>
+  {faqs.map(([q, a]) => (<><h3>{q}</h3><p>{a}</p></>))}
+  <script type="application/ld+json" set:html={faqLd} />
 
   <p>
     <a href={`${b}/tools/uncat`}>Uncat</a>
