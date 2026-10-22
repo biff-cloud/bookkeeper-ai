@@ -1,6 +1,17 @@
 ---
 import Base from '../../layouts/Base.astro';
 const b = import.meta.env.BASE_URL;
+const faqs = [
+  ['How much does Truewind cost?', 'Truewind does not publish pricing. Plans are quoted after a demo, based on close complexity and volume.'],
+  ['What is the cheapest Truewind alternative?', 'Xenett has the lowest published price here: AI Financials Review is $7.50/client/month and Workflow $10/client/month (USD), with a 14-day free trial. At 10 clients that is $75 to $100 a month. It reviews the P&L and Balance Sheet and tracks tasks, but does not run reconciliation and close execution the way Truewind does.'],
+  ['Which alternative keeps QuickBooks Online or Sage Intacct as the ledger?', 'Xenett and Double work on top of QBO or Xero. Digits and Docyt move clients to their own ledger. Of these, only Double lists Sage Intacct sync, and only on its separate annual Internal Finance plan for in-house teams.'],
+  ['When should a firm stay on Truewind?', 'Stay when your clients are on Sage Intacct, when you want to keep QBO or Sage Intacct as the books and add close execution on top, or when reviewer sign-off and an audit trail on every workflow matter more than a published price.'],
+];
+const faqLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+});
 ---
 <Base
   title="Truewind alternatives for bookkeeping firms: AI month-end close with published prices"
@@ -61,6 +72,10 @@ const b = import.meta.env.BASE_URL;
     <li>You want to keep QBO or Sage Intacct as the books and add close execution on top, not migrate ledgers.</li>
     <li>Reviewer ownership and an audit trail on every workflow matter more than a published price.</li>
   </ul>
+
+  <h2>FAQ</h2>
+  {faqs.map(([q, a]) => (<><h3>{q}</h3><p>{a}</p></>))}
+  <script type="application/ld+json" set:html={faqLd} />
 
   <p>
     <a href={`${b}/tools/truewind`}>Truewind</a>
