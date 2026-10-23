@@ -1,6 +1,17 @@
 ---
 import Base from '../../layouts/Base.astro';
 const b = import.meta.env.BASE_URL;
+const faqs = [
+  ['How much does Booke AI cost compared with Financial Cents Month-End Close?', 'Booke AI Business is $129 per business per month; the firm plan is custom-priced. Financial Cents Month-End Close is a $5 per client per month add-on, billed annually, on top of a Financial Cents plan: Solo $19/mo, Team $49/user/mo or Scale $69/user/mo (annual), all on a 12-month agreement.'],
+  ['Do Booke AI and Financial Cents MEC do the same job?', 'No. Booke AI works every day, categorizing the bank feed with AI and matching documents. Financial Cents MEC works at close: transaction review, uncategorized transactions, reconciliation and the client chase, inside a practice management plan.'],
+  ['What do they cost for 20 clients?', 'At list price, Booke AI Business is 20 × $129 = $2,580 per month. Financial Cents MEC is $119 per month for a solo firm (Solo $19 plus $100 MEC) or $247 for a 3-person firm on Team. A solo firm running both pays $2,699 per month before any Booke firm discount.'],
+  ['Which ledgers do they support?', 'Booke AI works with QuickBooks Online and Xero. Financial Cents MEC syncs corrections back to QuickBooks Online only.'],
+];
+const faqLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+});
 ---
 <Base
   title="Booke AI vs Financial Cents Month-End Close — AI categorization vs close review"
@@ -41,6 +52,10 @@ const b = import.meta.env.BASE_URL;
     <li>Your clients are on QuickBooks Online and the bottleneck is review, reconciliation and getting answers from clients.</li>
     <li>You want 1099 and W-9 prep in the same place as month-end review.</li>
   </ul>
+
+  <h2>FAQ</h2>
+  {faqs.map(([q, a]) => (<><h3>{q}</h3><p>{a}</p></>))}
+  <script type="application/ld+json" set:html={faqLd} />
 
   <p>Sources: booke.ai/pricing and financial-cents.com/pricing, checked 2026-10-19. No sponsor has paid for this comparison.</p>
 
