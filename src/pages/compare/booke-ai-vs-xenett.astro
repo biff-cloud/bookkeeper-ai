@@ -1,6 +1,17 @@
 ---
 import Base from '../../layouts/Base.astro';
 const b = import.meta.env.BASE_URL;
+const faqs = [
+  ['How much does Booke AI cost compared with Xenett?', 'Booke AI Business is $129 per business per month; the firm plan is custom-priced. Xenett is $7.50 per client per month for AI Financials Review or $10 for Workflow, with unlimited users.'],
+  ['Do Booke AI and Xenett do the same job?', 'No. Booke AI does the daily work: it categorizes the bank feed, matches documents and requests missing receipts. Xenett reviews the result, scanning each P&L and Balance Sheet for errors before sign-off. Many firms could use both.'],
+  ['What would both cost for 20 clients?', 'At list price, Booke AI Business is 20 × $129 = $2,580 per month and Xenett is $150 to $500 per month depending on plan and add-ons. Running both is $2,730 to $3,080 per month before any Booke firm discount.'],
+  ['Which ledgers do they support?', 'Both work with QuickBooks Online and Xero.'],
+];
+const faqLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+});
 ---
 <Base
   title="Booke AI vs Xenett for bookkeeping firms — daily AI categorization vs AI review before close"
@@ -40,6 +51,10 @@ const b = import.meta.env.BASE_URL;
     <li>You want a low, published per-client price with unlimited users.</li>
     <li>You want accruals, flux analysis, or a light practice management layer on the same per-client bill.</li>
   </ul>
+
+  <h2>FAQ</h2>
+  {faqs.map(([q, a]) => (<><h3>{q}</h3><p>{a}</p></>))}
+  <script type="application/ld+json" set:html={faqLd} />
 
   <p>Sources: booke.ai/pricing and xenett.com/pricing, checked 2026-10-18. No sponsor has paid for this comparison.</p>
 
