@@ -1,6 +1,17 @@
 ---
 import Base from '../../layouts/Base.astro';
 const b = import.meta.env.BASE_URL;
+const faqs = [
+  ['How much do TaxDome and Karbon cost?', 'TaxDome is priced per seat per year, billed upfront: Essentials $800 (solo only), Pro $1,000 and Business $1,200 on 1-year terms, or $950 and $1,150 on 2-year terms. Karbon is priced per user per month: Team $59 and Business $89 billed annually ($79 and $99 monthly).'],
+  ['What does each cost for a 3-person firm?', 'TaxDome Pro: 3 × $1,000 = $3,000 per year, about $250 per month, paid upfront; Business is $3,600 per year. Karbon Team: 3 × $59 = $177 per month ($2,124 per year); Business: 3 × $89 = $267 per month ($3,204 per year).'],
+  ['Which one handles uncategorized QuickBooks Online transactions?', 'TaxDome, through its Bookkeeping Hub on Pro (120 client ledger connections) and Business (unlimited): review, reclassify, send to clients and sync back to QuickBooks Online. Karbon lists no transaction review on its pricing page.'],
+  ['Can I pay monthly?', 'Karbon offers monthly billing only for teams of 4 or more. TaxDome bills all plans a year or more upfront; Pro has monthly seasonal seats at $100 per seat per month.'],
+];
+const faqLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+});
 ---
 <Base
   title="TaxDome vs Karbon for bookkeeping firms: pricing, client portal and uncategorized transactions"
@@ -42,6 +53,10 @@ const b = import.meta.env.BASE_URL;
     <li>You want to pay monthly (teams of 4+) instead of a year upfront.</li>
     <li>You are on Xero or another ledger, so a QBO-only transaction hub does not help you.</li>
   </ul>
+
+  <h2>FAQ</h2>
+  {faqs.map(([q, a]) => (<><h3>{q}</h3><p>{a}</p></>))}
+  <script type="application/ld+json" set:html={faqLd} />
 
   <p>Sources: taxdome.com/pricing and karbonhq.com/pricing, checked 2026-10-18; financial-cents.com/pricing checked 2026-10-18. No sponsor has paid for this comparison.</p>
 
