@@ -1,6 +1,17 @@
 ---
 import Base from '../../layouts/Base.astro';
 const b = import.meta.env.BASE_URL;
+const faqs = [
+  ['How much do Double and Xenett cost?', 'Xenett publishes per-client prices: AI Financials Review $7.50/mo or Workflow $10/mo, with unlimited users; Accruals + AI adds $15/client/mo. Double bills per connected client per month on tiers it does not publish; the first step is a demo and a pilot.'],
+  ['What does Xenett cost for 20 clients?', 'At list price, 20 × $7.50 = $150 per month for AI Financials Review, $200 for Workflow, and $500 for Workflow plus Accruals + AI. Double cannot be costed from public numbers; ask for the per-client price at your tier mix.'],
+  ['Do Double and Xenett work with QuickBooks Online and Xero?', 'Yes. Both sit on top of each client\'s QuickBooks Online or Xero file. Double\'s internal-finance annual plan also syncs with NetSuite and Sage Intacct.'],
+  ['Can I try them without a sales call?', 'Xenett has a self-serve 14-day free trial with free onboarding. Double starts with a personalized demo, then a contracted pilot with a Customer Success contact.'],
+];
+const faqLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+});
 ---
 <Base
   title="Double vs Xenett for bookkeeping firms — month-end close workspace vs AI review before close"
@@ -41,6 +52,10 @@ const b = import.meta.env.BASE_URL;
     <li>You want a published per-client price and a trial without a sales call.</li>
     <li>You already have practice management (Karbon, Financial Cents, TaxDome) and just need the review layer, or the $10 Workflow plan is enough.</li>
   </ul>
+
+  <h2>FAQ</h2>
+  {faqs.map(([q, a]) => (<><h3>{q}</h3><p>{a}</p></>))}
+  <script type="application/ld+json" set:html={faqLd} />
 
   <p>Sources: doublehq.com/pricing, xenett.com/pricing and xenett.com (14-day trial) checked 2026-10-19. No sponsor has paid for this comparison.</p>
 
