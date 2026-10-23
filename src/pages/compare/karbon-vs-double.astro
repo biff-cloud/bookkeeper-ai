@@ -1,6 +1,17 @@
 ---
 import Base from '../../layouts/Base.astro';
 const b = import.meta.env.BASE_URL;
+const faqs = [
+  ['How much do Karbon and Double cost?', 'Karbon is priced per user: Team $59/mo and Business $89/mo billed annually ($79 and $99 monthly), Enterprise custom. Double bills per connected client per month on tiers it does not publish; the first step is a demo and a pilot. Team members are free on Double.'],
+  ['What does each cost for a 3-person firm with 20 clients?', 'Karbon: 3 × $59 = $177 per month on Team or 3 × $89 = $267 on Business, both annual, whatever the client count. Double cannot be costed from public numbers; matching Karbon Team would mean about $8.85 per client per month.'],
+  ['Is Double a replacement for Karbon?', 'Not really. Karbon is practice management (email triage, workflows, billing, payments, engagements). Double is a close and review workspace inside each client\'s QuickBooks Online or Xero file. Many firms could run both.'],
+  ['Can I sign up without a sales call?', 'Karbon has self-serve plans on its pricing page; monthly billing is only for teams of 4 or more. Double starts with a demo, then a contracted pilot with a Customer Success contact.'],
+];
+const faqLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+});
 ---
 <Base
   title="Karbon vs Double for bookkeeping firms — email-centric practice management vs a month-end close workspace"
@@ -42,6 +53,10 @@ const b = import.meta.env.BASE_URL;
     <li>You want AI coding-error checks, flux and client transaction questions tied to each client's books.</li>
     <li>Your team is growing and you'd rather pay per connected client than per seat.</li>
   </ul>
+
+  <h2>FAQ</h2>
+  {faqs.map(([q, a]) => (<><h3>{q}</h3><p>{a}</p></>))}
+  <script type="application/ld+json" set:html={faqLd} />
 
   <p>Sources: karbonhq.com/pricing and doublehq.com/pricing, checked 2026-10-19. No sponsor has paid for this comparison.</p>
 
