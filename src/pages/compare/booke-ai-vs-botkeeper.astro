@@ -1,5 +1,16 @@
 ---
 import Base from '../../layouts/Base.astro';
+const faqs = [
+  ['How much does Booke AI cost compared with Botkeeper?', 'Booke AI Business is $129 per business per month; firm and white-label plans are by quote. Botkeeper Infinite licenses run from $149 per month (1 to 4 clients) down to $59 per month (25 or more), lower on annual billing.'],
+  ['Does Booke AI work inside QuickBooks Online and Xero?', 'Yes. Booke AI works inside existing QuickBooks Online and Xero files, so client books stay where they are.'],
+  ['Is Botkeeper only software, or does it include bookkeepers?', 'Botkeeper is a firm software platform (AI categorization, bank recs, Close Tracker, Activity Hub). Human bookkeeping services are an optional extra on top.'],
+  ['Which is cheaper for a firm with many clients?', 'Botkeeper volume tiers drop to $59 per client per month at 25 or more licenses, below Booke AI’s $129 per business list price. For a few clients, Booke AI’s published price is simpler.'],
+];
+const faqLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+});
 ---
 <Base
   title="Booke AI vs Botkeeper for bookkeeping firms — categorization compared"
@@ -32,6 +43,10 @@ import Base from '../../layouts/Base.astro';
     <li>You have (or will have) enough clients for volume license tiers to beat flat per-business pricing.</li>
     <li>You may later add Botkeeper’s human bookkeeping services on top of the software.</li>
   </ul>
+
+  <h2>FAQ</h2>
+  {faqs.map(([q, a]) => (<><h3>{q}</h3><p>{a}</p></>))}
+  <script type="application/ld+json" set:html={faqLd} />
 
   <p><a href={`${import.meta.env.BASE_URL}/category/categorization`}>All transaction categorization tools</a></p>
 </Base>
