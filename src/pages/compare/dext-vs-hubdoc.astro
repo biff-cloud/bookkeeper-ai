@@ -1,5 +1,16 @@
 ---
 import Base from '../../layouts/Base.astro';
+const faqs = [
+  ['Is Hubdoc free with Xero?', 'Hubdoc is included with qualifying Xero plans (Lite, Starter, Standard, Premium, or US Early, Growing, Established) when connected. Standalone it is about $12 per month.'],
+  ['How much does Dext cost?', 'Dext Business starts at about $25.21 per month billed annually (250 documents, 5 users). Practices are priced per client, with a 10-client minimum.'],
+  ['Which is better for a practice with Xero and QuickBooks clients?', 'Dext. It connects to Xero, QuickBooks Online and other ledgers on one capture stack. Hubdoc is strongest with Xero and supports QuickBooks Online only on its standalone plan.'],
+  ['Does Hubdoc fetch documents automatically?', 'Yes. Besides email, mobile and upload capture, Hubdoc can auto-fetch bills and statements from suppliers into Xero.'],
+];
+const faqLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+});
 ---
 <Base
   title="Dext vs Hubdoc for bookkeeping firms — receipt capture compared"
@@ -32,6 +43,10 @@ import Base from '../../layouts/Base.astro';
     <li>You want zero extra capture cost on those plans.</li>
     <li>Auto-fetching utility and bank PDFs into Xero is the main job.</li>
   </ul>
+
+  <h2>FAQ</h2>
+  {faqs.map(([q, a]) => (<><h3>{q}</h3><p>{a}</p></>))}
+  <script type="application/ld+json" set:html={faqLd} />
 
   <p><a href={`${import.meta.env.BASE_URL}/category/receipt-capture`}>All receipt &amp; document capture tools</a></p>
 </Base>
