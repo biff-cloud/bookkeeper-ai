@@ -1,5 +1,16 @@
 ---
 import Base from '../../layouts/Base.astro';
+const faqs = [
+  ['What is the main Dext alternative for Xero practices?', 'Hubdoc. It is included with qualifying Xero plans (standalone about $12 per month) and covers email, mobile and upload capture that publishes into Xero.'],
+  ['When should a firm stay on Dext instead of Hubdoc?', 'Stay on Dext if you run mixed Xero and QuickBooks (or other) ledgers on one capture stack, or rely on bank-statement, line-item or supplier-statement extraction beyond basic OCR.'],
+  ['Is Booke AI a replacement for Dext?', 'Only partly. Booke AI does OCR for bills and receipts plus daily bank categorization inside QuickBooks Online or Xero, at $129 per business per month (firm and white-label plans by quote). It is built for coding and exception review, not practice-wide capture.'],
+  ['Does a Xero partner pay for a Hubdoc practice account?', 'No. Xero partners can get a free Hubdoc practice account.'],
+];
+const faqLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+});
 ---
 <Base
   title="Dext alternatives for bookkeeping firms — receipt capture options"
@@ -52,6 +63,10 @@ import Base from '../../layouts/Base.astro';
     <li>Capture is secondary; the pain is uncategorized bank lines and chasing missing docs after OCR.</li>
     <li>You want AI bookkeeping inside QBO/Xero with exception review, not a standalone document inbox.</li>
   </ul>
+
+  <h2>FAQ</h2>
+  {faqs.map(([q, a]) => (<><h3>{q}</h3><p>{a}</p></>))}
+  <script type="application/ld+json" set:html={faqLd} />
 
   <p>
     <a href={`${import.meta.env.BASE_URL}/compare/dext-vs-hubdoc`}>Dext vs Hubdoc (head-to-head)</a>
