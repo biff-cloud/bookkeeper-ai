@@ -1,6 +1,17 @@
 ---
 import Base from '../../layouts/Base.astro';
 const b = import.meta.env.BASE_URL;
+const faqs = [
+  ['How much do Uncat and Financial Cents Month-End Close cost?', 'Uncat is $9 per client per month with unlimited accountant and client users. Financial Cents Month-End Close is a $5 per client per month add-on, billed annually, on top of a plan: Solo $19/mo, Team $49/user/mo or Scale $69/user/mo (annual, 12-month agreement).'],
+  ['Which works with Xero or QuickBooks Desktop?', 'Uncat syncs two ways with QuickBooks Online, QuickBooks Desktop and Xero. Financial Cents Month-End Close works with QuickBooks Online only.'],
+  ['What does each cost at 20 clients?', 'Uncat is $180/mo. Financial Cents Solo plus Month-End Close is $119/mo, and Team for 3 users plus Month-End Close is $247/mo. If you already pay for Financial Cents, Month-End Close adds $100/mo.'],
+  ['Which covers more of month-end?', 'Financial Cents Month-End Close also covers transaction review, account reconciliation, 1099 and W-9 prep and new vendors. Uncat does one job: getting clients to answer uncategorized transactions.'],
+];
+const faqLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+});
 ---
 <Base
   title="Uncat vs Financial Cents Month-End Close for uncategorized transactions — compared"
@@ -41,6 +52,10 @@ const b = import.meta.env.BASE_URL;
     <li>All your clients are on QuickBooks Online.</li>
     <li>You want the wider month-end review (reconciliation, 1099/W-9, new vendors), not only uncategorized lines.</li>
   </ul>
+
+  <h2>FAQ</h2>
+  {faqs.map(([q, a]) => (<><h3>{q}</h3><p>{a}</p></>))}
+  <script type="application/ld+json" set:html={faqLd} />
 
   <p>Sources: uncat.com and financial-cents.com/pricing, checked 2026-10-18. No sponsor has paid for this comparison.</p>
 
