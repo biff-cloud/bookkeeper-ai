@@ -1,6 +1,17 @@
 ---
 import Base from '../../layouts/Base.astro';
 const b = import.meta.env.BASE_URL;
+const faqs = [
+  ['Which tool automates bank reconciliation in Xero?', 'Booke AI. It works inside your existing ledger and runs daily bank reconciliation in Xero, plus daily bank-feed categorization in QBO. Business is $129 per business per month; firm plans are by quote.'],
+  ['Can I automate bank rec without leaving QBO or Xero?', 'Yes. Booke AI and Double both work on top of your current ledger (Double on QBO). Xenett also sits on top, but it reviews reconciliations rather than doing the matching. Only Digits replaces the ledger, and it is US only.'],
+  ['What is the cheapest option for 20 clients?', 'Xenett AI Financials Review at $7.50 per client per month, or $150 for 20 clients. It is a review layer only, so you still reconcile. Digits Essentials is $1,300 for 20 clients and includes the ledger itself.'],
+  ['Which tool handles inter-company reconciliation?', "Xenett's Inter-company Rec add-on, at $10 per client per month, auto-matches transactions across related entities."],
+];
+const faqLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+});
 ---
 <Base
   title="Best bank reconciliation automation tools for bookkeepers — Booke AI vs Digits vs Double vs Xenett"
@@ -62,6 +73,10 @@ const b = import.meta.env.BASE_URL;
     <li>Booke AI Business: 20 × $129 = $2,580 at the per-business price; firm plans are by quote.</li>
     <li>Double: not listed; ask for a quote.</li>
   </ul>
+
+  <h2>FAQ</h2>
+  {faqs.map(([q, a]) => (<><h3>{q}</h3><p>{a}</p></>))}
+  <script type="application/ld+json" set:html={faqLd} />
 
   <p>
     <a href={`${b}/compare/uncategorized-transactions-tools`}>Uncategorized transactions tools</a>
