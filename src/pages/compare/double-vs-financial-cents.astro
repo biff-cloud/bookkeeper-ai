@@ -1,6 +1,17 @@
 ---
 import Base from '../../layouts/Base.astro';
 const b = import.meta.env.BASE_URL;
+const faqs = [
+  ['How much do Double and Financial Cents cost?', 'Double bills per connected client per month on tiers it does not publish; you get the price in a demo. Financial Cents is Solo $19/mo, Team $49/user/mo or Scale $69/user/mo on annual billing, plus the Month-End Close add-on at $5/client/mo billed annually.'],
+  ['Which works with Xero?', 'Double works with QuickBooks Online and Xero. Financial Cents Month-End Close works with QuickBooks Online only.'],
+  ['What does each cost at 20 clients?', 'Financial Cents Solo plus Month-End Close is $119/mo, and Team for 3 users plus Month-End Close is $247/mo. Double cannot be priced from public numbers; to beat Financial Cents Team plus Month-End Close it would need to come in under about $12.35 per client per month.'],
+  ['Do I pay for team members?', 'Not on Double: team members, client contacts and unconnected clients are free. Financial Cents charges per user seat.'],
+];
+const faqLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+});
 ---
 <Base
   title="Double vs Financial Cents for bookkeeping firms — close workspace vs practice management with a close add-on"
@@ -42,6 +53,10 @@ const b = import.meta.env.BASE_URL;
     <li>Your clients are on QuickBooks Online and the close pain is mostly uncategorized transactions.</li>
     <li>You want a published price you can sign up for without a demo; a solo firm pays $119/month at 20 clients with MEC.</li>
   </ul>
+
+  <h2>FAQ</h2>
+  {faqs.map(([q, a]) => (<><h3>{q}</h3><p>{a}</p></>))}
+  <script type="application/ld+json" set:html={faqLd} />
 
   <p>Sources: doublehq.com/pricing and financial-cents.com/pricing, checked 2026-10-19. No sponsor has paid for this comparison.</p>
 
