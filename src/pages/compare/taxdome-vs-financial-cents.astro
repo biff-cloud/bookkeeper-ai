@@ -1,6 +1,17 @@
 ---
 import Base from '../../layouts/Base.astro';
 const b = import.meta.env.BASE_URL;
+const faqs = [
+  ['How much do TaxDome and Financial Cents cost?', 'TaxDome is priced per seat per year, billed upfront: Essentials $800 (solo only), Pro $1,000 and Business $1,200 on 1-year terms ($950 and $1,150 on 2-year). Financial Cents: Solo $19/mo (one user), Team $49/user/mo and Scale $69/user/mo on annual billing ($69 and $89 billed monthly, 5-user minimum).'],
+  ['How does each handle uncategorized QuickBooks Online transactions?', 'TaxDome includes its Bookkeeping Hub on Pro (120 client ledger connections) and Business (unlimited), with no per-client fee. Financial Cents charges for its Month-End Close (MEC) add-on: $5 per client per month billed annually, on any plan.'],
+  ['Which is cheaper for a 3-person firm with 20 review clients?', 'Nearly the same. TaxDome Pro: 3 × $1,000 = $3,000 per year, Hub included. Financial Cents Team: $1,764 in seats plus $1,200 MEC = $2,964 per year. At 40 clients, Financial Cents Team rises to $4,164 while TaxDome Pro stays $3,000.'],
+  ['Which is better for a solo bookkeeper?', 'Without close review, Financial Cents Solo ($228 per year) costs far less than TaxDome Essentials ($800). With close review on 20 clients, Financial Cents Solo + MEC is $1,428 per year vs TaxDome Pro at $1,000.'],
+];
+const faqLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+});
 ---
 <Base
   title="TaxDome vs Financial Cents for bookkeeping firms: pricing and uncategorized transactions"
@@ -42,6 +53,10 @@ const b = import.meta.env.BASE_URL;
     <li>You do bookkeeping, not tax, and want lower seat prices.</li>
     <li>You want monthly billing and have at least 5 users (still a 12-month agreement).</li>
   </ul>
+
+  <h2>FAQ</h2>
+  {faqs.map(([q, a]) => (<><h3>{q}</h3><p>{a}</p></>))}
+  <script type="application/ld+json" set:html={faqLd} />
 
   <p>Sources: taxdome.com/pricing and financial-cents.com/pricing, checked 2026-10-18. No sponsor has paid for this comparison.</p>
 
