@@ -1,6 +1,17 @@
 ---
 import Base from '../../layouts/Base.astro';
 const b = import.meta.env.BASE_URL;
+const faqs = [
+  ['Which tool is cheapest for clearing uncategorized transactions?', 'Financial Cents, if you already use it: the Month-End Close add-on is $5 per client per month on top of your plan (from $19/mo Solo). As a standalone tool, Uncat at $9 per client per month.'],
+  ['Which tool gets clients to explain uncategorized bank lines?', 'Uncat. Clients explain lines and upload receipts in a per-client portal, and the answers sync back to the ledger.'],
+  ['What do these tools cost for a 20-client firm?', 'At list prices per month: Uncat 20 × $9 = $180; Financial Cents add-on 20 × $5 = $100 plus your plan; Booke AI 20 × $129 = $2,580 at Business price. Double does not publish prices.'],
+  ['Which of these work with Xero?', 'Uncat, Booke AI and Double support Xero as well as QuickBooks Online. Financial Cents lists a QuickBooks Online integration on its pricing page.'],
+];
+const faqLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+});
 ---
 <Base
   title="Best tools to clear uncategorized transactions — Uncat vs Financial Cents vs Booke AI vs Double"
@@ -61,6 +72,10 @@ const b = import.meta.env.BASE_URL;
     <li>Booke AI: 20 × $129 = $2,580 at Business list price; firms should ask for firm pricing.</li>
     <li>Double: not published.</li>
   </ul>
+
+  <h2>FAQ</h2>
+  {faqs.map(([q, a]) => (<><h3>{q}</h3><p>{a}</p></>))}
+  <script type="application/ld+json" set:html={faqLd} />
 
   <p>
     <a href={`${b}/compare/booke-ai-vs-botkeeper`}>Booke AI vs Botkeeper</a>
