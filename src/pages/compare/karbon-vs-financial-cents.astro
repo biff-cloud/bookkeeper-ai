@@ -1,6 +1,17 @@
 ---
 import Base from '../../layouts/Base.astro';
 const b = import.meta.env.BASE_URL;
+const faqs = [
+  ['How much do Karbon and Financial Cents cost?', 'Karbon: Team $59/user/mo annual ($79 monthly), Business $89/user/mo annual ($99 monthly), Enterprise custom. Financial Cents: Solo $19/mo, Team $49/user/mo annual ($69 monthly), Scale $69/user/mo annual ($89 monthly), Enterprise custom; monthly billing needs 5+ users.'],
+  ['How does each handle uncategorized transactions at month-end?', 'Financial Cents sells a Month-End Close add-on at $5 per client per month (annual) to review, fix and finalize client books, including uncategorized transactions. Karbon offers workflow templates and to-do lists, with close automation marketed as a product area.'],
+  ['Which is cheaper for a 3-person firm with 20 clients?', 'Seats only, Financial Cents Team is $1,764 per year vs Karbon Team at $2,124. Adding the Month-End Close add-on for 20 clients ($1,200) brings Financial Cents to $2,964 per year, above Karbon Team.'],
+  ['Which has more AI features?', 'Karbon: Karbon AI for email triage and summaries, plus the Kai AI coworker and AI agents marketed as new. Financial Cents focuses on automation; its AI-adjacent piece is the Month-End Close add-on transaction cleanup.'],
+];
+const faqLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+});
 ---
 <Base
   title="Karbon vs Financial Cents for bookkeeping firms — practice management compared"
@@ -34,6 +45,10 @@ const b = import.meta.env.BASE_URL;
     <li>Uncategorized transactions are your month-end bottleneck and $5/client for the close add-on is cheaper than a separate tool.</li>
     <li>You want simple recurring workflows and client chasing more than an email-centric platform.</li>
   </ul>
+
+  <h2>FAQ</h2>
+  {faqs.map(([q, a]) => (<><h3>{q}</h3><p>{a}</p></>))}
+  <script type="application/ld+json" set:html={faqLd} />
 
   <p>Sources: karbonhq.com/pricing and financial-cents.com/pricing, checked 2026-10-17. No sponsor has paid for this comparison.</p>
 
