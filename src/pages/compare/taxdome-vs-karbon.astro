@@ -2,7 +2,7 @@
 import Base from '../../layouts/Base.astro';
 const b = import.meta.env.BASE_URL;
 const faqs = [
-  ['How much do TaxDome and Karbon cost?', 'TaxDome is priced per seat per year, billed upfront: Essentials $800 (solo only), Pro $1,000 and Business $1,200 on 1-year terms, or $950 and $1,150 on 2-year terms. Karbon is priced per user per month: Team $59 and Business $89 billed annually ($79 and $99 monthly).'],
+  ['How much do TaxDome and Karbon cost?', 'TaxDome is priced per seat per year, billed upfront: Essentials $800 (solo only), Pro $1,000 and Business $1,200 on 1-year terms, or $750, $950 and $1,150 on 2-year terms. Karbon is priced per user per month: Team $59 and Business $89 billed annually ($79 and $99 monthly).'],
   ['What does each cost for a 3-person firm?', 'TaxDome Pro: 3 × $1,000 = $3,000 per year, about $250 per month, paid upfront; Business is $3,600 per year. Karbon Team: 3 × $59 = $177 per month ($2,124 per year); Business: 3 × $89 = $267 per month ($3,204 per year).'],
   ['Which one handles uncategorized QuickBooks Online transactions?', 'TaxDome, through its Bookkeeping Hub on Pro (120 client ledger connections) and Business (unlimited): review, reclassify, send to clients and sync back to QuickBooks Online. Karbon lists no transaction review on its pricing page.'],
   ['Can I pay monthly?', 'Karbon offers monthly billing only for teams of 4 or more. TaxDome bills all plans a year or more upfront; Pro has monthly seasonal seats at $100 per seat per month.'],
@@ -24,7 +24,7 @@ const faqLd = JSON.stringify({
     <thead><tr><th></th><th><a href={`${b}/tools/taxdome`}>TaxDome</a></th><th><a href={`${b}/tools/karbon`}>Karbon</a></th></tr></thead>
     <tbody>
       <tr><td>Best for</td><td>Firms doing tax and bookkeeping that want one client portal and app, billing and workflows, plus client review of uncategorized QBO transactions</td><td>Growing firms that run client work through shared email and want it turned into tasks with AI summaries</td></tr>
-      <tr><td>Pricing (verified Oct 2026)</td><td>Essentials $800/seat/yr (solo only); Pro $1,000/seat/yr; Business $1,200/seat/yr on 1-year terms ($950 and $1,150 on 2-year). All plans billed upfront.</td><td>Team $59/user/mo annual ($79 monthly); Business $89/user/mo annual ($99 monthly). Monthly billing only for teams of 4+.</td></tr>
+      <tr><td>Pricing (verified Oct 2026)</td><td>Essentials $800/seat/yr (solo only); Pro $1,000/seat/yr; Business $1,200/seat/yr on 1-year terms ($750, $950 and $1,150 on 2-year). All plans billed upfront.</td><td>Team $59/user/mo annual ($79 monthly); Business $89/user/mo annual ($99 monthly). Monthly billing only for teams of 4+.</td></tr>
       <tr><td>Uncategorized transactions</td><td>Bookkeeping Hub on Pro (120 client ledger connections) and Business (unlimited): review, reclassify, send to clients, sync back to QuickBooks Online</td><td>No transaction review listed on the pricing page; client chasing runs through tasks, the client portal and email</td></tr>
       <tr><td>Client side</td><td>Client portal and mobile app, secure chat, organizers and intake forms, e-signatures; white-labeled app as a paid add-on</td><td>Client portal; automatic client reminders on Business</td></tr>
       <tr><td>AI angle</td><td>AI-powered reporting and analytics on Pro and up</td><td>Karbon AI for email triage and summaries; Kai AI coworker and AI agents marketed as new</td></tr>
