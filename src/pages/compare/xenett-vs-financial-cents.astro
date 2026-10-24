@@ -1,6 +1,17 @@
 ---
 import Base from '../../layouts/Base.astro';
 const b = import.meta.env.BASE_URL;
+const faqs = [
+  ['How much do Xenett and Financial Cents Month-End Close cost?', 'Xenett: AI Financials Review $7.50/client/mo, Workflow $10/client/mo, unlimited users, Enterprise custom. Financial Cents Month-End Close: $5/client/mo billed annually, on top of a plan (Solo $19/mo, Team $49/user/mo, Scale $69/user/mo annual).'],
+  ['Which works with Xero?', 'Xenett works with QuickBooks Online and Xero. Financial Cents Month-End Close works with QuickBooks Online, and corrections sync back to QBO.'],
+  ['Which is cheaper for a 3-person firm with 20 clients?', 'Starting from nothing, Financial Cents Team for 3 users ($147) plus Month-End Close ($100) is $247/mo, vs Xenett Workflow at $200/mo with unlimited users. A solo firm pays $119/mo on Financial Cents Solo plus Month-End Close, below Xenett Workflow.'],
+  ['What does each review check?', 'Xenett checks duplicate entries and vendors, GL inconsistencies, AR/AP issues, undeposited funds, uncategorized entries and missing name/class/location, plus custom review points. Financial Cents Month-End Close covers transaction review, uncategorized transactions, account reconciliation, 1099 and W-9 prep, shared transactions, and new vendors and accounts.'],
+];
+const faqLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+});
 ---
 <Base
   title="Xenett vs Financial Cents Month-End Close for bookkeeping firms — compared"
@@ -43,6 +54,10 @@ const b = import.meta.env.BASE_URL;
     <li>All your clients are on QuickBooks Online.</li>
     <li>Your main close problem is uncategorized transactions and client follow-up, plus 1099/W-9 prep.</li>
   </ul>
+
+  <h2>FAQ</h2>
+  {faqs.map(([q, a]) => (<><h3>{q}</h3><p>{a}</p></>))}
+  <script type="application/ld+json" set:html={faqLd} />
 
   <p>Sources: xenett.com/pricing and financial-cents.com/pricing, checked 2026-10-18. No sponsor has paid for this comparison.</p>
 
