@@ -1,6 +1,17 @@
 ---
 import Base from '../../layouts/Base.astro';
 const b = import.meta.env.BASE_URL;
+const faqs = [
+  ['Which tool is cheapest for chasing missing receipts?', 'Hubdoc, if your clients are on a qualifying Xero plan, where it is included. Otherwise Uncat at $9 per client per month, or Hubdoc standalone at $12 per month.'],
+  ['Which tool asks the client for the receipt behind a specific bank line?', 'Uncat. It follows up with the client for that line, asking for an explanation or a receipt, and matches the upload.'],
+  ['What do these tools cost for a 20-client firm?', 'At list prices per month: Uncat 20 × $9 = $180; Hubdoc $0 extra on qualifying Xero plans or 20 × $12 = $240 standalone; Booke AI 20 × $129 = $2,580 at Business price. Dext partner pricing is by quote.'],
+  ['Which of these work with QuickBooks Online?', 'All four: Dext, Hubdoc, Uncat and Booke AI connect to QBO. Uncat also supports QuickBooks Desktop, and all four support Xero.'],
+];
+const faqLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+});
 ---
 <Base
   title="Best tools to chase missing receipts — Dext vs Hubdoc vs Uncat vs Booke AI"
@@ -61,6 +72,10 @@ const b = import.meta.env.BASE_URL;
     <li>Dext: partner pricing is per client and not listed here; ask Dext for a firm quote.</li>
     <li>Booke AI: 20 × $129 = $2,580 at Business list price; firms should ask for firm pricing.</li>
   </ul>
+
+  <h2>FAQ</h2>
+  {faqs.map(([q, a]) => (<><h3>{q}</h3><p>{a}</p></>))}
+  <script type="application/ld+json" set:html={faqLd} />
 
   <p>
     <a href={`${b}/compare/dext-vs-hubdoc`}>Dext vs Hubdoc</a>
