@@ -1,6 +1,17 @@
 ---
 import Base from '../../layouts/Base.astro';
 const b = import.meta.env.BASE_URL;
+const faqs = [
+  ['Which AP tool is cheapest for a small client on QBO or Xero?', "Ramp. Its Free plan is $0 per user per month and includes Bill Pay plus the QBO/Xero sync. Plus is $15 per user per month plus a platform fee."],
+  ['Which tool lets one firm manage AP for many clients?', 'BILL. Its Accountant console ($49/mo) manages multiple clients from one login, and every AP plan includes approval workflows.'],
+  ['Can clients approve bills from their phone?', 'Yes. BILL, Ramp and Vic.ai all offer mobile approvals, so an owner can sign off without logging in at a desk.'],
+  ['What does BILL cost for a client with 3 users?', 'On Essentials, 3 × $49 = $147 per month, plus per-payment fees of $0.59 per ACH and $1.99 per check. Team is $65 and Corporate $89 per user per month.'],
+];
+const faqLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+});
 ---
 <Base
   title="Best AP bill approval tools for accounting firms — BILL vs Ramp vs Vic.ai"
@@ -54,6 +65,10 @@ const b = import.meta.env.BASE_URL;
     <li>BILL Essentials: 3 × $49 = $147, plus per-payment fees ($0.59 ACH, $1.99 check).</li>
     <li>Vic.ai: not listed; ask for a quote.</li>
   </ul>
+
+  <h2>FAQ</h2>
+  {faqs.map(([q, a]) => (<><h3>{q}</h3><p>{a}</p></>))}
+  <script type="application/ld+json" set:html={faqLd} />
 
   <p>
     <a href={`${b}/compare/missing-receipts-tools`}>Missing receipts tools</a>
