@@ -2,8 +2,8 @@
 import Base from '../../layouts/Base.astro';
 const b = import.meta.env.BASE_URL;
 const faqs = [
-  ['How much do Docyt and Xenett cost?', 'Docyt Accounting Suite starts at $299 per property (or location) per month, with unlimited users; Enterprise Suite is custom with portfolio pricing. Xenett is per client: AI Financials Review $7.50/mo or Workflow $10/mo, with unlimited users; Accruals + AI adds $15/client/mo.'],
-  ['What do they cost for 20 clients or properties?', 'At list price, Docyt Accounting Suite is 20 × $299 = $5,980 per month at the "from" price, likely lower with portfolio pricing. Xenett AI Financials Review is 20 × $7.50 = $150, Workflow is $200, and Workflow plus Accruals + AI is $500.'],
+  ['How much do Docyt and Xenett cost?', 'Docyt prices per property, by quote only: as of 25 Oct 2026 docyt.com/pricing publishes no number, with unlimited users and annual plans. Xenett is per client: AI Financials Review $7.50/mo or Workflow $10/mo, with unlimited users; Accruals + AI adds $15/client/mo.'],
+  ['What do they cost for 20 clients or properties?', 'Docyt has no public price, so 20 properties need a quote. Xenett AI Financials Review is 20 × $7.50 = $150, Workflow is $200, and Workflow plus Accruals + AI is $500.'],
   ['Does Docyt replace QuickBooks?', 'Yes. Docyt is its own AI-native ERP and migrates you off QuickBooks, Sage Intacct, NetSuite and others. Xenett keeps the client on QuickBooks Online or Xero and reviews the books there.'],
   ['Which one fits hotels and restaurant groups?', 'Docyt, because it posts PMS and POS revenue nightly with USALI mapping, reconciles continuously and runs a Closing Agent for multi-location hospitality and retail. Xenett fits general small-business clients that should stay on QBO or Xero.'],
 ];
@@ -15,7 +15,7 @@ const faqLd = JSON.stringify({
 ---
 <Base
   title="Docyt vs Xenett for bookkeeping firms — AI-native hospitality ERP vs AI review on QBO and Xero"
-  description="Docyt (from $299/property/mo, AI-native ERP with continuous reconciliation and a Closing Agent for hotels, restaurants and multi-location retail) vs Xenett ($7.50-$10/client, AI review of P&L and Balance Sheet on QBO and Xero): who each fits and 20-client cost math. Prices verified Oct 2026."
+  description="Docyt (per-property quote, AI-native ERP with continuous reconciliation and a Closing Agent for hotels, restaurants and multi-location retail) vs Xenett ($7.50-$10/client, AI review of P&L and Balance Sheet on QBO and Xero): who each fits and 20-client cost math. Prices verified Oct 2026."
 >
   <h1>Docyt vs Xenett</h1>
   <p>These two rarely compete for the same client. Docyt is an AI-native accounting ERP built for multi-location hospitality and retail: it posts PMS and POS revenue nightly, reconciles bank and card accounts continuously, and runs a Closing Agent, and it migrates you off QuickBooks, Sage Intacct or NetSuite rather than sitting on top of them. Xenett is a review layer on QuickBooks Online and Xero: it scans each client's P&amp;L and Balance Sheet for errors before sign-off, and its Workflow plan adds light practice management. The question is mostly whether your clients are hotel and restaurant portfolios or a general small-business book.</p>
@@ -24,7 +24,7 @@ const faqLd = JSON.stringify({
     <thead><tr><th></th><th><a href={`${b}/tools/docyt`}>Docyt</a></th><th><a href={`${b}/tools/xenett`}>Xenett</a></th></tr></thead>
     <tbody>
       <tr><td>Best for</td><td>Firms and in-house teams closing books for multi-property hotels, restaurant groups, retailers and franchisees</td><td>Firms reviewing many general small-business clients on QBO or Xero before sign-off</td></tr>
-      <tr><td>Pricing (verified Oct 2026)</td><td>Accounting Suite from $299 per property (or location)/month. Enterprise Suite (Accounting, Payments and BI) custom, with portfolio pricing that drops with property count. Daily Flash standalone from $100/location/month. Catch-up accounting $200 per month caught up. Unlimited users; annual plans billed monthly.</td><td>Per client: AI Financials Review $7.50/mo, Workflow $10/mo. Add-ons: Accruals + AI $15/client/mo, Inter-company Rec $10/client/mo ($0 for the first 60 days). Unlimited users. Enterprise by quote.</td></tr>
+      <tr><td>Pricing (verified Oct 2026)</td><td>Per property, quote-only: docyt.com/pricing shows no prices as of 25 Oct 2026. Modules (Accounting, Payments, BI) bought separately; catch-up and Outcome plans also quoted. Unlimited users; annual plans; integrations and onboarding included.</td><td>Per client: AI Financials Review $7.50/mo, Workflow $10/mo. Add-ons: Accruals + AI $15/client/mo, Inter-company Rec $10/client/mo ($0 for the first 60 days). Unlimited users. Enterprise by quote.</td></tr>
       <tr><td>Ledger</td><td>Its own AI-native ERP; migrates from QuickBooks, Sage Intacct, NetSuite, M3 and others</td><td>Works on QuickBooks Online and Xero</td></tr>
       <tr><td>What it automates</td><td>Nightly PMS/POS revenue posting with USALI mapping, deposit, OTA and chargeback tracking, continuous bank and card reconciliation, Closing Agent and Quality of Books Agent, payroll accounting, multi-entity and intercompany, owner reporting</td><td>Review points: duplicates, GL inconsistencies, AR/AP issues, undeposited funds, uncategorized entries, missing name/class/location, custom rules; Accruals add-on covers prepaids, payroll accruals, deferred revenue, flux analysis</td></tr>
       <tr><td>Firm workflow</td><td>Multi-owner permissioning and portfolio roll-ups (Enterprise); dedicated hospitality accountant on the Accounting Suite</td><td>Workflow plan: projects and tasks, time tracking, capacity planning, 1099s (US), documents, email and Drive integration</td></tr>
@@ -33,7 +33,7 @@ const faqLd = JSON.stringify({
 
   <h2>Cost at 20 clients or properties (list prices, monthly)</h2>
   <ul>
-    <li>Docyt Accounting Suite: 20 × $299 = $5,980 at the "from" price. Portfolio pricing scales down with property count, so a 20-property group would likely get a quote below that.</li>
+    <li>Docyt: no public price, so a 20-property group needs a quote from Docyt.</li>
     <li>Xenett AI Financials Review: 20 × $7.50 = $150. Workflow: 20 × $10 = $200. Workflow plus Accruals + AI: 20 × $25 = $500.</li>
   </ul>
   <p>The numbers are not like for like. Docyt's price replaces the ledger, revenue posting and much of the close for a hotel or restaurant; Xenett's price checks books that already live in QBO or Xero. All figures before discounts or promotions.</p>
