@@ -23,7 +23,7 @@ const groups = [
     <section>
       <h2>{name} ({list.length})</h2>
       <ul>
-        {list.map((s) => <li><a href={`${base}/compare/${s}`}>{label(s)}</a></li>)}
+        {list.map((s) => <li><a href={`${base}/compare/${s}/`}>{label(s)}</a></li>)}
       </ul>
     </section>
   ))}
