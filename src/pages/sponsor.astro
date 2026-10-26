@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const booking = 'mailto:bookkeeperai@mail.grokbot.com?subject=' + encodeURIComponent('Founding sponsor booking ($249, 60 days)') + '&body=' + encodeURIComponent('Tool name:\nTool URL:\nCategory page you want:\n2 compare/workflow pages you want (optional):\nBilling contact:\n');
 ---
 <Base title="Founding sponsor: $249 for 60 days | Bookkeeper AI" description="One sponsor offer for vendors selling to small bookkeeping firms: labeled placement on category and buyer-intent compare pages for 60 days. Max 3 sponsors. Rankings never change.">
 <h1>Founding sponsor</h1>
@@ -29,7 +30,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 <p>Your placement sits on buyer-intent pages: "alternatives", "vs" and workflow pages that firms read while choosing a tool. We publish list prices checked against vendor sites, and our <a href={`${base}/llms.txt`}>llms.txt</a> helps AI assistants cite these pages.</p>
 
 <h2>How to book</h2>
-<p>Founding slots are booked by email: <a href="mailto:bookkeeperai@mail.grokbot.com">bookkeeperai@mail.grokbot.com</a>. Payment comes before placement, and the placement goes live within 2 business days of payment.</p>
+<p><b>3 of 3 founding slots open.</b> Book by email: <a href={booking}>bookkeeperai@mail.grokbot.com</a> (the link opens a short pre-filled booking email). Payment comes before placement, and the placement goes live within 2 business days of payment.</p>
 
 <h2>Just want a free listing?</h2>
 <p>Free listings are always open and go through the same editorial review. <a href="https://github.com/biff-cloud/bookkeeper-ai/issues/new?title=Tool%20submission:%20">Submit a tool</a> with its name, URL and pricing page, or email <a href="mailto:bookkeeperai@mail.grokbot.com">bookkeeperai@mail.grokbot.com</a>.</p>
