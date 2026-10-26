@@ -1,0 +1,30 @@
+---
+import Base from '../../layouts/Base.astro';
+const base = import.meta.env.BASE_URL;
+const caps = { ai: 'AI', ap: 'AP', vs: 'vs' };
+const label = (slug) => slug.split('-').map((w) => caps[w] ?? w[0].toUpperCase() + w.slice(1)).join(' ');
+const slugs = Object.keys(import.meta.glob('./*.astro'))
+  .map((p) => p.slice(2, -6))
+  .filter((s) => s !== 'index')
+  .sort();
+const groups = [
+  ['Head-to-head comparisons', slugs.filter((s) => s.includes('-vs-'))],
+  ['Alternatives to one tool', slugs.filter((s) => s.endsWith('-alternatives'))],
+  ['Tools for one job', slugs.filter((s) => s.endsWith('-tools'))],
+];
+---
+<Base
+  title="Compare AI tools for bookkeeping firms — all comparisons"
+  description={`All ${slugs.length} comparison pages: head-to-heads, alternatives and tools-by-job for bookkeeping and accounting firms. Pricing checked against vendor sites.`}
+>
+  <h1>All comparisons</h1>
+  <p>{slugs.length} pages comparing AI and workflow tools for bookkeeping firms. Prices are checked against each vendor's own site.</p>
+  {groups.map(([name, list]) => (
+    <section>
+      <h2>{name} ({list.length})</h2>
+      <ul>
+        {list.map((s) => <li><a href={`${base}/compare/${s}`}>{label(s)}</a></li>)}
+      </ul>
+    </section>
+  ))}
+</Base>
