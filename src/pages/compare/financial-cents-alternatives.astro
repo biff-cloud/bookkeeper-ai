@@ -4,7 +4,7 @@ const b = import.meta.env.BASE_URL;
 const faqs = [
   ['How much does Financial Cents cost?', 'Financial Cents charges per user on annual billing: Solo $19/month (one user), Team $49/user/month and Scale $69/user/month, all on 12-month agreements. Monthly billing needs at least 5 users. A 3-person firm on Team pays 3 × $49 = $147 a month.'],
   ['What does the Financial Cents Month-End Close add-on cost?', 'It costs $5 per client per month on annual billing and reviews uncategorized transactions. It works with QuickBooks Online only. For 20 clients that adds $100, so a 3-person Team firm pays $247 a month.'],
-  ['Which Financial Cents alternative is cheapest for a 3-person, 20-client firm?', 'Among published prices, Xenett AI Financials Review at 20 × $7.50 = $150 a month, but it is a close review tool, not full practice management. For practice management, Karbon Team is 3 × $59 = $177 a month on annual billing and TaxDome Pro is about $250 a month, paid upfront. Double does not publish prices.'],
+  ['Which Financial Cents alternative is cheapest for a 3-person, 20-client firm?', 'Among published prices, Xenett AI Financials Review at 20 × $7.50 = $150 a month, but it is a close review tool, not full practice management. For practice management, TaxDome at the 150-client minimum is $1,500/year (~$125/month), Financial Cents Team is 3 × $49 = $147/month (or $247 with MEC for 20 clients), and Karbon Team is 3 × $59 = $177/month. Double does not publish prices.'],
   ['When should a firm stay on Financial Cents?', 'Stay if you are a solo firm ($19/month is the lowest published seat price here), if you bill and send proposals from the same tool as your client task follow-ups, or if your clients are on QuickBooks Online so the $5/client close add-on covers uncategorized transactions without a second tool.'],
 ];
 const faqLd = JSON.stringify({
@@ -25,7 +25,7 @@ const faqLd = JSON.stringify({
       <tr>
         <th>Alternative</th>
         <th>Best fit vs Financial Cents</th>
-        <th>Pricing (verified Oct 2026)</th>
+        <th>Pricing (verified Nov 2026)</th>
         <th>Trade-off</th>
       </tr>
     </thead>
@@ -39,8 +39,8 @@ const faqLd = JSON.stringify({
       <tr>
         <td><a href={`${b}/tools/taxdome`}>TaxDome</a></td>
         <td>Firms that do tax and bookkeeping and want a branded client portal and mobile app, billing and workflows in one system</td>
-        <td>Essentials $800/seat/yr (solo only); Pro $1,000/seat/yr; Business $1,200/seat/yr; 1-year terms, billed upfront</td>
-        <td>Annual upfront billing only; its Bookkeeping Hub syncs with QuickBooks Online, like Financial Cents MEC</td>
+        <td>From $1,500/yr billed annually (starts at 150 active clients); 20 seats included; volume bands above 150</td>
+        <td>Annual billing; Bookkeeping Hub listed on TaxDome pricing (QBO-oriented, like Financial Cents MEC)</td>
       </tr>
       <tr>
         <td><a href={`${b}/tools/xenett`}>Xenett</a></td>
@@ -61,7 +61,7 @@ const faqLd = JSON.stringify({
   <ul>
     <li>Financial Cents: 3 × $49 = $147 (Team, annual), or $247 with Month-End Close for 20 clients (20 × $5).</li>
     <li>Karbon: 3 × $59 = $177 (Team, annual) or 3 × $89 = $267 (Business, annual). A 3-person team cannot pay Karbon monthly.</li>
-    <li>TaxDome: 3 × $1,000 per year = $3,000 per year, about $250 per month (Pro), paid upfront.</li>
+    <li>TaxDome: $1,500 per year at the 150-client minimum (~$125 per month), billed annually, 20 seats included.</li>
     <li>Xenett: 20 × $7.50 = $150 for AI Financials Review, or 20 × $10 = $200 for Workflow. Compare the review against Financial Cents MEC at $100.</li>
     <li>Double: not published.</li>
   </ul>
@@ -77,7 +77,7 @@ const faqLd = JSON.stringify({
   {faqs.map(([q, a]) => (<><h3>{q}</h3><p>{a}</p></>))}
   <script type="application/ld+json" set:html={faqLd} />
 
-  <p>Sources: financial-cents.com/pricing, karbonhq.com/pricing and taxdome.com/pricing checked 2026-10-18; xenett.com and doublehq.com/pricing checked 2026-10-17 and 2026-10-18. No sponsor has paid for this comparison.</p>
+  <p>Sources: taxdome.com/pricing checked 2026-11-06; financial-cents.com/pricing, karbonhq.com/pricing, xenett.com and doublehq.com/pricing checked earlier Oct/Nov 2026 sessions. No sponsor has paid for this comparison.</p>
 
   <p>
     <a href={`${b}/tools/financial-cents`}>Financial Cents</a>

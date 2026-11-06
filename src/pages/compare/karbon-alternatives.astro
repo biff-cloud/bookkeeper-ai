@@ -4,7 +4,7 @@ const b = import.meta.env.BASE_URL;
 const faqs = [
   ['How much does Karbon cost?', 'Karbon charges per user: Team $59/user/month and Business $89/user/month on annual billing. Monthly billing is only offered to teams of 4 or more, so a 3-person team pays annually.'],
   ['What is the cheapest Karbon alternative?', 'Financial Cents has the lowest published seat price in this comparison: Solo $19/month, Team $49/user/month and Scale $69/user/month (annual). For a 3-person firm, Team costs $147/month versus $177 on Karbon Team.'],
-  ['Is TaxDome cheaper than Karbon?', 'Not for a 3-person firm on list prices. TaxDome Pro is $1,000/seat/year, about $250/month for 3 seats, paid upfront, versus $177/month on Karbon Team. TaxDome Pro includes the Bookkeeping Hub with 120 client ledger connections.'],
+  ['Is TaxDome cheaper than Karbon?', 'For a 3-person firm with few clients, often yes on list prices. TaxDome starts at $1,500/year (~$125/month) at the 150-client minimum with 20 seats included, versus $177/month on Karbon Team. TaxDome lists a Bookkeeping Hub for uncategorized transactions.'],
   ['When should a firm stay on Karbon?', 'Stay when your team runs client work out of shared email and wants it turned into tasks with AI summaries, when you want time tracking, billing, payments and engagement letters from the Team plan, or when you need the client reminders and automation listed on Business.'],
 ];
 const faqLd = JSON.stringify({
@@ -25,7 +25,7 @@ const faqLd = JSON.stringify({
       <tr>
         <th>Alternative</th>
         <th>Best fit vs Karbon</th>
-        <th>Pricing (verified Oct 2026)</th>
+        <th>Pricing (verified Nov 2026)</th>
         <th>Trade-off</th>
       </tr>
     </thead>
@@ -39,8 +39,8 @@ const faqLd = JSON.stringify({
       <tr>
         <td><a href={`${b}/tools/taxdome`}>TaxDome</a></td>
         <td>Firms that do tax and bookkeeping and want a branded client portal and mobile app, billing and workflows in one system</td>
-        <td>Essentials $800/seat/yr (solo only); Pro $1,000/seat/yr; Business $1,200/seat/yr; 1-year terms, billed upfront</td>
-        <td>Annual upfront billing only; the Bookkeeping Hub for uncategorized transactions syncs with QuickBooks Online</td>
+        <td>From $1,500/yr billed annually (starts at 150 active clients); 20 seats included; volume bands above 150</td>
+        <td>Annual billing; Bookkeeping Hub for uncategorized transactions listed on TaxDome pricing</td>
       </tr>
       <tr>
         <td><a href={`${b}/tools/double`}>Double</a></td>
@@ -55,7 +55,7 @@ const faqLd = JSON.stringify({
   <ul>
     <li>Karbon: 3 × $59 = $177 (Team, annual) or 3 × $89 = $267 (Business, annual). A 3-person team cannot pay monthly.</li>
     <li>Financial Cents: 3 × $49 = $147 (Team, annual), or $247 with the close add-on for 20 clients (20 × $5).</li>
-    <li>TaxDome: 3 × $1,000 per year = $3,000 per year, about $250 per month (Pro), paid upfront. Pro includes the Bookkeeping Hub with 120 client ledger connections.</li>
+    <li>TaxDome: $1,500 per year at the 150-client minimum (~$125 per month), billed annually, 20 seats included.</li>
     <li>Double: not published.</li>
   </ul>
 
@@ -70,7 +70,7 @@ const faqLd = JSON.stringify({
   {faqs.map(([q, a]) => (<><h3>{q}</h3><p>{a}</p></>))}
   <script type="application/ld+json" set:html={faqLd} />
 
-  <p>Sources: karbonhq.com/pricing and taxdome.com/pricing checked 2026-10-18; financial-cents.com/pricing and doublehq.com/pricing checked 2026-10-17 and 2026-10-18. No sponsor has paid for this comparison.</p>
+  <p>Sources: taxdome.com/pricing checked 2026-11-06; karbonhq.com/pricing, financial-cents.com/pricing and doublehq.com/pricing checked earlier Oct 2026 sessions. No sponsor has paid for this comparison.</p>
 
   <p>
     <a href={`${b}/tools/karbon`}>Karbon</a>
