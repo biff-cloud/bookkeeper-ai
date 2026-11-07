@@ -28,4 +28,9 @@ if [ "${LINKCHECK:-0}" = 1 ]; then
   bash scripts/linkcheck.sh
 fi
 
+if [ "${PRICERECHECK:-0}" = 1 ]; then
+  echo "== price-recheck =="
+  bash scripts/price-recheck.sh
+fi
+
 echo "ops-idle OK"
