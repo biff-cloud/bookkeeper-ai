@@ -1,10 +1,10 @@
 ---
 import Base from '../../layouts/Base.astro';
 const faqs = [
-  ['How much does Booke AI cost compared with Botkeeper?', 'Booke AI Business is $129 per business per month; firm and white-label plans are by quote. Botkeeper Infinite licenses run from $149 per month (1 to 4 clients) down to $59 per month (25 or more), lower on annual billing.'],
+  ['How much does Booke AI cost compared with Botkeeper?', 'Booke AI Business is $129 per business per month; firm and white-label plans are by quote. Botkeeper Infinite licenses run from $149 per month (1 to 4 clients; $134 annual) down to $59 monthly / $53 annual at 25 or more, with a 10–24 tier at $79/$71.'],
   ['Does Booke AI work inside QuickBooks Online and Xero?', 'Yes. Booke AI works inside existing QuickBooks Online and Xero files, so client books stay where they are.'],
   ['Is Botkeeper only software, or does it include bookkeepers?', 'Botkeeper is a firm software platform (AI categorization, bank recs, Close Tracker, Activity Hub). Human bookkeeping services are an optional extra on top.'],
-  ['Which is cheaper for a firm with many clients?', 'Botkeeper volume tiers drop to $59 per client per month at 25 or more licenses, below Booke AI’s $129 per business list price. For a few clients, Booke AI’s published price is simpler.'],
+  ['Which is cheaper for a firm with many clients?', 'Botkeeper volume tiers drop to $59 monthly ($53 annual) per client at 25 or more licenses, below Booke AI’s $129 per business list price. For a few clients, Booke AI’s published price is simpler.'],
 ];
 const faqLd = JSON.stringify({
   '@context': 'https://schema.org',
@@ -23,7 +23,7 @@ const faqLd = JSON.stringify({
     <thead><tr><th></th><th><a href={`${import.meta.env.BASE_URL}/tools/booke-ai`}>Booke AI</a></th><th><a href={`${import.meta.env.BASE_URL}/tools/botkeeper`}>Botkeeper</a></th></tr></thead>
     <tbody>
       <tr><td>Best for</td><td>Practices that want AI categorization inside existing QBO/Xero files at a published per-business price</td><td>Firms that want a full bookkeeping platform (close tracker, client hub, firm insights) priced per client license</td></tr>
-      <tr><td>Pricing (verified Oct 2026)</td><td>Business $129/business/mo; firm/white-label plans by quote</td><td>Infinite licenses from $149/mo (1–4) down to $59/mo (25+); annual lower; optional human bookkeeping services extra</td></tr>
+      <tr><td>Pricing (verified Nov 2026)</td><td>Business $129/business/mo; firm/white-label plans by quote</td><td>Infinite: $149/mo ($134 annual) for 1–4; $79/$71 for 10–24; $59/$53 for 25+; optional human bookkeeping services extra</td></tr>
       <tr><td>Ledgers</td><td>Works inside QuickBooks Online and Xero</td><td>Firm platform with bank linking and firm-managed client books (QBO-oriented practice stacks)</td></tr>
       <tr><td>Core AI job</td><td>Daily bank-feed categorization, OCR/doc matching, missing-doc requests, exception review</td><td>AI categorization, auto bank recs, journal entries, autonomous month-end review with anomaly detection</td></tr>
       <tr><td>Firm angle</td><td>Multi-client + white-label available on firm tier; meter is per business</td><td>Built for firms: entity licenses, Activity Hub, Close Tracker, volume discounts as client count grows</td></tr>
