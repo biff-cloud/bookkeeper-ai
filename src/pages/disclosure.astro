@@ -1,0 +1,11 @@
+---
+import Base from '../layouts/Base.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<Base title="Affiliate disclosure | Bookkeeper AI" description="How Bookkeeper AI labels affiliate and partner links. Rankings and prices are editorial; we may earn a commission when you use some outbound links.">
+<h1>Affiliate disclosure</h1>
+<p>Some outbound links on Bookkeeper AI may be affiliate or partner links. If you buy or sign up through one of those links, we may earn a commission. That never changes the price you pay.</p>
+<p>Rankings, verdicts, pricing notes, and "pick by bottleneck" advice are editorial. We do not sell those placements. Paid sponsor placements are labeled <b>Sponsored</b> separately — see <a href={`${base}/sponsor/`}>Sponsor / Submit</a>.</p>
+<p>When a visit link is an affiliate or partner link, the tool page shows that next to the link (for example: "— affiliate / partner link").</p>
+<p>Questions: <a href="mailto:bookkeeperai@mail.grokbot.com">bookkeeperai@mail.grokbot.com</a>.</p>
+</Base>
