@@ -22,7 +22,15 @@ CHECKS=(
   'double#https://keeper.app/pricing#mix-and-match'
   'botkeeper#https://www.botkeeper.com/pricing#$149#$79#$59#$134#$71#$53'
   'xenett#https://xenett.com/pricing#$7.5#$10'
+  'dext#https://dext.com/us/business/pricing#25.21#302.50'
+  'hubdoc#https://www.hubdoc.com/pricing#$12'
+  'bill#https://www.bill.com/pricing#$</sup>49#$</sup>65#$</sup>89#$0.59#$1.99'
+  'ramp#https://ramp.com/pricing#$15/mo/user'
+  'canopy#https://www.getcanopy.com/pricing#$74#$109#$149'
+  'vic-ai#https://aws.amazon.com/marketplace/pp/prodview-eyn6m46gvxud4#$25,000.00#$2.00'
+  'ignition#https://www.ignitionapp.com/api/pricing.json?region=us#$39#$99#$229#$399'
 )
+# Skipped: taxdome.com/pricing returns 403 to curl; chatgpt.com/pricing hides numbers in JS.
 
 want=("$@")
 fail=0
@@ -63,7 +71,7 @@ for row in "${CHECKS[@]}"; do
 done
 
 if [ "$ran" = 0 ]; then
-  echo "no vendors matched; known: digits booke-ai truewind docyt financial-cents uncat client-hub liscio karbon double botkeeper xenett"
+  echo "no vendors matched; known: digits booke-ai truewind docyt financial-cents uncat client-hub liscio karbon double botkeeper xenett dext hubdoc bill ramp canopy vic-ai ignition"
   exit 1
 fi
 echo "price-recheck: $ran checked, $fail failed"
